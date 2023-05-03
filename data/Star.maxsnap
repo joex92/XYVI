@@ -1,0 +1,48 @@
+{
+	"filetype" : "C74Snapshot",
+	"version" : 2,
+	"minorversion" : 0,
+	"name" : "5-Star",
+	"origin" : "Star",
+	"type" : "rnbo",
+	"subtype" : "",
+	"embed" : 0,
+	"snapshot" : 	{
+		"__presetid" : "Star",
+		"__sps" : 		{
+			"equation" : [ 				{
+
+				}
+, 				{
+
+				}
+, 				{
+
+				}
+, 				{
+
+				}
+, 				{
+
+				}
+, 				{
+
+				}
+, 				{
+
+				}
+, 				{
+
+				}
+, 				{
+
+				}
+, 				{
+
+				}
+ ]
+		}
+
+	}
+
+}
