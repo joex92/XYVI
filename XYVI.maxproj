@@ -1,8 +1,8 @@
 {
-	"name" : "XYinstruments",
+	"name" : "XYVI",
 	"version" : 1,
 	"creationdate" : 3757855936,
-	"modificationdate" : 3757856049,
+	"modificationdate" : 3766971581,
 	"viewrect" : [ 25.0, 107.0, 300.0, 500.0 ],
 	"autoorganize" : 1,
 	"hideprojectwindow" : 0,
@@ -12,9 +12,12 @@
 		"patchers" : 		{
 			"main.maxpat" : 			{
 				"kind" : "patcher",
-				"local" : 1,
-				"toplevel" : 1
+				"local" : 1
 			}
+
+		}
+,
+		"code" : 		{
 
 		}
 
