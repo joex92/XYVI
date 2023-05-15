@@ -75,17 +75,17 @@ namespace RNBO {
 class rnbomatic : public PatcherInterfaceImpl {
 public:
 
-class RNBOSubpatcher_292 : public PatcherInterfaceImpl {
+class RNBOSubpatcher_14 : public PatcherInterfaceImpl {
     
     friend class rnbomatic;
     
     public:
     
-    RNBOSubpatcher_292()
+    RNBOSubpatcher_14()
     {
     }
     
-    ~RNBOSubpatcher_292()
+    ~RNBOSubpatcher_14()
     {
     }
     
@@ -224,12 +224,11 @@ class RNBOSubpatcher_292 : public PatcherInterfaceImpl {
         const SampleValue * target_duty = (numInputs >= 1 && inputs[0] ? inputs[0] : this->zeroBuffer);
         const SampleValue * target_r = (numInputs >= 2 && inputs[1] ? inputs[1] : this->zeroBuffer);
         const SampleValue * target_A = (numInputs >= 3 && inputs[2] ? inputs[2] : this->zeroBuffer);
-        const SampleValue * target_phase = (numInputs >= 4 && inputs[3] ? inputs[3] : this->zeroBuffer);
-        const SampleValue * target_D = (numInputs >= 5 && inputs[4] ? inputs[4] : this->zeroBuffer);
-        const SampleValue * target_S = (numInputs >= 6 && inputs[5] ? inputs[5] : this->zeroBuffer);
-        const SampleValue * target_R = (numInputs >= 7 && inputs[6] ? inputs[6] : this->zeroBuffer);
-        const SampleValue * target_p = (numInputs >= 8 && inputs[7] ? inputs[7] : this->zeroBuffer);
-        const SampleValue * target_m = (numInputs >= 9 && inputs[8] ? inputs[8] : this->zeroBuffer);
+        const SampleValue * target_D = (numInputs >= 4 && inputs[3] ? inputs[3] : this->zeroBuffer);
+        const SampleValue * target_S = (numInputs >= 5 && inputs[4] ? inputs[4] : this->zeroBuffer);
+        const SampleValue * target_R = (numInputs >= 6 && inputs[5] ? inputs[5] : this->zeroBuffer);
+        const SampleValue * target_p = (numInputs >= 7 && inputs[6] ? inputs[6] : this->zeroBuffer);
+        const SampleValue * target_m = (numInputs >= 8 && inputs[7] ? inputs[7] : this->zeroBuffer);
         SampleValue * out1 = (numOutputs >= 1 && outputs[0] ? outputs[0] : this->dummyBuffer);
         SampleValue * out2 = (numOutputs >= 2 && outputs[1] ? outputs[1] : this->dummyBuffer);
     
@@ -239,71 +238,66 @@ class RNBOSubpatcher_292 : public PatcherInterfaceImpl {
         this->mtof_tilde_01_perform(this->mtof_tilde_01_midivalue, this->signals[0], n);
         this->phasor_01_perform(this->signals[0], this->signals[1], n);
         this->ip_01_perform(this->signals[0], n);
-        this->dspexpr_04_perform(this->signals[2], n);
+        this->dspexpr_03_perform(this->signals[2], n);
         this->ip_02_perform(this->signals[3], n);
-        this->ip_03_perform(this->signals[4], n);
         this->stackprotect_perform(n);
-        this->signalreceive_01_perform(target_duty, this->signals[5], n);
-        this->triangle_tilde_01_perform(this->signals[1], this->signals[5], this->signals[6], n);
-        this->signalreceive_02_perform(target_r, this->signals[5], n);
+        this->signalreceive_01_perform(target_duty, this->signals[4], n);
+        this->triangle_tilde_01_perform(this->signals[1], this->signals[4], this->signals[5], n);
+        this->signalreceive_02_perform(target_r, this->signals[4], n);
         this->signalreceive_03_perform(target_A, this->signals[1], n);
-        this->signalreceive_04_perform(target_phase, this->signals[7], n);
-        this->dspexpr_05_perform(this->signals[7], this->signals[2], this->signals[8], n);
-        this->dspexpr_06_perform(this->signals[8], this->signals[3], this->signals[7], n);
-        this->signalreceive_05_perform(target_D, this->signals[3], n);
-        this->signalreceive_06_perform(target_S, this->signals[8], n);
-        this->signalreceive_07_perform(target_R, this->signals[9], n);
+        this->signalreceive_04_perform(target_D, this->signals[6], n);
+        this->signalreceive_05_perform(target_S, this->signals[7], n);
+        this->signalreceive_06_perform(target_R, this->signals[8], n);
     
         this->adsr_01_perform(
             this->signals[1],
-            this->signals[3],
+            this->signals[6],
+            this->signals[7],
             this->signals[8],
-            this->signals[9],
             this->signals[0],
-            this->signals[10],
+            this->signals[9],
             n
         );
     
-        this->signalreceive_08_perform(target_p, this->signals[9], n);
-        this->dspexpr_08_perform(this->signals[6], this->signals[9], this->signals[8], n);
-        this->dspexpr_10_perform(this->signals[8], this->signals[6], n);
-        this->dspexpr_09_perform(this->signals[6], this->signals[9], this->signals[3], n);
-        this->dspexpr_11_perform(this->signals[3], this->signals[2], this->signals[9], n);
-        this->poltocar_tilde_02_perform(this->signals[4], this->signals[9], this->signals[2], this->signals[3], n);
-        this->dspexpr_07_perform(this->signals[8], this->dspexpr_07_in2, this->signals[6], n);
-        this->signalreceive_09_perform(target_m, this->signals[8], n);
-        this->dspexpr_12_perform(this->signals[9], this->signals[8], this->signals[1], n);
-        this->poltocar_tilde_03_perform(this->signals[4], this->signals[1], this->signals[8], this->signals[9], n);
+        this->signalreceive_07_perform(target_p, this->signals[8], n);
+        this->dspexpr_05_perform(this->signals[5], this->signals[8], this->signals[7], n);
+        this->dspexpr_07_perform(this->signals[7], this->signals[5], n);
+        this->dspexpr_06_perform(this->signals[5], this->signals[8], this->signals[6], n);
+        this->dspexpr_08_perform(this->signals[6], this->signals[2], this->signals[8], n);
+        this->poltocar_tilde_02_perform(this->signals[3], this->signals[8], this->signals[2], this->signals[6], n);
+        this->dspexpr_04_perform(this->signals[7], this->dspexpr_04_in2, this->signals[5], n);
+        this->signalreceive_08_perform(target_m, this->signals[7], n);
+        this->dspexpr_09_perform(this->signals[8], this->signals[7], this->signals[1], n);
+        this->poltocar_tilde_03_perform(this->signals[3], this->signals[1], this->signals[7], this->signals[8], n);
     
         this->scale_tilde_01_perform(
-            this->signals[6],
+            this->signals[5],
             this->scale_tilde_01_lowin,
             this->scale_tilde_01_hiin,
             this->signals[2],
-            this->signals[8],
+            this->signals[7],
             this->scale_tilde_01_pow,
             this->signals[1],
             n
         );
     
         this->scale_tilde_02_perform(
-            this->signals[6],
+            this->signals[5],
             this->scale_tilde_02_lowin,
             this->scale_tilde_02_hiin,
-            this->signals[3],
-            this->signals[9],
-            this->scale_tilde_02_pow,
+            this->signals[6],
             this->signals[8],
+            this->scale_tilde_02_pow,
+            this->signals[7],
             n
         );
     
-        this->cartopol_tilde_01_perform(this->signals[1], this->signals[8], this->signals[9], this->signals[3], n);
-        this->dspexpr_01_perform(this->signals[9], this->signals[10], this->signals[8], n);
-        this->dspexpr_02_perform(this->signals[3], this->signals[5], this->signals[10], n);
-        this->dspexpr_03_perform(this->signals[10], this->signals[7], this->signals[5], n);
-        this->poltocar_tilde_01_perform(this->signals[8], this->signals[5], this->signals[7], this->signals[10], n);
-        this->signaladder_01_perform(this->signals[7], out1, out1, n);
-        this->signaladder_02_perform(this->signals[10], out2, out2, n);
+        this->cartopol_tilde_01_perform(this->signals[1], this->signals[7], this->signals[8], this->signals[6], n);
+        this->dspexpr_01_perform(this->signals[8], this->signals[9], this->signals[7], n);
+        this->dspexpr_02_perform(this->signals[6], this->signals[4], this->signals[9], n);
+        this->poltocar_tilde_01_perform(this->signals[7], this->signals[9], this->signals[4], this->signals[6], n);
+        this->signaladder_01_perform(this->signals[4], out1, out1, n);
+        this->signaladder_02_perform(this->signals[6], out2, out2, n);
         this->audioProcessSampleCount += this->vs;
     }
     
@@ -311,7 +305,7 @@ class RNBOSubpatcher_292 : public PatcherInterfaceImpl {
         if (this->maxvs < maxBlockSize || !this->didAllocateSignals) {
             Index i;
     
-            for (i = 0; i < 11; i++) {
+            for (i = 0; i < 10; i++) {
                 this->signals[i] = resizeSignal(this->signals[i], this->maxvs, maxBlockSize);
             }
     
@@ -320,7 +314,6 @@ class RNBOSubpatcher_292 : public PatcherInterfaceImpl {
             this->adsr_01_triggerBuf = resizeSignal(this->adsr_01_triggerBuf, this->maxvs, maxBlockSize);
             this->adsr_01_triggerValueBuf = resizeSignal(this->adsr_01_triggerValueBuf, this->maxvs, maxBlockSize);
             this->ip_02_sigbuf = resizeSignal(this->ip_02_sigbuf, this->maxvs, maxBlockSize);
-            this->ip_03_sigbuf = resizeSignal(this->ip_03_sigbuf, this->maxvs, maxBlockSize);
             this->zeroBuffer = resizeSignal(this->zeroBuffer, this->maxvs, maxBlockSize);
             this->dummyBuffer = resizeSignal(this->dummyBuffer, this->maxvs, maxBlockSize);
             this->didAllocateSignals = true;
@@ -340,7 +333,6 @@ class RNBOSubpatcher_292 : public PatcherInterfaceImpl {
         this->phasor_01_dspsetup(forceDSPSetup);
         this->ip_01_dspsetup(forceDSPSetup);
         this->ip_02_dspsetup(forceDSPSetup);
-        this->ip_03_dspsetup(forceDSPSetup);
         this->adsr_01_dspsetup(forceDSPSetup);
     
         if (sampleRateChanged)
@@ -444,7 +436,7 @@ class RNBOSubpatcher_292 : public PatcherInterfaceImpl {
     }
     
     ParameterIndex getNumSignalInParameters() const {
-        return 9;
+        return 8;
     }
     
     ParameterIndex getNumSignalOutParameters() const {
@@ -643,7 +635,6 @@ class RNBOSubpatcher_292 : public PatcherInterfaceImpl {
         this->mtof_tilde_01_init();
         this->ip_01_init();
         this->ip_02_init();
-        this->ip_03_init();
     }
     
     void sendOutlet(OutletIndex index, ParameterValue value) {
@@ -729,19 +720,11 @@ class RNBOSubpatcher_292 : public PatcherInterfaceImpl {
             this->join_01_out_set(l);
     }
     
-    void ip_02_value_set(number v) {
-        this->ip_02_value = v;
-        this->ip_02_fillSigBuf();
-        this->ip_02_lastValue = v;
-    }
-    
     void voice_01_voicenumber_set(number v) {
         {
             list converted = {v};
             this->join_01_in0_set(converted);
         }
-    
-        this->ip_02_value_set(v);
     }
     
     void voice_01_voicebang_bang() {
@@ -1128,7 +1111,7 @@ class RNBOSubpatcher_292 : public PatcherInterfaceImpl {
         this->ip_01_lastIndex = __ip_01_lastIndex;
     }
     
-    void dspexpr_04_perform(SampleValue * out1, Index n) {
+    void dspexpr_03_perform(SampleValue * out1, Index n) {
         Index i;
     
         for (i = 0; i < n; i++) {
@@ -1147,19 +1130,6 @@ class RNBOSubpatcher_292 : public PatcherInterfaceImpl {
     
         __ip_02_lastIndex = 0;
         this->ip_02_lastIndex = __ip_02_lastIndex;
-    }
-    
-    void ip_03_perform(SampleValue * out, Index n) {
-        auto __ip_03_sigbuf = this->ip_03_sigbuf;
-        auto __ip_03_lastValue = this->ip_03_lastValue;
-        auto __ip_03_lastIndex = this->ip_03_lastIndex;
-    
-        for (Index i = 0; i < n; i++) {
-            out[(Index)i] = ((SampleIndex)(i) >= __ip_03_lastIndex ? __ip_03_lastValue : __ip_03_sigbuf[(Index)i]);
-        }
-    
-        __ip_03_lastIndex = 0;
-        this->ip_03_lastIndex = __ip_03_lastIndex;
     }
     
     void stackprotect_perform(Index n) {
@@ -1211,22 +1181,6 @@ class RNBOSubpatcher_292 : public PatcherInterfaceImpl {
         }
     }
     
-    void dspexpr_05_perform(const Sample * in1, const Sample * in2, SampleValue * out1, Index n) {
-        Index i;
-    
-        for (i = 0; i < n; i++) {
-            out1[(Index)i] = in1[(Index)i] * in2[(Index)i];//#map:_###_obj_###_:1
-        }
-    }
-    
-    void dspexpr_06_perform(const Sample * in1, const Sample * in2, SampleValue * out1, Index n) {
-        Index i;
-    
-        for (i = 0; i < n; i++) {
-            out1[(Index)i] = in1[(Index)i] * in2[(Index)i];//#map:_###_obj_###_:1
-        }
-    }
-    
     void signalreceive_05_perform(const SampleValue * receive, SampleValue * output, Index n) {
         for (Index i = 0; i < n; i++) {
             output[(Index)i] = receive[(Index)i];
@@ -1234,12 +1188,6 @@ class RNBOSubpatcher_292 : public PatcherInterfaceImpl {
     }
     
     void signalreceive_06_perform(const SampleValue * receive, SampleValue * output, Index n) {
-        for (Index i = 0; i < n; i++) {
-            output[(Index)i] = receive[(Index)i];
-        }
-    }
-    
-    void signalreceive_07_perform(const SampleValue * receive, SampleValue * output, Index n) {
         for (Index i = 0; i < n; i++) {
             output[(Index)i] = receive[(Index)i];
         }
@@ -1375,13 +1323,13 @@ class RNBOSubpatcher_292 : public PatcherInterfaceImpl {
         this->adsr_01_time = __adsr_01_time;
     }
     
-    void signalreceive_08_perform(const SampleValue * receive, SampleValue * output, Index n) {
+    void signalreceive_07_perform(const SampleValue * receive, SampleValue * output, Index n) {
         for (Index i = 0; i < n; i++) {
             output[(Index)i] = receive[(Index)i];
         }
     }
     
-    void dspexpr_08_perform(const Sample * in1, const Sample * in2, SampleValue * out1, Index n) {
+    void dspexpr_05_perform(const Sample * in1, const Sample * in2, SampleValue * out1, Index n) {
         Index i;
     
         for (i = 0; i < n; i++) {
@@ -1389,7 +1337,7 @@ class RNBOSubpatcher_292 : public PatcherInterfaceImpl {
         }
     }
     
-    void dspexpr_10_perform(const Sample * in1, SampleValue * out1, Index n) {
+    void dspexpr_07_perform(const Sample * in1, SampleValue * out1, Index n) {
         Index i;
     
         for (i = 0; i < n; i++) {
@@ -1397,7 +1345,7 @@ class RNBOSubpatcher_292 : public PatcherInterfaceImpl {
         }
     }
     
-    void dspexpr_09_perform(const Sample * in1, const Sample * in2, SampleValue * out1, Index n) {
+    void dspexpr_06_perform(const Sample * in1, const Sample * in2, SampleValue * out1, Index n) {
         Index i;
     
         for (i = 0; i < n; i++) {
@@ -1405,7 +1353,7 @@ class RNBOSubpatcher_292 : public PatcherInterfaceImpl {
         }
     }
     
-    void dspexpr_11_perform(const Sample * in1, const Sample * in2, SampleValue * out1, Index n) {
+    void dspexpr_08_perform(const Sample * in1, const Sample * in2, SampleValue * out1, Index n) {
         Index i;
     
         for (i = 0; i < n; i++) {
@@ -1428,7 +1376,7 @@ class RNBOSubpatcher_292 : public PatcherInterfaceImpl {
         }
     }
     
-    void dspexpr_07_perform(const Sample * in1, number in2, SampleValue * out1, Index n) {
+    void dspexpr_04_perform(const Sample * in1, number in2, SampleValue * out1, Index n) {
         RNBO_UNUSED(in2);
         Index i;
     
@@ -1437,13 +1385,13 @@ class RNBOSubpatcher_292 : public PatcherInterfaceImpl {
         }
     }
     
-    void signalreceive_09_perform(const SampleValue * receive, SampleValue * output, Index n) {
+    void signalreceive_08_perform(const SampleValue * receive, SampleValue * output, Index n) {
         for (Index i = 0; i < n; i++) {
             output[(Index)i] = receive[(Index)i];
         }
     }
     
-    void dspexpr_12_perform(const Sample * in1, const Sample * in2, SampleValue * out1, Index n) {
+    void dspexpr_09_perform(const Sample * in1, const Sample * in2, SampleValue * out1, Index n) {
         Index i;
     
         for (i = 0; i < n; i++) {
@@ -1538,14 +1486,6 @@ class RNBOSubpatcher_292 : public PatcherInterfaceImpl {
     }
     
     void dspexpr_02_perform(const Sample * in1, const Sample * in2, SampleValue * out1, Index n) {
-        Index i;
-    
-        for (i = 0; i < n; i++) {
-            out1[(Index)i] = in1[(Index)i] + in2[(Index)i];//#map:_###_obj_###_:1
-        }
-    }
-    
-    void dspexpr_03_perform(const Sample * in1, const Sample * in2, SampleValue * out1, Index n) {
         Index i;
     
         for (i = 0; i < n; i++) {
@@ -2191,38 +2131,6 @@ class RNBOSubpatcher_292 : public PatcherInterfaceImpl {
         this->adsr_01_setupDone = true;
     }
     
-    void ip_02_init() {
-        this->ip_02_lastValue = this->ip_02_value;
-    }
-    
-    void ip_02_fillSigBuf() {
-        if ((bool)(this->ip_02_sigbuf)) {
-            SampleIndex k = (SampleIndex)(this->sampleOffsetIntoNextAudioBuffer);
-    
-            if (k >= (SampleIndex)(this->vs))
-                k = (SampleIndex)(this->vs) - 1;
-    
-            for (SampleIndex i = (SampleIndex)(this->ip_02_lastIndex); i < k; i++) {
-                if (this->ip_02_resetCount > 0) {
-                    this->ip_02_sigbuf[(Index)i] = 1;
-                    this->ip_02_resetCount--;
-                } else {
-                    this->ip_02_sigbuf[(Index)i] = this->ip_02_lastValue;
-                }
-            }
-    
-            this->ip_02_lastIndex = k;
-        }
-    }
-    
-    void ip_02_dspsetup(bool force) {
-        if ((bool)(this->ip_02_setupDone) && (bool)(!(bool)(force)))
-            return;
-    
-        this->ip_02_lastIndex = 0;
-        this->ip_02_setupDone = true;
-    }
-    
     number midiformat_01_innerFormat_cclamp(number v) {
         return (v - 1 > 15 ? 15 : (v - 1 < 0 ? 0 : v - 1));
     }
@@ -2374,16 +2282,16 @@ class RNBOSubpatcher_292 : public PatcherInterfaceImpl {
         this->midiformat_01_midimessage_set(bytes[1]);
     }
     
-    void ip_03_init() {
-        this->ip_03_lastValue = this->ip_03_value;
+    void ip_02_init() {
+        this->ip_02_lastValue = this->ip_02_value;
     }
     
-    void ip_03_dspsetup(bool force) {
-        if ((bool)(this->ip_03_setupDone) && (bool)(!(bool)(force)))
+    void ip_02_dspsetup(bool force) {
+        if ((bool)(this->ip_02_setupDone) && (bool)(!(bool)(force)))
             return;
     
-        this->ip_03_lastIndex = 0;
-        this->ip_03_setupDone = true;
+        this->ip_02_lastIndex = 0;
+        this->ip_02_setupDone = true;
     }
     
     void midiouthelper_sendMidi(number v) {
@@ -2440,8 +2348,6 @@ class RNBOSubpatcher_292 : public PatcherInterfaceImpl {
         expr_02_out1 = 0;
         dspexpr_02_in1 = 0;
         dspexpr_02_in2 = 0;
-        dspexpr_03_in1 = 0;
-        dspexpr_03_in2 = 0;
         adsr_01_trigger_number = 0;
         adsr_01_attack = 10;
         adsr_01_decay = 10;
@@ -2450,15 +2356,9 @@ class RNBOSubpatcher_292 : public PatcherInterfaceImpl {
         adsr_01_legato = 0;
         floatnum_02_input_number = 0;
         floatnum_02_value = 0;
-        dspexpr_05_in1 = 0;
-        dspexpr_05_in2 = 0;
-        dspexpr_06_in1 = 0;
-        dspexpr_06_in2 = 0;
         expr_03_in1 = 0;
         expr_03_in2 = 2;
         expr_03_out1 = 0;
-        ip_02_value = 0;
-        ip_02_impulse = 0;
         join_01_in0 = { 0 };
         join_01_in1 = { 0 };
         join_01_in2 = { 0 };
@@ -2475,10 +2375,10 @@ class RNBOSubpatcher_292 : public PatcherInterfaceImpl {
         scale_tilde_01_lowout = 0;
         scale_tilde_01_highout = 0;
         scale_tilde_01_pow = 1;
-        dspexpr_07_in1 = 0;
-        dspexpr_07_in2 = 1;
-        dspexpr_08_in1 = 0;
-        dspexpr_08_in2 = 0;
+        dspexpr_04_in1 = 0;
+        dspexpr_04_in2 = 1;
+        dspexpr_05_in1 = 0;
+        dspexpr_05_in2 = 0;
         midiout_01_port = 0;
         scale_tilde_02_x = 0;
         scale_tilde_02_lowin = 0;
@@ -2488,17 +2388,17 @@ class RNBOSubpatcher_292 : public PatcherInterfaceImpl {
         scale_tilde_02_pow = 1;
         poltocar_tilde_02_radius = 0;
         poltocar_tilde_02_angle = 0;
-        ip_03_value = 1;
-        ip_03_impulse = 0;
+        ip_02_value = 1;
+        ip_02_impulse = 0;
         poltocar_tilde_03_radius = 0;
         poltocar_tilde_03_angle = 0;
+        dspexpr_06_in1 = 0;
+        dspexpr_06_in2 = 0;
+        dspexpr_07_in1 = 0;
+        dspexpr_08_in1 = 0;
+        dspexpr_08_in2 = 0;
         dspexpr_09_in1 = 0;
         dspexpr_09_in2 = 0;
-        dspexpr_10_in1 = 0;
-        dspexpr_11_in1 = 0;
-        dspexpr_11_in2 = 0;
-        dspexpr_12_in1 = 0;
-        dspexpr_12_in2 = 0;
         _currentTime = 0;
         audioProcessSampleCount = 0;
         sampleOffsetIntoNextAudioBuffer = 0;
@@ -2514,7 +2414,6 @@ class RNBOSubpatcher_292 : public PatcherInterfaceImpl {
         signals[7] = nullptr;
         signals[8] = nullptr;
         signals[9] = nullptr;
-        signals[10] = nullptr;
         didAllocateSignals = 0;
         vs = 0;
         maxvs = 0;
@@ -2564,19 +2463,14 @@ class RNBOSubpatcher_292 : public PatcherInterfaceImpl {
         adsr_01_triggerValueBuf = nullptr;
         adsr_01_setupDone = false;
         floatnum_02_stored = 0;
+        midiout_01_currentStatus = -1;
+        midiout_01_status = -1;
+        midiout_01_byte1 = -1;
         ip_02_lastIndex = 0;
         ip_02_lastValue = 0;
         ip_02_resetCount = 0;
         ip_02_sigbuf = nullptr;
         ip_02_setupDone = false;
-        midiout_01_currentStatus = -1;
-        midiout_01_status = -1;
-        midiout_01_byte1 = -1;
-        ip_03_lastIndex = 0;
-        ip_03_lastValue = 0;
-        ip_03_resetCount = 0;
-        ip_03_sigbuf = nullptr;
-        ip_03_setupDone = false;
         stackprotect_count = 0;
         _voiceIndex = 0;
         _noteNumber = 0;
@@ -2614,8 +2508,6 @@ class RNBOSubpatcher_292 : public PatcherInterfaceImpl {
         number expr_02_out1;
         number dspexpr_02_in1;
         number dspexpr_02_in2;
-        number dspexpr_03_in1;
-        number dspexpr_03_in2;
         number adsr_01_trigger_number;
         number adsr_01_attack;
         number adsr_01_decay;
@@ -2624,15 +2516,9 @@ class RNBOSubpatcher_292 : public PatcherInterfaceImpl {
         number adsr_01_legato;
         number floatnum_02_input_number;
         number floatnum_02_value;
-        number dspexpr_05_in1;
-        number dspexpr_05_in2;
-        number dspexpr_06_in1;
-        number dspexpr_06_in2;
         number expr_03_in1;
         number expr_03_in2;
         number expr_03_out1;
-        number ip_02_value;
-        number ip_02_impulse;
         list join_01_in0;
         list join_01_in1;
         list join_01_in2;
@@ -2649,10 +2535,10 @@ class RNBOSubpatcher_292 : public PatcherInterfaceImpl {
         number scale_tilde_01_lowout;
         number scale_tilde_01_highout;
         number scale_tilde_01_pow;
-        number dspexpr_07_in1;
-        number dspexpr_07_in2;
-        number dspexpr_08_in1;
-        number dspexpr_08_in2;
+        number dspexpr_04_in1;
+        number dspexpr_04_in2;
+        number dspexpr_05_in1;
+        number dspexpr_05_in2;
         number midiout_01_port;
         number scale_tilde_02_x;
         number scale_tilde_02_lowin;
@@ -2662,23 +2548,23 @@ class RNBOSubpatcher_292 : public PatcherInterfaceImpl {
         number scale_tilde_02_pow;
         number poltocar_tilde_02_radius;
         number poltocar_tilde_02_angle;
-        number ip_03_value;
-        number ip_03_impulse;
+        number ip_02_value;
+        number ip_02_impulse;
         number poltocar_tilde_03_radius;
         number poltocar_tilde_03_angle;
+        number dspexpr_06_in1;
+        number dspexpr_06_in2;
+        number dspexpr_07_in1;
+        number dspexpr_08_in1;
+        number dspexpr_08_in2;
         number dspexpr_09_in1;
         number dspexpr_09_in2;
-        number dspexpr_10_in1;
-        number dspexpr_11_in1;
-        number dspexpr_11_in2;
-        number dspexpr_12_in1;
-        number dspexpr_12_in2;
         MillisecondTime _currentTime;
         SampleIndex audioProcessSampleCount;
         SampleIndex sampleOffsetIntoNextAudioBuffer;
         signal zeroBuffer;
         signal dummyBuffer;
-        SampleValue * signals[11];
+        SampleValue * signals[10];
         bool didAllocateSignals;
         Index vs;
         Index maxvs;
@@ -2731,20 +2617,15 @@ class RNBOSubpatcher_292 : public PatcherInterfaceImpl {
         signal adsr_01_triggerValueBuf;
         bool adsr_01_setupDone;
         number floatnum_02_stored;
+        int midiout_01_currentStatus;
+        int midiout_01_status;
+        int midiout_01_byte1;
+        list midiout_01_sysex;
         SampleIndex ip_02_lastIndex;
         number ip_02_lastValue;
         SampleIndex ip_02_resetCount;
         signal ip_02_sigbuf;
         bool ip_02_setupDone;
-        int midiout_01_currentStatus;
-        int midiout_01_status;
-        int midiout_01_byte1;
-        list midiout_01_sysex;
-        SampleIndex ip_03_lastIndex;
-        number ip_03_lastValue;
-        SampleIndex ip_03_resetCount;
-        signal ip_03_sigbuf;
-        bool ip_03_setupDone;
         number stackprotect_count;
         Index _voiceIndex;
         Int _noteNumber;
@@ -2845,61 +2726,56 @@ void process(
 ) {
     this->vs = n;
     this->updateTime(this->getEngine()->getCurrentTime());
-    const SampleValue * Phase = (numInputs >= 1 && inputs[0] ? inputs[0] : this->zeroBuffer);
-    const SampleValue * Gain = (numInputs >= 2 && inputs[1] ? inputs[1] : this->zeroBuffer);
-    const SampleValue * Release = (numInputs >= 3 && inputs[2] ? inputs[2] : this->zeroBuffer);
-    const SampleValue * Sustain = (numInputs >= 4 && inputs[3] ? inputs[3] : this->zeroBuffer);
-    const SampleValue * Decay = (numInputs >= 5 && inputs[4] ? inputs[4] : this->zeroBuffer);
-    const SampleValue * Attack = (numInputs >= 6 && inputs[5] ? inputs[5] : this->zeroBuffer);
-    const SampleValue * Ramp = (numInputs >= 7 && inputs[6] ? inputs[6] : this->zeroBuffer);
-    const SampleValue * Rotation = (numInputs >= 8 && inputs[7] ? inputs[7] : this->zeroBuffer);
-    const SampleValue * Multiplier = (numInputs >= 9 && inputs[8] ? inputs[8] : this->zeroBuffer);
-    const SampleValue * Points = (numInputs >= 10 && inputs[9] ? inputs[9] : this->zeroBuffer);
+    const SampleValue * Gain = (numInputs >= 1 && inputs[0] ? inputs[0] : this->zeroBuffer);
+    const SampleValue * Release = (numInputs >= 2 && inputs[1] ? inputs[1] : this->zeroBuffer);
+    const SampleValue * Sustain = (numInputs >= 3 && inputs[2] ? inputs[2] : this->zeroBuffer);
+    const SampleValue * Decay = (numInputs >= 4 && inputs[3] ? inputs[3] : this->zeroBuffer);
+    const SampleValue * Attack = (numInputs >= 5 && inputs[4] ? inputs[4] : this->zeroBuffer);
+    const SampleValue * Ramp = (numInputs >= 6 && inputs[5] ? inputs[5] : this->zeroBuffer);
+    const SampleValue * Rotation = (numInputs >= 7 && inputs[6] ? inputs[6] : this->zeroBuffer);
+    const SampleValue * Multiplier = (numInputs >= 8 && inputs[7] ? inputs[7] : this->zeroBuffer);
+    const SampleValue * Points = (numInputs >= 9 && inputs[8] ? inputs[8] : this->zeroBuffer);
     SampleValue * out1 = (numOutputs >= 1 && outputs[0] ? outputs[0] : this->dummyBuffer);
     SampleValue * out2 = (numOutputs >= 2 && outputs[1] ? outputs[1] : this->dummyBuffer);
-    this->paramtilde_01_perform(Phase, this->signals[0], n);
-    this->dspexpr_13_perform(this->signals[0], this->dspexpr_13_in2, this->signals[1], n);
-    this->signalsend_01_perform(this->signals[1], this->signals[0], n);
-    this->paramtilde_02_perform(Gain, this->signals[1], n);
-    this->dspexpr_14_perform(this->signals[1], this->signals[2], n);
-    this->paramtilde_03_perform(Release, this->signals[1], n);
-    this->signalsend_06_perform(this->signals[1], this->signals[3], n);
-    this->paramtilde_04_perform(Sustain, this->signals[1], n);
-    this->dspexpr_15_perform(this->signals[1], this->signals[4], n);
-    this->dspexpr_18_perform(this->signals[4], this->dspexpr_18_in2, this->signals[1], n);
-    this->signalsend_03_perform(this->signals[1], this->signals[4], n);
-    this->paramtilde_05_perform(Decay, this->signals[1], n);
-    this->signalsend_04_perform(this->signals[1], this->signals[5], n);
-    this->paramtilde_06_perform(Attack, this->signals[1], n);
-    this->signalsend_05_perform(this->signals[1], this->signals[6], n);
-    this->paramtilde_07_perform(Ramp, this->signals[1], n);
-    this->dspexpr_16_perform(this->signals[1], this->dspexpr_16_in2, this->signals[7], n);
-    this->signalsend_02_perform(this->signals[7], this->signals[1], n);
-    this->paramtilde_08_perform(Rotation, this->signals[7], n);
-    this->dspexpr_20_perform(this->signals[7], this->signals[8], n);
-    this->signalsend_09_perform(this->signals[8], this->signals[7], n);
-    this->paramtilde_09_perform(Multiplier, this->signals[8], n);
-    this->signalsend_07_perform(this->signals[8], this->signals[9], n);
-    this->paramtilde_10_perform(Points, this->signals[8], n);
-    this->signalsend_08_perform(this->signals[8], this->signals[10], n);
+    this->paramtilde_01_perform(Gain, this->signals[0], n);
+    this->dspexpr_10_perform(this->signals[0], this->signals[1], n);
+    this->paramtilde_02_perform(Release, this->signals[0], n);
+    this->signalsend_05_perform(this->signals[0], this->signals[2], n);
+    this->paramtilde_03_perform(Sustain, this->signals[0], n);
+    this->dspexpr_11_perform(this->signals[0], this->signals[3], n);
+    this->dspexpr_14_perform(this->signals[3], this->dspexpr_14_in2, this->signals[0], n);
+    this->signalsend_02_perform(this->signals[0], this->signals[3], n);
+    this->paramtilde_04_perform(Decay, this->signals[0], n);
+    this->signalsend_03_perform(this->signals[0], this->signals[4], n);
+    this->paramtilde_05_perform(Attack, this->signals[0], n);
+    this->signalsend_04_perform(this->signals[0], this->signals[5], n);
+    this->paramtilde_06_perform(Ramp, this->signals[0], n);
+    this->dspexpr_12_perform(this->signals[0], this->dspexpr_12_in2, this->signals[6], n);
+    this->signalsend_01_perform(this->signals[6], this->signals[0], n);
+    this->paramtilde_07_perform(Rotation, this->signals[6], n);
+    this->dspexpr_16_perform(this->signals[6], this->signals[7], n);
+    this->signalsend_08_perform(this->signals[7], this->signals[6], n);
+    this->paramtilde_08_perform(Multiplier, this->signals[7], n);
+    this->signalsend_06_perform(this->signals[7], this->signals[8], n);
+    this->paramtilde_09_perform(Points, this->signals[7], n);
+    this->signalsend_07_perform(this->signals[7], this->signals[9], n);
 
     this->p_01_perform(
-        this->signals[1],
-        this->signals[7],
-        this->signals[6],
         this->signals[0],
+        this->signals[6],
         this->signals[5],
         this->signals[4],
         this->signals[3],
-        this->signals[10],
+        this->signals[2],
         this->signals[9],
         this->signals[8],
-        this->signals[11],
+        this->signals[7],
+        this->signals[10],
         n
     );
 
-    this->dspexpr_17_perform(this->signals[8], this->signals[2], out1, n);
-    this->dspexpr_19_perform(this->signals[11], this->signals[2], out2, n);
+    this->dspexpr_13_perform(this->signals[7], this->signals[1], out1, n);
+    this->dspexpr_15_perform(this->signals[10], this->signals[1], out2, n);
     this->stackprotect_perform(n);
     this->globaltransport_advance();
     this->audioProcessSampleCount += this->vs;
@@ -2909,7 +2785,7 @@ void prepareToProcess(number sampleRate, Index maxBlockSize, bool force) {
     if (this->maxvs < maxBlockSize || !this->didAllocateSignals) {
         Index i;
 
-        for (i = 0; i < 12; i++) {
+        for (i = 0; i < 11; i++) {
             this->signals[i] = resizeSignal(this->signals[i], this->maxvs, maxBlockSize);
         }
 
@@ -2922,7 +2798,6 @@ void prepareToProcess(number sampleRate, Index maxBlockSize, bool force) {
         this->paramtilde_07_sigbuf = resizeSignal(this->paramtilde_07_sigbuf, this->maxvs, maxBlockSize);
         this->paramtilde_08_sigbuf = resizeSignal(this->paramtilde_08_sigbuf, this->maxvs, maxBlockSize);
         this->paramtilde_09_sigbuf = resizeSignal(this->paramtilde_09_sigbuf, this->maxvs, maxBlockSize);
-        this->paramtilde_10_sigbuf = resizeSignal(this->paramtilde_10_sigbuf, this->maxvs, maxBlockSize);
         this->globaltransport_tempo = resizeSignal(this->globaltransport_tempo, this->maxvs, maxBlockSize);
         this->globaltransport_state = resizeSignal(this->globaltransport_state, this->maxvs, maxBlockSize);
         this->zeroBuffer = resizeSignal(this->zeroBuffer, this->maxvs, maxBlockSize);
@@ -2950,7 +2825,6 @@ void prepareToProcess(number sampleRate, Index maxBlockSize, bool force) {
     this->paramtilde_07_dspsetup(forceDSPSetup);
     this->paramtilde_08_dspsetup(forceDSPSetup);
     this->paramtilde_09_dspsetup(forceDSPSetup);
-    this->paramtilde_10_dspsetup(forceDSPSetup);
     this->globaltransport_dspsetup(forceDSPSetup);
 
     for (Index i = 0; i < 32; i++) {
@@ -3049,7 +2923,7 @@ void getState(PatcherStateInterface& ) {}
 
 void setState() {
     for (Index i = 0; i < 32; i++) {
-        this->p_01[(Index)i] = new RNBOSubpatcher_292();
+        this->p_01[(Index)i] = new RNBOSubpatcher_14();
         this->p_01[(Index)i]->setEngineAndPatcher(this->getEngine(), this);
         this->p_01[(Index)i]->initialize();
         this->p_01[(Index)i]->setParameterOffset(this->getParameterOffset(this->p_01[0]));
@@ -3168,62 +3042,52 @@ void setParameterValue(ParameterIndex index, ParameterValue v, MillisecondTime t
         }
     case 10:
         {
-        this->paramtilde_10_value_set(v);
+        // namedAudioIn: Gain
         break;
         }
     case 11:
         {
-        // namedAudioIn: Phase
+        // namedAudioIn: Release
         break;
         }
     case 12:
         {
-        // namedAudioIn: Gain
+        // namedAudioIn: Sustain
         break;
         }
     case 13:
         {
-        // namedAudioIn: Release
+        // namedAudioIn: Decay
         break;
         }
     case 14:
         {
-        // namedAudioIn: Sustain
+        // namedAudioIn: Attack
         break;
         }
     case 15:
         {
-        // namedAudioIn: Decay
+        // namedAudioIn: Ramp
         break;
         }
     case 16:
         {
-        // namedAudioIn: Attack
+        // namedAudioIn: Rotation
         break;
         }
     case 17:
         {
-        // namedAudioIn: Ramp
-        break;
-        }
-    case 18:
-        {
-        // namedAudioIn: Rotation
-        break;
-        }
-    case 19:
-        {
         // namedAudioIn: Multiplier
         break;
         }
-    case 20:
+    case 18:
         {
         // namedAudioIn: Points
         break;
         }
     default:
         {
-        index -= 21;
+        index -= 19;
 
         if (index < this->p_01[0]->getNumParameters())
             this->p_01[0]->setPolyParameterValue((PatcherInterface**)this->p_01, index, v, time);
@@ -3285,61 +3149,52 @@ ParameterValue getParameterValue(ParameterIndex index)  {
         }
     case 10:
         {
-        return this->paramtilde_10_value;
-        }
-    case 11:
-        {
-        // namedAudioIn: Phase
-        return 0;
-        }
-    case 12:
-        {
         // namedAudioIn: Gain
         return 0;
         }
-    case 13:
+    case 11:
         {
         // namedAudioIn: Release
         return 0;
         }
-    case 14:
+    case 12:
         {
         // namedAudioIn: Sustain
         return 0;
         }
-    case 15:
+    case 13:
         {
         // namedAudioIn: Decay
         return 0;
         }
-    case 16:
+    case 14:
         {
         // namedAudioIn: Attack
         return 0;
         }
-    case 17:
+    case 15:
         {
         // namedAudioIn: Ramp
         return 0;
         }
-    case 18:
+    case 16:
         {
         // namedAudioIn: Rotation
         return 0;
         }
-    case 19:
+    case 17:
         {
         // namedAudioIn: Multiplier
         return 0;
         }
-    case 20:
+    case 18:
         {
         // namedAudioIn: Points
         return 0;
         }
     default:
         {
-        index -= 21;
+        index -= 19;
 
         if (index < this->p_01[0]->getNumParameters())
             return this->p_01[0]->getPolyParameterValue((PatcherInterface**)this->p_01, index);
@@ -3350,7 +3205,7 @@ ParameterValue getParameterValue(ParameterIndex index)  {
 }
 
 ParameterIndex getNumSignalInParameters() const {
-    return 10;
+    return 9;
 }
 
 ParameterIndex getNumSignalOutParameters() const {
@@ -3358,7 +3213,7 @@ ParameterIndex getNumSignalOutParameters() const {
 }
 
 ParameterIndex getNumParameters() const {
-    return 21 + this->p_01[0]->getNumParameters();
+    return 19 + this->p_01[0]->getNumParameters();
 }
 
 ConstCharPointer getParameterName(ParameterIndex index) const {
@@ -3369,87 +3224,79 @@ ConstCharPointer getParameterName(ParameterIndex index) const {
         }
     case 1:
         {
-        return "Phase";
+        return "Gain";
         }
     case 2:
         {
-        return "Gain";
+        return "Release";
         }
     case 3:
         {
-        return "Release";
+        return "Sustain";
         }
     case 4:
         {
-        return "Sustain";
+        return "Decay";
         }
     case 5:
         {
-        return "Decay";
+        return "Attack";
         }
     case 6:
         {
-        return "Attack";
+        return "Ramp";
         }
     case 7:
         {
-        return "Ramp";
+        return "Rotation";
         }
     case 8:
         {
-        return "Rotation";
+        return "Multiplier";
         }
     case 9:
         {
-        return "Multiplier";
+        return "Points";
         }
     case 10:
         {
-        return "Points";
+        return "Gain";
         }
     case 11:
         {
-        return "Phase";
+        return "Release";
         }
     case 12:
         {
-        return "Gain";
+        return "Sustain";
         }
     case 13:
         {
-        return "Release";
+        return "Decay";
         }
     case 14:
         {
-        return "Sustain";
+        return "Attack";
         }
     case 15:
         {
-        return "Decay";
+        return "Ramp";
         }
     case 16:
         {
-        return "Attack";
+        return "Rotation";
         }
     case 17:
         {
-        return "Ramp";
-        }
-    case 18:
-        {
-        return "Rotation";
-        }
-    case 19:
-        {
         return "Multiplier";
         }
-    case 20:
+    case 18:
         {
         return "Points";
         }
     default:
         {
-        index -= 21;
+        index -= 19;
 
         if (index < this->p_01[0]->getNumParameters()) {
             {
@@ -3470,87 +3317,79 @@ ConstCharPointer getParameterId(ParameterIndex index) const {
         }
     case 1:
         {
-        return "Phase";
+        return "Gain";
         }
     case 2:
         {
-        return "Gain";
+        return "Release";
         }
     case 3:
         {
-        return "Release";
+        return "Sustain";
         }
     case 4:
         {
-        return "Sustain";
+        return "Decay";
         }
     case 5:
         {
-        return "Decay";
+        return "Attack";
         }
     case 6:
         {
-        return "Attack";
+        return "Ramp";
         }
     case 7:
         {
-        return "Ramp";
+        return "Rotation";
         }
     case 8:
         {
-        return "Rotation";
+        return "Multiplier";
         }
     case 9:
         {
-        return "Multiplier";
+        return "Points";
         }
     case 10:
         {
-        return "Points";
+        return "/signals/Gain";
         }
     case 11:
         {
-        return "/signals/Phase";
+        return "/signals/Release";
         }
     case 12:
         {
-        return "/signals/Gain";
+        return "/signals/Sustain";
         }
     case 13:
         {
-        return "/signals/Release";
+        return "/signals/Decay";
         }
     case 14:
         {
-        return "/signals/Sustain";
+        return "/signals/Attack";
         }
     case 15:
         {
-        return "/signals/Decay";
+        return "/signals/Ramp";
         }
     case 16:
         {
-        return "/signals/Attack";
+        return "/signals/Rotation";
         }
     case 17:
         {
-        return "/signals/Ramp";
-        }
-    case 18:
-        {
-        return "/signals/Rotation";
-        }
-    case 19:
-        {
         return "/signals/Multiplier";
         }
-    case 20:
+    case 18:
         {
         return "/signals/Points";
         }
     default:
         {
-        index -= 21;
+        index -= 19;
 
         if (index < this->p_01[0]->getNumParameters()) {
             {
@@ -3589,25 +3428,6 @@ void getParameterInfo(ParameterIndex index, ParameterInfo * info) const {
             {
             info->type = ParameterTypeNumber;
             info->initialValue = 0;
-            info->min = 0;
-            info->max = 360;
-            info->exponent = 1;
-            info->steps = 0;
-            info->debug = false;
-            info->saveable = true;
-            info->transmittable = true;
-            info->initialized = true;
-            info->visible = true;
-            info->displayName = "";
-            info->unit = "";
-            info->ioType = IOTypeUndefined;
-            info->signalIndex = INVALID_INDEX;
-            break;
-            }
-        case 2:
-            {
-            info->type = ParameterTypeNumber;
-            info->initialValue = 0;
             info->min = -70;
             info->max = 6;
             info->exponent = 1;
@@ -3623,7 +3443,7 @@ void getParameterInfo(ParameterIndex index, ParameterInfo * info) const {
             info->signalIndex = INVALID_INDEX;
             break;
             }
-        case 3:
+        case 2:
             {
             info->type = ParameterTypeNumber;
             info->initialValue = 10;
@@ -3642,12 +3462,31 @@ void getParameterInfo(ParameterIndex index, ParameterInfo * info) const {
             info->signalIndex = INVALID_INDEX;
             break;
             }
-        case 4:
+        case 3:
             {
             info->type = ParameterTypeNumber;
             info->initialValue = 0;
             info->min = -70;
             info->max = 0;
+            info->exponent = 1;
+            info->steps = 0;
+            info->debug = false;
+            info->saveable = true;
+            info->transmittable = true;
+            info->initialized = true;
+            info->visible = true;
+            info->displayName = "";
+            info->unit = "";
+            info->ioType = IOTypeUndefined;
+            info->signalIndex = INVALID_INDEX;
+            break;
+            }
+        case 4:
+            {
+            info->type = ParameterTypeNumber;
+            info->initialValue = 10;
+            info->min = 0;
+            info->max = 1000;
             info->exponent = 1;
             info->steps = 0;
             info->debug = false;
@@ -3683,25 +3522,6 @@ void getParameterInfo(ParameterIndex index, ParameterInfo * info) const {
         case 6:
             {
             info->type = ParameterTypeNumber;
-            info->initialValue = 10;
-            info->min = 0;
-            info->max = 1000;
-            info->exponent = 1;
-            info->steps = 0;
-            info->debug = false;
-            info->saveable = true;
-            info->transmittable = true;
-            info->initialized = true;
-            info->visible = true;
-            info->displayName = "";
-            info->unit = "";
-            info->ioType = IOTypeUndefined;
-            info->signalIndex = INVALID_INDEX;
-            break;
-            }
-        case 7:
-            {
-            info->type = ParameterTypeNumber;
             info->initialValue = 100;
             info->min = 0;
             info->max = 100;
@@ -3718,7 +3538,7 @@ void getParameterInfo(ParameterIndex index, ParameterInfo * info) const {
             info->signalIndex = INVALID_INDEX;
             break;
             }
-        case 8:
+        case 7:
             {
             info->type = ParameterTypeNumber;
             info->initialValue = 0;
@@ -3737,7 +3557,7 @@ void getParameterInfo(ParameterIndex index, ParameterInfo * info) const {
             info->signalIndex = INVALID_INDEX;
             break;
             }
-        case 9:
+        case 8:
             {
             info->type = ParameterTypeNumber;
             info->initialValue = 2;
@@ -3756,7 +3576,7 @@ void getParameterInfo(ParameterIndex index, ParameterInfo * info) const {
             info->signalIndex = INVALID_INDEX;
             break;
             }
-        case 10:
+        case 9:
             {
             info->type = ParameterTypeNumber;
             info->initialValue = 21;
@@ -3775,7 +3595,7 @@ void getParameterInfo(ParameterIndex index, ParameterInfo * info) const {
             info->signalIndex = INVALID_INDEX;
             break;
             }
-        case 11:
+        case 10:
             {
             info->type = ParameterTypeSignal;
             info->initialValue = 0;
@@ -3794,7 +3614,7 @@ void getParameterInfo(ParameterIndex index, ParameterInfo * info) const {
             info->signalIndex = 0;
             break;
             }
-        case 12:
+        case 11:
             {
             info->type = ParameterTypeSignal;
             info->initialValue = 0;
@@ -3813,7 +3633,7 @@ void getParameterInfo(ParameterIndex index, ParameterInfo * info) const {
             info->signalIndex = 1;
             break;
             }
-        case 13:
+        case 12:
             {
             info->type = ParameterTypeSignal;
             info->initialValue = 0;
@@ -3832,7 +3652,7 @@ void getParameterInfo(ParameterIndex index, ParameterInfo * info) const {
             info->signalIndex = 2;
             break;
             }
-        case 14:
+        case 13:
             {
             info->type = ParameterTypeSignal;
             info->initialValue = 0;
@@ -3851,7 +3671,7 @@ void getParameterInfo(ParameterIndex index, ParameterInfo * info) const {
             info->signalIndex = 3;
             break;
             }
-        case 15:
+        case 14:
             {
             info->type = ParameterTypeSignal;
             info->initialValue = 0;
@@ -3870,7 +3690,7 @@ void getParameterInfo(ParameterIndex index, ParameterInfo * info) const {
             info->signalIndex = 4;
             break;
             }
-        case 16:
+        case 15:
             {
             info->type = ParameterTypeSignal;
             info->initialValue = 0;
@@ -3889,7 +3709,7 @@ void getParameterInfo(ParameterIndex index, ParameterInfo * info) const {
             info->signalIndex = 5;
             break;
             }
-        case 17:
+        case 16:
             {
             info->type = ParameterTypeSignal;
             info->initialValue = 0;
@@ -3908,7 +3728,7 @@ void getParameterInfo(ParameterIndex index, ParameterInfo * info) const {
             info->signalIndex = 6;
             break;
             }
-        case 18:
+        case 17:
             {
             info->type = ParameterTypeSignal;
             info->initialValue = 0;
@@ -3927,7 +3747,7 @@ void getParameterInfo(ParameterIndex index, ParameterInfo * info) const {
             info->signalIndex = 7;
             break;
             }
-        case 19:
+        case 18:
             {
             info->type = ParameterTypeSignal;
             info->initialValue = 0;
@@ -3946,28 +3766,9 @@ void getParameterInfo(ParameterIndex index, ParameterInfo * info) const {
             info->signalIndex = 8;
             break;
             }
-        case 20:
-            {
-            info->type = ParameterTypeSignal;
-            info->initialValue = 0;
-            info->min = 0;
-            info->max = 1;
-            info->exponent = 1;
-            info->steps = 0;
-            info->debug = false;
-            info->saveable = false;
-            info->transmittable = false;
-            info->initialized = false;
-            info->visible = false;
-            info->displayName = "";
-            info->unit = "";
-            info->ioType = IOTypeInput;
-            info->signalIndex = 9;
-            break;
-            }
         default:
             {
-            index -= 21;
+            index -= 19;
 
             if (index < this->p_01[0]->getNumParameters()) {
                 for (Index i = 0; i < 32; i++) {
@@ -3987,7 +3788,7 @@ void sendParameter(ParameterIndex index, bool ignoreValue) {
 
 ParameterIndex getParameterOffset(BaseInterface* subpatcher) const {
     if (subpatcher == this->p_01[0])
-        return 21;
+        return 19;
 
     return 0;
 }
@@ -4008,7 +3809,7 @@ ParameterValue applyStepsToNormalizedParameterValue(ParameterValue normalizedVal
 
 ParameterValue convertToNormalizedParameterValue(ParameterIndex index, ParameterValue value) const {
     switch (index) {
-    case 7:
+    case 6:
         {
         {
             value = (value < 0 ? 0 : (value > 100 ? 100 : value));
@@ -4016,17 +3817,9 @@ ParameterValue convertToNormalizedParameterValue(ParameterIndex index, Parameter
             return normalizedValue;
         }
         }
-    case 1:
-        {
-        {
-            value = (value < 0 ? 0 : (value > 360 ? 360 : value));
-            ParameterValue normalizedValue = (value - 0) / (360 - 0);
-            return normalizedValue;
-        }
-        }
-    case 3:
+    case 2:
+    case 4:
     case 5:
-    case 6:
         {
         {
             value = (value < 0 ? 0 : (value > 1000 ? 1000 : value));
@@ -4047,7 +3840,7 @@ ParameterValue convertToNormalizedParameterValue(ParameterIndex index, Parameter
             return normalizedValue;
         }
         }
-    case 10:
+    case 9:
         {
         {
             value = (value < 1 ? 1 : (value > 128 ? 128 : value));
@@ -4055,7 +3848,7 @@ ParameterValue convertToNormalizedParameterValue(ParameterIndex index, Parameter
             return normalizedValue;
         }
         }
-    case 4:
+    case 3:
         {
         {
             value = (value < -70 ? -70 : (value > 0 ? 0 : value));
@@ -4063,7 +3856,7 @@ ParameterValue convertToNormalizedParameterValue(ParameterIndex index, Parameter
             return normalizedValue;
         }
         }
-    case 2:
+    case 1:
         {
         {
             value = (value < -70 ? -70 : (value > 6 ? 6 : value));
@@ -4071,7 +3864,7 @@ ParameterValue convertToNormalizedParameterValue(ParameterIndex index, Parameter
             return normalizedValue;
         }
         }
-    case 8:
+    case 7:
         {
         {
             value = (value < -180 ? -180 : (value > 180 ? 180 : value));
@@ -4079,7 +3872,7 @@ ParameterValue convertToNormalizedParameterValue(ParameterIndex index, Parameter
             return normalizedValue;
         }
         }
-    case 9:
+    case 8:
         {
         {
             value = (value < -64 ? -64 : (value > 64 ? 64 : value));
@@ -4089,7 +3882,7 @@ ParameterValue convertToNormalizedParameterValue(ParameterIndex index, Parameter
         }
     default:
         {
-        index -= 21;
+        index -= 19;
 
         if (index < this->p_01[0]->getNumParameters()) {
             {
@@ -4106,7 +3899,7 @@ ParameterValue convertFromNormalizedParameterValue(ParameterIndex index, Paramet
     value = (value < 0 ? 0 : (value > 1 ? 1 : value));
 
     switch (index) {
-    case 7:
+    case 6:
         {
         {
             value = (value < 0 ? 0 : (value > 1 ? 1 : value));
@@ -4116,19 +3909,9 @@ ParameterValue convertFromNormalizedParameterValue(ParameterIndex index, Paramet
             }
         }
         }
-    case 1:
-        {
-        {
-            value = (value < 0 ? 0 : (value > 1 ? 1 : value));
-
-            {
-                return 0 + value * (360 - 0);
-            }
-        }
-        }
-    case 3:
+    case 2:
+    case 4:
     case 5:
-    case 6:
         {
         {
             value = (value < 0 ? 0 : (value > 1 ? 1 : value));
@@ -4152,7 +3935,7 @@ ParameterValue convertFromNormalizedParameterValue(ParameterIndex index, Paramet
             }
         }
         }
-    case 10:
+    case 9:
         {
         {
             value = (value < 0 ? 0 : (value > 1 ? 1 : value));
@@ -4162,7 +3945,7 @@ ParameterValue convertFromNormalizedParameterValue(ParameterIndex index, Paramet
             }
         }
         }
-    case 4:
+    case 3:
         {
         {
             value = (value < 0 ? 0 : (value > 1 ? 1 : value));
@@ -4172,7 +3955,7 @@ ParameterValue convertFromNormalizedParameterValue(ParameterIndex index, Paramet
             }
         }
         }
-    case 2:
+    case 1:
         {
         {
             value = (value < 0 ? 0 : (value > 1 ? 1 : value));
@@ -4182,7 +3965,7 @@ ParameterValue convertFromNormalizedParameterValue(ParameterIndex index, Paramet
             }
         }
         }
-    case 8:
+    case 7:
         {
         {
             value = (value < 0 ? 0 : (value > 1 ? 1 : value));
@@ -4192,7 +3975,7 @@ ParameterValue convertFromNormalizedParameterValue(ParameterIndex index, Paramet
             }
         }
         }
-    case 9:
+    case 8:
         {
         {
             value = (value < 0 ? 0 : (value > 1 ? 1 : value));
@@ -4204,7 +3987,7 @@ ParameterValue convertFromNormalizedParameterValue(ParameterIndex index, Paramet
         }
     default:
         {
-        index -= 21;
+        index -= 19;
 
         if (index < this->p_01[0]->getNumParameters()) {
             {
@@ -4225,7 +4008,7 @@ ParameterValue constrainParameterValue(ParameterIndex index, ParameterValue valu
         }
     default:
         {
-        index -= 21;
+        index -= 19;
 
         if (index < this->p_01[0]->getNumParameters()) {
             {
@@ -4484,20 +4267,6 @@ void paramtilde_09_value_set(number v) {
         for (SampleIndex i = (SampleIndex)(this->paramtilde_09_lastIndex); i < k; i++) {
             this->paramtilde_09_sigbuf[(Index)i] = v;
             this->paramtilde_09_lastIndex = k;
-        }
-    }
-}
-
-void paramtilde_10_value_set(number v) {
-    this->paramtilde_10_value_setter(v);
-    v = this->paramtilde_10_value;
-    this->sendParameter(10, false);
-    SampleIndex k = (SampleIndex)(this->sampleOffsetIntoNextAudioBuffer);
-
-    if ((bool)(this->paramtilde_10_sigbuf)) {
-        for (SampleIndex i = (SampleIndex)(this->paramtilde_10_lastIndex); i < k; i++) {
-            this->paramtilde_10_sigbuf[(Index)i] = v;
-            this->paramtilde_10_lastIndex = k;
         }
     }
 }
@@ -5119,16 +4888,16 @@ void p_01_midiout_set(number v) {
     this->midiout_02_midiin_set(v);
 }
 
-void paramtilde_01_perform(const SampleValue * Phase, SampleValue * out, Index n) {
+void paramtilde_01_perform(const SampleValue * Gain, SampleValue * out, Index n) {
     auto __paramtilde_01_sigbuf = this->paramtilde_01_sigbuf;
     auto __paramtilde_01_value = this->paramtilde_01_value;
     auto __paramtilde_01_lastIndex = this->paramtilde_01_lastIndex;
 
     for (Index i = 0; i < n; i++) {
         if (i >= __paramtilde_01_lastIndex) {
-            out[(Index)i] = Phase[(Index)i] + __paramtilde_01_value;
+            out[(Index)i] = Gain[(Index)i] + __paramtilde_01_value;
         } else {
-            out[(Index)i] = Phase[(Index)i] + __paramtilde_01_sigbuf[(Index)i];
+            out[(Index)i] = Gain[(Index)i] + __paramtilde_01_sigbuf[(Index)i];
         }
     }
 
@@ -5136,31 +4905,24 @@ void paramtilde_01_perform(const SampleValue * Phase, SampleValue * out, Index n
     this->paramtilde_01_lastIndex = __paramtilde_01_lastIndex;
 }
 
-void dspexpr_13_perform(const Sample * in1, number in2, SampleValue * out1, Index n) {
-    RNBO_UNUSED(in2);
+void dspexpr_10_perform(const Sample * in1, SampleValue * out1, Index n) {
     Index i;
 
     for (i = 0; i < n; i++) {
-        out1[(Index)i] = in1[(Index)i] / (number)360;//#map:_###_obj_###_:1
+        out1[(Index)i] = rnbo_pow(10, in1[(Index)i] * 0.05);//#map:_###_obj_###_:1
     }
 }
 
-void signalsend_01_perform(const SampleValue * input, SampleValue * send, Index n) {
-    for (Index i = 0; i < n; i++) {
-        send[(Index)i] = input[(Index)i];
-    }
-}
-
-void paramtilde_02_perform(const SampleValue * Gain, SampleValue * out, Index n) {
+void paramtilde_02_perform(const SampleValue * Release, SampleValue * out, Index n) {
     auto __paramtilde_02_sigbuf = this->paramtilde_02_sigbuf;
     auto __paramtilde_02_value = this->paramtilde_02_value;
     auto __paramtilde_02_lastIndex = this->paramtilde_02_lastIndex;
 
     for (Index i = 0; i < n; i++) {
         if (i >= __paramtilde_02_lastIndex) {
-            out[(Index)i] = Gain[(Index)i] + __paramtilde_02_value;
+            out[(Index)i] = Release[(Index)i] + __paramtilde_02_value;
         } else {
-            out[(Index)i] = Gain[(Index)i] + __paramtilde_02_sigbuf[(Index)i];
+            out[(Index)i] = Release[(Index)i] + __paramtilde_02_sigbuf[(Index)i];
         }
     }
 
@@ -5168,24 +4930,22 @@ void paramtilde_02_perform(const SampleValue * Gain, SampleValue * out, Index n)
     this->paramtilde_02_lastIndex = __paramtilde_02_lastIndex;
 }
 
-void dspexpr_14_perform(const Sample * in1, SampleValue * out1, Index n) {
-    Index i;
-
-    for (i = 0; i < n; i++) {
-        out1[(Index)i] = rnbo_pow(10, in1[(Index)i] * 0.05);//#map:_###_obj_###_:1
+void signalsend_05_perform(const SampleValue * input, SampleValue * send, Index n) {
+    for (Index i = 0; i < n; i++) {
+        send[(Index)i] = input[(Index)i];
     }
 }
 
-void paramtilde_03_perform(const SampleValue * Release, SampleValue * out, Index n) {
+void paramtilde_03_perform(const SampleValue * Sustain, SampleValue * out, Index n) {
     auto __paramtilde_03_sigbuf = this->paramtilde_03_sigbuf;
     auto __paramtilde_03_value = this->paramtilde_03_value;
     auto __paramtilde_03_lastIndex = this->paramtilde_03_lastIndex;
 
     for (Index i = 0; i < n; i++) {
         if (i >= __paramtilde_03_lastIndex) {
-            out[(Index)i] = Release[(Index)i] + __paramtilde_03_value;
+            out[(Index)i] = Sustain[(Index)i] + __paramtilde_03_value;
         } else {
-            out[(Index)i] = Release[(Index)i] + __paramtilde_03_sigbuf[(Index)i];
+            out[(Index)i] = Sustain[(Index)i] + __paramtilde_03_sigbuf[(Index)i];
         }
     }
 
@@ -5193,30 +4953,7 @@ void paramtilde_03_perform(const SampleValue * Release, SampleValue * out, Index
     this->paramtilde_03_lastIndex = __paramtilde_03_lastIndex;
 }
 
-void signalsend_06_perform(const SampleValue * input, SampleValue * send, Index n) {
-    for (Index i = 0; i < n; i++) {
-        send[(Index)i] = input[(Index)i];
-    }
-}
-
-void paramtilde_04_perform(const SampleValue * Sustain, SampleValue * out, Index n) {
-    auto __paramtilde_04_sigbuf = this->paramtilde_04_sigbuf;
-    auto __paramtilde_04_value = this->paramtilde_04_value;
-    auto __paramtilde_04_lastIndex = this->paramtilde_04_lastIndex;
-
-    for (Index i = 0; i < n; i++) {
-        if (i >= __paramtilde_04_lastIndex) {
-            out[(Index)i] = Sustain[(Index)i] + __paramtilde_04_value;
-        } else {
-            out[(Index)i] = Sustain[(Index)i] + __paramtilde_04_sigbuf[(Index)i];
-        }
-    }
-
-    __paramtilde_04_lastIndex = 0;
-    this->paramtilde_04_lastIndex = __paramtilde_04_lastIndex;
-}
-
-void dspexpr_15_perform(const Sample * in1, SampleValue * out1, Index n) {
+void dspexpr_11_perform(const Sample * in1, SampleValue * out1, Index n) {
     Index i;
 
     for (i = 0; i < n; i++) {
@@ -5224,7 +4961,7 @@ void dspexpr_15_perform(const Sample * in1, SampleValue * out1, Index n) {
     }
 }
 
-void dspexpr_18_perform(const Sample * in1, number in2, SampleValue * out1, Index n) {
+void dspexpr_14_perform(const Sample * in1, number in2, SampleValue * out1, Index n) {
     RNBO_UNUSED(in2);
     Index i;
 
@@ -5233,22 +4970,45 @@ void dspexpr_18_perform(const Sample * in1, number in2, SampleValue * out1, Inde
     }
 }
 
+void signalsend_02_perform(const SampleValue * input, SampleValue * send, Index n) {
+    for (Index i = 0; i < n; i++) {
+        send[(Index)i] = input[(Index)i];
+    }
+}
+
+void paramtilde_04_perform(const SampleValue * Decay, SampleValue * out, Index n) {
+    auto __paramtilde_04_sigbuf = this->paramtilde_04_sigbuf;
+    auto __paramtilde_04_value = this->paramtilde_04_value;
+    auto __paramtilde_04_lastIndex = this->paramtilde_04_lastIndex;
+
+    for (Index i = 0; i < n; i++) {
+        if (i >= __paramtilde_04_lastIndex) {
+            out[(Index)i] = Decay[(Index)i] + __paramtilde_04_value;
+        } else {
+            out[(Index)i] = Decay[(Index)i] + __paramtilde_04_sigbuf[(Index)i];
+        }
+    }
+
+    __paramtilde_04_lastIndex = 0;
+    this->paramtilde_04_lastIndex = __paramtilde_04_lastIndex;
+}
+
 void signalsend_03_perform(const SampleValue * input, SampleValue * send, Index n) {
     for (Index i = 0; i < n; i++) {
         send[(Index)i] = input[(Index)i];
     }
 }
 
-void paramtilde_05_perform(const SampleValue * Decay, SampleValue * out, Index n) {
+void paramtilde_05_perform(const SampleValue * Attack, SampleValue * out, Index n) {
     auto __paramtilde_05_sigbuf = this->paramtilde_05_sigbuf;
     auto __paramtilde_05_value = this->paramtilde_05_value;
     auto __paramtilde_05_lastIndex = this->paramtilde_05_lastIndex;
 
     for (Index i = 0; i < n; i++) {
         if (i >= __paramtilde_05_lastIndex) {
-            out[(Index)i] = Decay[(Index)i] + __paramtilde_05_value;
+            out[(Index)i] = Attack[(Index)i] + __paramtilde_05_value;
         } else {
-            out[(Index)i] = Decay[(Index)i] + __paramtilde_05_sigbuf[(Index)i];
+            out[(Index)i] = Attack[(Index)i] + __paramtilde_05_sigbuf[(Index)i];
         }
     }
 
@@ -5262,16 +5022,16 @@ void signalsend_04_perform(const SampleValue * input, SampleValue * send, Index 
     }
 }
 
-void paramtilde_06_perform(const SampleValue * Attack, SampleValue * out, Index n) {
+void paramtilde_06_perform(const SampleValue * Ramp, SampleValue * out, Index n) {
     auto __paramtilde_06_sigbuf = this->paramtilde_06_sigbuf;
     auto __paramtilde_06_value = this->paramtilde_06_value;
     auto __paramtilde_06_lastIndex = this->paramtilde_06_lastIndex;
 
     for (Index i = 0; i < n; i++) {
         if (i >= __paramtilde_06_lastIndex) {
-            out[(Index)i] = Attack[(Index)i] + __paramtilde_06_value;
+            out[(Index)i] = Ramp[(Index)i] + __paramtilde_06_value;
         } else {
-            out[(Index)i] = Attack[(Index)i] + __paramtilde_06_sigbuf[(Index)i];
+            out[(Index)i] = Ramp[(Index)i] + __paramtilde_06_sigbuf[(Index)i];
         }
     }
 
@@ -5279,30 +5039,7 @@ void paramtilde_06_perform(const SampleValue * Attack, SampleValue * out, Index 
     this->paramtilde_06_lastIndex = __paramtilde_06_lastIndex;
 }
 
-void signalsend_05_perform(const SampleValue * input, SampleValue * send, Index n) {
-    for (Index i = 0; i < n; i++) {
-        send[(Index)i] = input[(Index)i];
-    }
-}
-
-void paramtilde_07_perform(const SampleValue * Ramp, SampleValue * out, Index n) {
-    auto __paramtilde_07_sigbuf = this->paramtilde_07_sigbuf;
-    auto __paramtilde_07_value = this->paramtilde_07_value;
-    auto __paramtilde_07_lastIndex = this->paramtilde_07_lastIndex;
-
-    for (Index i = 0; i < n; i++) {
-        if (i >= __paramtilde_07_lastIndex) {
-            out[(Index)i] = Ramp[(Index)i] + __paramtilde_07_value;
-        } else {
-            out[(Index)i] = Ramp[(Index)i] + __paramtilde_07_sigbuf[(Index)i];
-        }
-    }
-
-    __paramtilde_07_lastIndex = 0;
-    this->paramtilde_07_lastIndex = __paramtilde_07_lastIndex;
-}
-
-void dspexpr_16_perform(const Sample * in1, number in2, SampleValue * out1, Index n) {
+void dspexpr_12_perform(const Sample * in1, number in2, SampleValue * out1, Index n) {
     RNBO_UNUSED(in2);
     Index i;
 
@@ -5311,30 +5048,30 @@ void dspexpr_16_perform(const Sample * in1, number in2, SampleValue * out1, Inde
     }
 }
 
-void signalsend_02_perform(const SampleValue * input, SampleValue * send, Index n) {
+void signalsend_01_perform(const SampleValue * input, SampleValue * send, Index n) {
     for (Index i = 0; i < n; i++) {
         send[(Index)i] = input[(Index)i];
     }
 }
 
-void paramtilde_08_perform(const SampleValue * Rotation, SampleValue * out, Index n) {
-    auto __paramtilde_08_sigbuf = this->paramtilde_08_sigbuf;
-    auto __paramtilde_08_value = this->paramtilde_08_value;
-    auto __paramtilde_08_lastIndex = this->paramtilde_08_lastIndex;
+void paramtilde_07_perform(const SampleValue * Rotation, SampleValue * out, Index n) {
+    auto __paramtilde_07_sigbuf = this->paramtilde_07_sigbuf;
+    auto __paramtilde_07_value = this->paramtilde_07_value;
+    auto __paramtilde_07_lastIndex = this->paramtilde_07_lastIndex;
 
     for (Index i = 0; i < n; i++) {
-        if (i >= __paramtilde_08_lastIndex) {
-            out[(Index)i] = Rotation[(Index)i] + __paramtilde_08_value;
+        if (i >= __paramtilde_07_lastIndex) {
+            out[(Index)i] = Rotation[(Index)i] + __paramtilde_07_value;
         } else {
-            out[(Index)i] = Rotation[(Index)i] + __paramtilde_08_sigbuf[(Index)i];
+            out[(Index)i] = Rotation[(Index)i] + __paramtilde_07_sigbuf[(Index)i];
         }
     }
 
-    __paramtilde_08_lastIndex = 0;
-    this->paramtilde_08_lastIndex = __paramtilde_08_lastIndex;
+    __paramtilde_07_lastIndex = 0;
+    this->paramtilde_07_lastIndex = __paramtilde_07_lastIndex;
 }
 
-void dspexpr_20_perform(const Sample * in1, SampleValue * out1, Index n) {
+void dspexpr_16_perform(const Sample * in1, SampleValue * out1, Index n) {
     Index i;
 
     for (i = 0; i < n; i++) {
@@ -5342,22 +5079,45 @@ void dspexpr_20_perform(const Sample * in1, SampleValue * out1, Index n) {
     }
 }
 
-void signalsend_09_perform(const SampleValue * input, SampleValue * send, Index n) {
+void signalsend_08_perform(const SampleValue * input, SampleValue * send, Index n) {
     for (Index i = 0; i < n; i++) {
         send[(Index)i] = input[(Index)i];
     }
 }
 
-void paramtilde_09_perform(const SampleValue * Multiplier, SampleValue * out, Index n) {
+void paramtilde_08_perform(const SampleValue * Multiplier, SampleValue * out, Index n) {
+    auto __paramtilde_08_sigbuf = this->paramtilde_08_sigbuf;
+    auto __paramtilde_08_value = this->paramtilde_08_value;
+    auto __paramtilde_08_lastIndex = this->paramtilde_08_lastIndex;
+
+    for (Index i = 0; i < n; i++) {
+        if (i >= __paramtilde_08_lastIndex) {
+            out[(Index)i] = Multiplier[(Index)i] + __paramtilde_08_value;
+        } else {
+            out[(Index)i] = Multiplier[(Index)i] + __paramtilde_08_sigbuf[(Index)i];
+        }
+    }
+
+    __paramtilde_08_lastIndex = 0;
+    this->paramtilde_08_lastIndex = __paramtilde_08_lastIndex;
+}
+
+void signalsend_06_perform(const SampleValue * input, SampleValue * send, Index n) {
+    for (Index i = 0; i < n; i++) {
+        send[(Index)i] = input[(Index)i];
+    }
+}
+
+void paramtilde_09_perform(const SampleValue * Points, SampleValue * out, Index n) {
     auto __paramtilde_09_sigbuf = this->paramtilde_09_sigbuf;
     auto __paramtilde_09_value = this->paramtilde_09_value;
     auto __paramtilde_09_lastIndex = this->paramtilde_09_lastIndex;
 
     for (Index i = 0; i < n; i++) {
         if (i >= __paramtilde_09_lastIndex) {
-            out[(Index)i] = Multiplier[(Index)i] + __paramtilde_09_value;
+            out[(Index)i] = Points[(Index)i] + __paramtilde_09_value;
         } else {
-            out[(Index)i] = Multiplier[(Index)i] + __paramtilde_09_sigbuf[(Index)i];
+            out[(Index)i] = Points[(Index)i] + __paramtilde_09_sigbuf[(Index)i];
         }
     }
 
@@ -5371,34 +5131,10 @@ void signalsend_07_perform(const SampleValue * input, SampleValue * send, Index 
     }
 }
 
-void paramtilde_10_perform(const SampleValue * Points, SampleValue * out, Index n) {
-    auto __paramtilde_10_sigbuf = this->paramtilde_10_sigbuf;
-    auto __paramtilde_10_value = this->paramtilde_10_value;
-    auto __paramtilde_10_lastIndex = this->paramtilde_10_lastIndex;
-
-    for (Index i = 0; i < n; i++) {
-        if (i >= __paramtilde_10_lastIndex) {
-            out[(Index)i] = Points[(Index)i] + __paramtilde_10_value;
-        } else {
-            out[(Index)i] = Points[(Index)i] + __paramtilde_10_sigbuf[(Index)i];
-        }
-    }
-
-    __paramtilde_10_lastIndex = 0;
-    this->paramtilde_10_lastIndex = __paramtilde_10_lastIndex;
-}
-
-void signalsend_08_perform(const SampleValue * input, SampleValue * send, Index n) {
-    for (Index i = 0; i < n; i++) {
-        send[(Index)i] = input[(Index)i];
-    }
-}
-
 void p_01_perform(
     const SampleValue * target_duty,
     const SampleValue * target_r,
     const SampleValue * target_A,
-    const SampleValue * target_phase,
     const SampleValue * target_D,
     const SampleValue * target_S,
     const SampleValue * target_R,
@@ -5409,11 +5145,10 @@ void p_01_perform(
     Index n
 ) {
     // subpatcher: equation
-    ConstSampleArray<9> ins = {
+    ConstSampleArray<8> ins = {
         target_duty,
         target_r,
         target_A,
-        target_phase,
         target_D,
         target_S,
         target_R,
@@ -5427,10 +5162,10 @@ void p_01_perform(
         zeroSignal(outs[(Index)chan], n);
 
     for (Index i = 0; i < 32; i++)
-        this->p_01[(Index)i]->process(ins, 9, outs, 2, n);
+        this->p_01[(Index)i]->process(ins, 8, outs, 2, n);
 }
 
-void dspexpr_17_perform(const Sample * in1, const Sample * in2, SampleValue * out1, Index n) {
+void dspexpr_13_perform(const Sample * in1, const Sample * in2, SampleValue * out1, Index n) {
     Index i;
 
     for (i = 0; i < n; i++) {
@@ -5438,7 +5173,7 @@ void dspexpr_17_perform(const Sample * in1, const Sample * in2, SampleValue * ou
     }
 }
 
-void dspexpr_19_perform(const Sample * in1, const Sample * in2, SampleValue * out1, Index n) {
+void dspexpr_15_perform(const Sample * in1, const Sample * in2, SampleValue * out1, Index n) {
     Index i;
 
     for (i = 0; i < n; i++) {
@@ -5454,18 +5189,6 @@ void stackprotect_perform(Index n) {
 }
 
 void paramtilde_01_value_setter(number v) {
-    if ((bool)(!(bool)(isNaN(360))) && v >= 360) {
-        v = 360;
-    }
-
-    if ((bool)(!(bool)(isNaN(0))) && v <= 0) {
-        v = 0;
-    }
-
-    this->paramtilde_01_value = v;
-}
-
-void paramtilde_02_value_setter(number v) {
     if ((bool)(!(bool)(isNaN(6))) && v >= 6) {
         v = 6;
     }
@@ -5474,10 +5197,10 @@ void paramtilde_02_value_setter(number v) {
         v = -70;
     }
 
-    this->paramtilde_02_value = v;
+    this->paramtilde_01_value = v;
 }
 
-void paramtilde_03_value_setter(number v) {
+void paramtilde_02_value_setter(number v) {
     if ((bool)(!(bool)(isNaN(1000))) && v >= 1000) {
         v = 1000;
     }
@@ -5486,16 +5209,28 @@ void paramtilde_03_value_setter(number v) {
         v = 0;
     }
 
-    this->paramtilde_03_value = v;
+    this->paramtilde_02_value = v;
 }
 
-void paramtilde_04_value_setter(number v) {
+void paramtilde_03_value_setter(number v) {
     if ((bool)(!(bool)(isNaN(0))) && v >= 0) {
         v = 0;
     }
 
     if ((bool)(!(bool)(isNaN(-70))) && v <= -70) {
         v = -70;
+    }
+
+    this->paramtilde_03_value = v;
+}
+
+void paramtilde_04_value_setter(number v) {
+    if ((bool)(!(bool)(isNaN(1000))) && v >= 1000) {
+        v = 1000;
+    }
+
+    if ((bool)(!(bool)(isNaN(0))) && v <= 0) {
+        v = 0;
     }
 
     this->paramtilde_04_value = v;
@@ -5514,8 +5249,8 @@ void paramtilde_05_value_setter(number v) {
 }
 
 void paramtilde_06_value_setter(number v) {
-    if ((bool)(!(bool)(isNaN(1000))) && v >= 1000) {
-        v = 1000;
+    if ((bool)(!(bool)(isNaN(100))) && v >= 100) {
+        v = 100;
     }
 
     if ((bool)(!(bool)(isNaN(0))) && v <= 0) {
@@ -5526,18 +5261,6 @@ void paramtilde_06_value_setter(number v) {
 }
 
 void paramtilde_07_value_setter(number v) {
-    if ((bool)(!(bool)(isNaN(100))) && v >= 100) {
-        v = 100;
-    }
-
-    if ((bool)(!(bool)(isNaN(0))) && v <= 0) {
-        v = 0;
-    }
-
-    this->paramtilde_07_value = v;
-}
-
-void paramtilde_08_value_setter(number v) {
     if ((bool)(!(bool)(isNaN(180))) && v >= 180) {
         v = 180;
     }
@@ -5546,10 +5269,10 @@ void paramtilde_08_value_setter(number v) {
         v = -180;
     }
 
-    this->paramtilde_08_value = v;
+    this->paramtilde_07_value = v;
 }
 
-void paramtilde_09_value_setter(number v) {
+void paramtilde_08_value_setter(number v) {
     if ((bool)(!(bool)(isNaN(64))) && v >= 64) {
         v = 64;
     }
@@ -5558,10 +5281,10 @@ void paramtilde_09_value_setter(number v) {
         v = -64;
     }
 
-    this->paramtilde_09_value = v;
+    this->paramtilde_08_value = v;
 }
 
-void paramtilde_10_value_setter(number v) {
+void paramtilde_09_value_setter(number v) {
     if ((bool)(!(bool)(isNaN(128))) && v >= 128) {
         v = 128;
     }
@@ -5570,7 +5293,7 @@ void paramtilde_10_value_setter(number v) {
         v = 1;
     }
 
-    this->paramtilde_10_value = v;
+    this->paramtilde_09_value = v;
 }
 
 void param_01_getPresetValue(PatcherStateInterface& preset) {
@@ -5632,14 +5355,6 @@ void paramtilde_06_dspsetup(bool force) {
     this->paramtilde_06_setupDone = true;
 }
 
-void paramtilde_07_dspsetup(bool force) {
-    if ((bool)(this->paramtilde_07_setupDone) && (bool)(!(bool)(force)))
-        return;
-
-    this->paramtilde_07_lastIndex = 0;
-    this->paramtilde_07_setupDone = true;
-}
-
 number p_01_calcActiveVoices() {
     {
         number activeVoices = 0;
@@ -5651,6 +5366,14 @@ number p_01_calcActiveVoices() {
 
         return activeVoices;
     }
+}
+
+void paramtilde_07_dspsetup(bool force) {
+    if ((bool)(this->paramtilde_07_setupDone) && (bool)(!(bool)(force)))
+        return;
+
+    this->paramtilde_07_lastIndex = 0;
+    this->paramtilde_07_setupDone = true;
 }
 
 void paramtilde_08_dspsetup(bool force) {
@@ -5667,14 +5390,6 @@ void paramtilde_09_dspsetup(bool force) {
 
     this->paramtilde_09_lastIndex = 0;
     this->paramtilde_09_setupDone = true;
-}
-
-void paramtilde_10_dspsetup(bool force) {
-    if ((bool)(this->paramtilde_10_setupDone) && (bool)(!(bool)(force)))
-        return;
-
-    this->paramtilde_10_lastIndex = 0;
-    this->paramtilde_10_setupDone = true;
 }
 
 void midinotecontroller_01_init() {
@@ -6013,42 +5728,38 @@ void assign_defaults()
 {
     send_01_input_number = 0;
     param_01_value = 2;
-    dspexpr_13_in1 = 0;
-    dspexpr_13_in2 = 360;
+    dspexpr_10_in1 = 0;
     paramtilde_01_value = 0;
     paramtilde_01_value_setter(paramtilde_01_value);
-    dspexpr_14_in1 = 0;
-    paramtilde_02_value = 0;
+    dspexpr_11_in1 = 0;
+    paramtilde_02_value = 10;
     paramtilde_02_value_setter(paramtilde_02_value);
-    dspexpr_15_in1 = 0;
-    paramtilde_03_value = 10;
+    paramtilde_03_value = 0;
     paramtilde_03_value_setter(paramtilde_03_value);
-    paramtilde_04_value = 0;
+    paramtilde_04_value = 10;
     paramtilde_04_value_setter(paramtilde_04_value);
     paramtilde_05_value = 10;
     paramtilde_05_value_setter(paramtilde_05_value);
-    paramtilde_06_value = 10;
+    dspexpr_12_in1 = 0;
+    dspexpr_12_in2 = 100;
+    paramtilde_06_value = 100;
     paramtilde_06_value_setter(paramtilde_06_value);
-    dspexpr_16_in1 = 0;
-    dspexpr_16_in2 = 100;
-    paramtilde_07_value = 100;
-    paramtilde_07_value_setter(paramtilde_07_value);
     p_01_target = 0;
     p_01_midiin = 0;
     midiin_02_port = 0;
-    dspexpr_17_in1 = 0;
-    dspexpr_17_in2 = 1;
-    dspexpr_18_in1 = 0;
-    dspexpr_18_in2 = 0.01;
-    dspexpr_19_in1 = 0;
-    dspexpr_19_in2 = 1;
-    dspexpr_20_in1 = 0;
-    paramtilde_08_value = 0;
+    dspexpr_13_in1 = 0;
+    dspexpr_13_in2 = 1;
+    dspexpr_14_in1 = 0;
+    dspexpr_14_in2 = 0.01;
+    dspexpr_15_in1 = 0;
+    dspexpr_15_in2 = 1;
+    dspexpr_16_in1 = 0;
+    paramtilde_07_value = 0;
+    paramtilde_07_value_setter(paramtilde_07_value);
+    paramtilde_08_value = 2;
     paramtilde_08_value_setter(paramtilde_08_value);
-    paramtilde_09_value = 2;
+    paramtilde_09_value = 21;
     paramtilde_09_value_setter(paramtilde_09_value);
-    paramtilde_10_value = 21;
-    paramtilde_10_value_setter(paramtilde_10_value);
     midiout_02_port = 0;
     midinotecontroller_01_currenttarget = 0;
     midinotecontroller_01_midiin = 0;
@@ -6068,7 +5779,6 @@ void assign_defaults()
     signals[8] = nullptr;
     signals[9] = nullptr;
     signals[10] = nullptr;
-    signals[11] = nullptr;
     didAllocateSignals = 0;
     vs = 0;
     maxvs = 0;
@@ -6093,22 +5803,19 @@ void assign_defaults()
     paramtilde_06_lastIndex = 0;
     paramtilde_06_sigbuf = nullptr;
     paramtilde_06_setupDone = false;
-    paramtilde_07_lastIndex = 0;
-    paramtilde_07_sigbuf = nullptr;
-    paramtilde_07_setupDone = false;
     p_01_currentStatus = -1;
     p_01_mididata[0] = 0;
     p_01_mididata[1] = 0;
     p_01_mididata[2] = 0;
+    paramtilde_07_lastIndex = 0;
+    paramtilde_07_sigbuf = nullptr;
+    paramtilde_07_setupDone = false;
     paramtilde_08_lastIndex = 0;
     paramtilde_08_sigbuf = nullptr;
     paramtilde_08_setupDone = false;
     paramtilde_09_lastIndex = 0;
     paramtilde_09_sigbuf = nullptr;
     paramtilde_09_setupDone = false;
-    paramtilde_10_lastIndex = 0;
-    paramtilde_10_sigbuf = nullptr;
-    paramtilde_10_setupDone = false;
     midiout_02_currentStatus = -1;
     midiout_02_status = -1;
     midiout_02_byte1 = -1;
@@ -6141,32 +5848,29 @@ void assign_defaults()
     number send_01_input_number;
     list send_01_input_list;
     number param_01_value;
-    number dspexpr_13_in1;
-    number dspexpr_13_in2;
+    number dspexpr_10_in1;
     number paramtilde_01_value;
-    number dspexpr_14_in1;
+    number dspexpr_11_in1;
     number paramtilde_02_value;
-    number dspexpr_15_in1;
     number paramtilde_03_value;
     number paramtilde_04_value;
     number paramtilde_05_value;
+    number dspexpr_12_in1;
+    number dspexpr_12_in2;
     number paramtilde_06_value;
-    number dspexpr_16_in1;
-    number dspexpr_16_in2;
-    number paramtilde_07_value;
     number p_01_target;
     number p_01_midiin;
     number midiin_02_port;
-    number dspexpr_17_in1;
-    number dspexpr_17_in2;
-    number dspexpr_18_in1;
-    number dspexpr_18_in2;
-    number dspexpr_19_in1;
-    number dspexpr_19_in2;
-    number dspexpr_20_in1;
+    number dspexpr_13_in1;
+    number dspexpr_13_in2;
+    number dspexpr_14_in1;
+    number dspexpr_14_in2;
+    number dspexpr_15_in1;
+    number dspexpr_15_in2;
+    number dspexpr_16_in1;
+    number paramtilde_07_value;
     number paramtilde_08_value;
     number paramtilde_09_value;
-    number paramtilde_10_value;
     number midiout_02_port;
     number midinotecontroller_01_currenttarget;
     number midinotecontroller_01_midiin;
@@ -6175,7 +5879,7 @@ void assign_defaults()
     SampleIndex sampleOffsetIntoNextAudioBuffer;
     signal zeroBuffer;
     signal dummyBuffer;
-    SampleValue * signals[12];
+    SampleValue * signals[11];
     bool didAllocateSignals;
     Index vs;
     Index maxvs;
@@ -6200,20 +5904,17 @@ void assign_defaults()
     SampleIndex paramtilde_06_lastIndex;
     signal paramtilde_06_sigbuf;
     bool paramtilde_06_setupDone;
+    int p_01_currentStatus;
+    uint8_t p_01_mididata[3];
     SampleIndex paramtilde_07_lastIndex;
     signal paramtilde_07_sigbuf;
     bool paramtilde_07_setupDone;
-    int p_01_currentStatus;
-    uint8_t p_01_mididata[3];
     SampleIndex paramtilde_08_lastIndex;
     signal paramtilde_08_sigbuf;
     bool paramtilde_08_setupDone;
     SampleIndex paramtilde_09_lastIndex;
     signal paramtilde_09_sigbuf;
     bool paramtilde_09_setupDone;
-    SampleIndex paramtilde_10_lastIndex;
-    signal paramtilde_10_sigbuf;
-    bool paramtilde_10_setupDone;
     int midiout_02_currentStatus;
     int midiout_02_status;
     int midiout_02_byte1;
@@ -6253,7 +5954,7 @@ void assign_defaults()
     Index isMuted;
     indexlist paramInitIndices;
     indexlist paramInitOrder;
-    RNBOSubpatcher_292* p_01[32];
+    RNBOSubpatcher_14* p_01[32];
 
 };
 
