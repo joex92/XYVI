@@ -2,11 +2,11 @@
 	"filetype" : "C74Snapshot",
 	"version" : 2,
 	"minorversion" : 0,
-	"name" : "2 Epicycles",
+	"name" : "Trochoid",
 	"origin" : "Trochoid",
 	"type" : "rnbo",
 	"subtype" : "",
-	"embed" : 0,
+	"embed" : 1,
 	"snapshot" : 	{
 		"__presetid" : "Trochoid",
 		"PitchBendRange" : 		{
@@ -14,11 +14,11 @@
 		}
 ,
 		"Position" : 		{
-			"value" : 1.0
+			"value" : 2.0
 		}
 ,
 		"__sps" : 		{
-			"equation" : [ 				{
+			"Trochoid" : [ 				{
 
 				}
 , 				{

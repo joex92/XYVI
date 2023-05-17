@@ -2,11 +2,11 @@
 	"filetype" : "C74Snapshot",
 	"version" : 2,
 	"minorversion" : 0,
-	"name" : "21 Times 2",
+	"name" : "TTable",
 	"origin" : "TTable",
 	"type" : "rnbo",
 	"subtype" : "",
-	"embed" : 0,
+	"embed" : 1,
 	"snapshot" : 	{
 		"__presetid" : "TTable",
 		"PitchBendRange" : 		{

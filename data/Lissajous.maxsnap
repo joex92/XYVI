@@ -2,11 +2,11 @@
 	"filetype" : "C74Snapshot",
 	"version" : 2,
 	"minorversion" : 0,
-	"name" : "Circle",
+	"name" : "Lissajous",
 	"origin" : "Lissajous",
 	"type" : "rnbo",
 	"subtype" : "",
-	"embed" : 0,
+	"embed" : 1,
 	"snapshot" : 	{
 		"__presetid" : "Lissajous",
 		"PitchBendRange" : 		{

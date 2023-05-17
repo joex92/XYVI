@@ -6,7 +6,7 @@
 	"origin" : "Heart",
 	"type" : "rnbo",
 	"subtype" : "",
-	"embed" : 0,
+	"embed" : 1,
 	"snapshot" : 	{
 		"__presetid" : "Heart",
 		"PitchBendRange" : 		{

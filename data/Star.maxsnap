@@ -2,11 +2,11 @@
 	"filetype" : "C74Snapshot",
 	"version" : 2,
 	"minorversion" : 0,
-	"name" : "5-Star",
+	"name" : "Star",
 	"origin" : "Star",
 	"type" : "rnbo",
 	"subtype" : "",
-	"embed" : 0,
+	"embed" : 1,
 	"snapshot" : 	{
 		"__presetid" : "Star",
 		"PitchBendRange" : 		{
