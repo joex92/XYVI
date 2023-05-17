@@ -26123,7 +26123,8 @@
 								"vst-au-export-ins" : 								{
 									"plugin_name" : "XY-Points",
 									"plugin_manufacturer_name" : "JxM",
-									"plugin_manufacturer_code" : "JoeX"
+									"plugin_manufacturer_code" : "JoeX",
+									"include_presets" : 0
 								}
 
 							}
