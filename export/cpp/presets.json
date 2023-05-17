@@ -1,12 +1,15 @@
 [
   {
-    "name": "5-Star",
+    "name": "4 Petals",
     "preset": {
       "PitchBendRange": {
         "value": 2
       },
+      "Points": {
+        "value": 10
+      },
       "__sps": {
-        "equation": [
+        "Points[1]": [
           {},
           {},
           {},

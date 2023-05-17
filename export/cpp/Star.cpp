@@ -75,17 +75,17 @@ namespace RNBO {
 class rnbomatic : public PatcherInterfaceImpl {
 public:
 
-class RNBOSubpatcher_22 : public PatcherInterfaceImpl {
+class RNBOSubpatcher_872 : public PatcherInterfaceImpl {
     
     friend class rnbomatic;
     
     public:
     
-    RNBOSubpatcher_22()
+    RNBOSubpatcher_872()
     {
     }
     
-    ~RNBOSubpatcher_22()
+    ~RNBOSubpatcher_872()
     {
     }
     
@@ -629,7 +629,7 @@ class RNBOSubpatcher_22 : public PatcherInterfaceImpl {
     
     void expr_03_in1_set(number in1) {
         this->expr_03_in1 = in1;
-        this->expr_03_out1_set(this->expr_03_in1 * this->expr_03_in2);//#map:equation/*_obj-200:1
+        this->expr_03_out1_set(this->expr_03_in1 * this->expr_03_in2);//#map:Star/*_obj-200:1
     }
     
     void trigger_02_out2_set(number v) {
@@ -705,7 +705,7 @@ class RNBOSubpatcher_22 : public PatcherInterfaceImpl {
     
     void expr_01_in1_set(number in1) {
         this->expr_01_in1 = in1;
-        this->expr_01_out1_set(this->expr_01_in1 + this->expr_01_in2);//#map:equation/+_obj-52:1
+        this->expr_01_out1_set(this->expr_01_in1 + this->expr_01_in2);//#map:Star/+_obj-52:1
     }
     
     void floatnum_01_out_set(number v) {
@@ -804,7 +804,7 @@ class RNBOSubpatcher_22 : public PatcherInterfaceImpl {
     
         this->expr_02_out1_set(
             (this->expr_02_in2 == 0 ? 0 : (this->expr_02_in2 == 0. ? 0. : this->expr_02_in1 / this->expr_02_in2))
-        );//#map:equation//_obj-93:1
+        );//#map:Star//_obj-93:1
     }
     
     void unpack_01_out2_set(number v) {
@@ -2895,7 +2895,7 @@ void getState(PatcherStateInterface& ) {}
 
 void setState() {
     for (Index i = 0; i < 32; i++) {
-        this->p_01[(Index)i] = new RNBOSubpatcher_22();
+        this->p_01[(Index)i] = new RNBOSubpatcher_872();
         this->p_01[(Index)i]->setEngineAndPatcher(this->getEngine(), this);
         this->p_01[(Index)i]->initialize();
         this->p_01[(Index)i]->setParameterOffset(this->getParameterOffset(this->p_01[0]));
@@ -2908,7 +2908,7 @@ void getPreset(PatcherStateInterface& preset) {
     this->param_01_getPresetValue(getSubState(preset, "PitchBendRange"));
 
     for (Index i = 0; i < 32; i++)
-        this->p_01[i]->getPreset(getSubStateAt(getSubState(preset, "__sps"), "equation", i));
+        this->p_01[i]->getPreset(getSubStateAt(getSubState(preset, "__sps"), "Star", i));
 }
 
 void setPreset(MillisecondTime time, PatcherStateInterface& preset) {
@@ -3472,9 +3472,9 @@ void getParameterInfo(ParameterIndex index, ParameterInfo * info) const {
         case 3:
             {
             info->type = ParameterTypeNumber;
-            info->initialValue = 10;
+            info->initialValue = 100;
             info->min = 0;
-            info->max = 1000;
+            info->max = 10000;
             info->exponent = 1;
             info->steps = 0;
             info->debug = false;
@@ -3512,7 +3512,7 @@ void getParameterInfo(ParameterIndex index, ParameterInfo * info) const {
             info->type = ParameterTypeNumber;
             info->initialValue = 10;
             info->min = 0;
-            info->max = 1000;
+            info->max = 10000;
             info->exponent = 1;
             info->steps = 0;
             info->debug = false;
@@ -3531,7 +3531,7 @@ void getParameterInfo(ParameterIndex index, ParameterInfo * info) const {
             info->type = ParameterTypeNumber;
             info->initialValue = 10;
             info->min = 0;
-            info->max = 1000;
+            info->max = 10000;
             info->exponent = 1;
             info->steps = 0;
             info->debug = false;
@@ -3876,8 +3876,8 @@ ParameterValue convertToNormalizedParameterValue(ParameterIndex index, Parameter
     case 6:
         {
         {
-            value = (value < 0 ? 0 : (value > 1000 ? 1000 : value));
-            ParameterValue normalizedValue = (value - 0) / (1000 - 0);
+            value = (value < 0 ? 0 : (value > 10000 ? 10000 : value));
+            ParameterValue normalizedValue = (value - 0) / (10000 - 0);
             return normalizedValue;
         }
         }
@@ -3974,7 +3974,7 @@ ParameterValue convertFromNormalizedParameterValue(ParameterIndex index, Paramet
             value = (value < 0 ? 0 : (value > 1 ? 1 : value));
 
             {
-                return 0 + value * (1000 - 0);
+                return 0 + value * (10000 - 0);
             }
         }
         }
@@ -5289,7 +5289,7 @@ void p_01_perform(
     SampleValue * out2,
     Index n
 ) {
-    // subpatcher: equation
+    // subpatcher: Star
     ConstSampleArray<9> ins = {
         target_duty,
         target_r,
@@ -5359,8 +5359,8 @@ void paramtilde_02_value_setter(number v) {
 }
 
 void paramtilde_03_value_setter(number v) {
-    if ((bool)(!(bool)(isNaN(1000))) && v >= 1000) {
-        v = 1000;
+    if ((bool)(!(bool)(isNaN(10000))) && v >= 10000) {
+        v = 10000;
     }
 
     if ((bool)(!(bool)(isNaN(0))) && v <= 0) {
@@ -5383,8 +5383,8 @@ void paramtilde_04_value_setter(number v) {
 }
 
 void paramtilde_05_value_setter(number v) {
-    if ((bool)(!(bool)(isNaN(1000))) && v >= 1000) {
-        v = 1000;
+    if ((bool)(!(bool)(isNaN(10000))) && v >= 10000) {
+        v = 10000;
     }
 
     if ((bool)(!(bool)(isNaN(0))) && v <= 0) {
@@ -5395,8 +5395,8 @@ void paramtilde_05_value_setter(number v) {
 }
 
 void paramtilde_06_value_setter(number v) {
-    if ((bool)(!(bool)(isNaN(1000))) && v >= 1000) {
-        v = 1000;
+    if ((bool)(!(bool)(isNaN(10000))) && v >= 10000) {
+        v = 10000;
     }
 
     if ((bool)(!(bool)(isNaN(0))) && v <= 0) {
@@ -5904,7 +5904,7 @@ void assign_defaults()
     paramtilde_02_value = 0;
     paramtilde_02_value_setter(paramtilde_02_value);
     dspexpr_25_in1 = 0;
-    paramtilde_03_value = 10;
+    paramtilde_03_value = 100;
     paramtilde_03_value_setter(paramtilde_03_value);
     paramtilde_04_value = 0;
     paramtilde_04_value_setter(paramtilde_04_value);
@@ -6156,7 +6156,7 @@ void assign_defaults()
     Index isMuted;
     indexlist paramInitIndices;
     indexlist paramInitOrder;
-    RNBOSubpatcher_22* p_01[32];
+    RNBOSubpatcher_872* p_01[32];
 
 };
 
