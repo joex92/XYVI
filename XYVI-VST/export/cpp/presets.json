@@ -1,12 +1,15 @@
 [
   {
-    "name": "4 Petals",
+    "name": "Star",
     "preset": {
+      "PitchBend": {
+        "value": 0
+      },
       "PitchBendRange": {
         "value": 2
       },
       "__sps": {
-        "Fermat's Spiral": [
+        "Star": [
           {},
           {},
           {},

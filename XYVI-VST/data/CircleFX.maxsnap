@@ -1,0 +1,38 @@
+{
+	"filetype" : "C74Snapshot",
+	"version" : 2,
+	"minorversion" : 0,
+	"name" : "CircleFX",
+	"origin" : "CircleFX",
+	"type" : "rnbo",
+	"subtype" : "",
+	"embed" : 0,
+	"snapshot" : 	{
+		"__presetid" : "CircleFX",
+		"Delay" : 		{
+			"value" : 0.568181818181818
+		}
+,
+		"Channel" : 		{
+			"value" : 3.0
+		}
+,
+		"MIDI" : 		{
+			"value" : 69.0
+		}
+,
+		"Frequency" : 		{
+			"value" : 439.999999999999943
+		}
+,
+		"Framesize" : 		{
+			"value" : 12.0
+		}
+,
+		"ManualDelay" : 		{
+			"value" : 1.0
+		}
+
+	}
+
+}

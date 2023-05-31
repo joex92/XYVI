@@ -2,8 +2,8 @@
 	"name" : "XY-Oscilloscope",
 	"version" : 1,
 	"creationdate" : 3766969743,
-	"modificationdate" : 3766970309,
-	"viewrect" : [ 25.0, 107.0, 300.0, 500.0 ],
+	"modificationdate" : 3767647720,
+	"viewrect" : [ 8.0, 168.0, 300.0, 500.0 ],
 	"autoorganize" : 1,
 	"hideprojectwindow" : 0,
 	"showdependencies" : 1,
@@ -15,10 +15,15 @@
 				"local" : 1,
 				"toplevel" : 1
 			}
+,
+			"NDI.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
 
 		}
 ,
-		"code" : 		{
+		"externals" : 		{
 
 		}
 ,
