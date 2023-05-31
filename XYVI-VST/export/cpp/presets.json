@@ -1,48 +1,30 @@
 [
   {
-    "name": "Star",
+    "name": "CircleFX",
     "preset": {
-      "PitchBend": {
+      "Channel": {
         "value": 0
       },
-      "PitchBendRange": {
-        "value": 2
+      "Delay": {
+        "value": 999.999999999999
       },
-      "__sps": {
-        "Star": [
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {}
-        ]
+      "DelayTuning": {
+        "value": 0
+      },
+      "Framesize": {
+        "value": 12
+      },
+      "Frequency": {
+        "value": 10.00000000000001
+      },
+      "MIDI": {
+        "value": 3.486820523428932
+      },
+      "Mode": {
+        "value": 1
+      },
+      "Smoothing": {
+        "value": 100
       }
     }
   }

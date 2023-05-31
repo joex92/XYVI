@@ -1,0 +1,46 @@
+{
+	"filetype" : "C74Snapshot",
+	"version" : 2,
+	"minorversion" : 0,
+	"name" : "CircleFX",
+	"origin" : "XY-Delay",
+	"type" : "rnbo",
+	"subtype" : "",
+	"embed" : 0,
+	"snapshot" : 	{
+		"__presetid" : "XY-Delay",
+		"Mode" : 		{
+			"value" : 1.0
+		}
+,
+		"Delay" : 		{
+			"value" : 999.999999999998977
+		}
+,
+		"Channel" : 		{
+			"value" : 0.0
+		}
+,
+		"Frequency" : 		{
+			"value" : 10.000000000000011
+		}
+,
+		"Smoothing" : 		{
+			"value" : 100.0
+		}
+,
+		"MIDI" : 		{
+			"value" : 3.486820523428932
+		}
+,
+		"Framesize" : 		{
+			"value" : 12.0
+		}
+,
+		"DelayTuning" : 		{
+			"value" : 0.0
+		}
+
+	}
+
+}
