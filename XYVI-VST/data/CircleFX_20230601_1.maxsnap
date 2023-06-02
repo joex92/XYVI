@@ -9,12 +9,12 @@
 	"embed" : 0,
 	"snapshot" : 	{
 		"MirrorY" : 		{
-			"value" : 0.0
+			"value" : 1.0
 		}
 ,
 		"__presetid" : "XY-RotPos",
 		"MirrorRotation" : 		{
-			"value" : 0.0
+			"value" : 1.0
 		}
 ,
 		"Output" : 		{
@@ -22,6 +22,10 @@
 		}
 ,
 		"MirrorX" : 		{
+			"value" : 1.0
+		}
+,
+		"Rotation" : 		{
 			"value" : 0.0
 		}
 

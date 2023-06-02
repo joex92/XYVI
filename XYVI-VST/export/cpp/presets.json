@@ -3,15 +3,18 @@
     "name": "CircleFX",
     "preset": {
       "MirrorRotation": {
-        "value": 0
+        "value": 1
       },
       "MirrorX": {
-        "value": 0
+        "value": 1
       },
       "MirrorY": {
-        "value": 0
+        "value": 1
       },
       "Output": {
+        "value": 0
+      },
+      "Rotation": {
         "value": 0
       }
     }
