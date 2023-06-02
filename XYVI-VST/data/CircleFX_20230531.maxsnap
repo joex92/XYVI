@@ -14,23 +14,27 @@
 		}
 ,
 		"Delay" : 		{
-			"value" : 999.999999999998977
+			"value" : 999.999999999997726
 		}
 ,
 		"Channel" : 		{
 			"value" : 0.0
 		}
 ,
+		"MIDI" : 		{
+			"value" : 3.48682052342896
+		}
+,
+		"Output" : 		{
+			"value" : 0.0
+		}
+,
 		"Frequency" : 		{
-			"value" : 10.000000000000011
+			"value" : 10.000000000000023
 		}
 ,
 		"Smoothing" : 		{
 			"value" : 100.0
-		}
-,
-		"MIDI" : 		{
-			"value" : 3.486820523428932
 		}
 ,
 		"Framesize" : 		{

@@ -75,17 +75,17 @@ namespace RNBO {
 class rnbomatic : public PatcherInterfaceImpl {
 public:
 
-class RNBOSubpatcher_24 : public PatcherInterfaceImpl {
+class RNBOSubpatcher_25 : public PatcherInterfaceImpl {
     
     friend class rnbomatic;
     
     public:
     
-    RNBOSubpatcher_24()
+    RNBOSubpatcher_25()
     {
     }
     
-    ~RNBOSubpatcher_24()
+    ~RNBOSubpatcher_25()
     {
     }
     
@@ -377,7 +377,7 @@ class RNBOSubpatcher_24 : public PatcherInterfaceImpl {
         switch (index) {
         default:
             {
-            for (Index i = 0; i < 32; i++)
+            for (Index i = 0; i < 12; i++)
                 voices[i]->setParameterValue(index, value, time);
             }
         }
@@ -2599,7 +2599,7 @@ rnbomatic()
 
 ~rnbomatic()
 {
-    for (int i = 0; i < 32; i++) {
+    for (int i = 0; i < 12; i++) {
         delete p_01[i];
     }
 }
@@ -2686,51 +2686,52 @@ void process(
     this->vs = n;
     this->updateTime(this->getEngine()->getCurrentTime());
     const SampleValue * Rotation = (numInputs >= 1 && inputs[0] ? inputs[0] : this->zeroBuffer);
-    const SampleValue * Gain = (numInputs >= 2 && inputs[1] ? inputs[1] : this->zeroBuffer);
-    const SampleValue * Release = (numInputs >= 3 && inputs[2] ? inputs[2] : this->zeroBuffer);
-    const SampleValue * Sustain = (numInputs >= 4 && inputs[3] ? inputs[3] : this->zeroBuffer);
-    const SampleValue * Decay = (numInputs >= 5 && inputs[4] ? inputs[4] : this->zeroBuffer);
-    const SampleValue * Attack = (numInputs >= 6 && inputs[5] ? inputs[5] : this->zeroBuffer);
-    const SampleValue * Ramp = (numInputs >= 7 && inputs[6] ? inputs[6] : this->zeroBuffer);
-    const SampleValue * Leaves = (numInputs >= 8 && inputs[7] ? inputs[7] : this->zeroBuffer);
+    const SampleValue * Release = (numInputs >= 2 && inputs[1] ? inputs[1] : this->zeroBuffer);
+    const SampleValue * Sustain = (numInputs >= 3 && inputs[2] ? inputs[2] : this->zeroBuffer);
+    const SampleValue * Decay = (numInputs >= 4 && inputs[3] ? inputs[3] : this->zeroBuffer);
+    const SampleValue * Attack = (numInputs >= 5 && inputs[4] ? inputs[4] : this->zeroBuffer);
+    const SampleValue * Ramp = (numInputs >= 6 && inputs[5] ? inputs[5] : this->zeroBuffer);
+    const SampleValue * Leaves = (numInputs >= 7 && inputs[6] ? inputs[6] : this->zeroBuffer);
     SampleValue * out1 = (numOutputs >= 1 && outputs[0] ? outputs[0] : this->dummyBuffer);
     SampleValue * out2 = (numOutputs >= 2 && outputs[1] ? outputs[1] : this->dummyBuffer);
     this->paramtilde_01_perform(Rotation, this->signals[0], n);
     this->dspexpr_25_perform(this->signals[0], this->signals[1], n);
     this->signalsend_03_perform(this->signals[1], this->signals[0], n);
-    this->paramtilde_02_perform(Gain, this->signals[1], n);
-    this->dspexpr_26_perform(this->signals[1], this->signals[2], n);
-    this->paramtilde_03_perform(Release, this->signals[1], n);
-    this->signalsend_06_perform(this->signals[1], this->signals[3], n);
-    this->paramtilde_04_perform(Sustain, this->signals[1], n);
-    this->dspexpr_27_perform(this->signals[1], this->signals[4], n);
-    this->dspexpr_30_perform(this->signals[4], this->dspexpr_30_in2, this->signals[1], n);
-    this->signalsend_02_perform(this->signals[1], this->signals[4], n);
-    this->paramtilde_05_perform(Decay, this->signals[1], n);
-    this->signalsend_04_perform(this->signals[1], this->signals[5], n);
-    this->paramtilde_06_perform(Attack, this->signals[1], n);
-    this->signalsend_05_perform(this->signals[1], this->signals[6], n);
-    this->paramtilde_07_perform(Ramp, this->signals[1], n);
-    this->dspexpr_28_perform(this->signals[1], this->dspexpr_28_in2, this->signals[7], n);
-    this->signalsend_01_perform(this->signals[7], this->signals[1], n);
-    this->paramtilde_08_perform(Leaves, this->signals[7], n);
-    this->signalsend_07_perform(this->signals[7], this->signals[8], n);
+    this->dspexpr_26_perform(this->dspexpr_26_in1, this->signals[1], n);
+    this->paramtilde_02_perform(Release, this->signals[2], n);
+    this->signalsend_06_perform(this->signals[2], this->signals[3], n);
+    this->paramtilde_03_perform(Sustain, this->signals[2], n);
+    this->dspexpr_27_perform(this->signals[2], this->signals[4], n);
+    this->dspexpr_30_perform(this->signals[4], this->dspexpr_30_in2, this->signals[2], n);
+    this->signalsend_02_perform(this->signals[2], this->signals[4], n);
+    this->paramtilde_04_perform(Decay, this->signals[2], n);
+    this->signalsend_04_perform(this->signals[2], this->signals[5], n);
+    this->paramtilde_05_perform(Attack, this->signals[2], n);
+    this->signalsend_05_perform(this->signals[2], this->signals[6], n);
+    this->paramtilde_06_perform(Ramp, this->signals[2], n);
+    this->dspexpr_28_perform(this->signals[2], this->dspexpr_28_in2, this->signals[7], n);
+    this->signalsend_01_perform(this->signals[7], this->signals[2], n);
+    this->paramtilde_07_perform(Leaves, this->signals[7], n);
+    this->dspexpr_32_perform(this->signals[7], this->signals[8], n);
+    this->ip_02_perform(this->signals[9], n);
+    this->selector_01_perform(this->signals[9], this->signals[7], this->signals[8], this->signals[10], n);
+    this->signalsend_07_perform(this->signals[10], this->signals[8], n);
 
     this->p_01_perform(
         this->signals[6],
-        this->signals[1],
+        this->signals[2],
         this->signals[0],
         this->signals[5],
         this->signals[4],
         this->signals[3],
         this->signals[8],
+        this->signals[10],
         this->signals[7],
-        this->signals[9],
         n
     );
 
-    this->dspexpr_29_perform(this->signals[7], this->signals[2], out1, n);
-    this->dspexpr_31_perform(this->signals[9], this->signals[2], out2, n);
+    this->dspexpr_29_perform(this->signals[10], this->signals[1], out1, n);
+    this->dspexpr_31_perform(this->signals[7], this->signals[1], out2, n);
     this->stackprotect_perform(n);
     this->globaltransport_advance();
     this->audioProcessSampleCount += this->vs;
@@ -2740,7 +2741,7 @@ void prepareToProcess(number sampleRate, Index maxBlockSize, bool force) {
     if (this->maxvs < maxBlockSize || !this->didAllocateSignals) {
         Index i;
 
-        for (i = 0; i < 10; i++) {
+        for (i = 0; i < 11; i++) {
             this->signals[i] = resizeSignal(this->signals[i], this->maxvs, maxBlockSize);
         }
 
@@ -2751,7 +2752,7 @@ void prepareToProcess(number sampleRate, Index maxBlockSize, bool force) {
         this->paramtilde_05_sigbuf = resizeSignal(this->paramtilde_05_sigbuf, this->maxvs, maxBlockSize);
         this->paramtilde_06_sigbuf = resizeSignal(this->paramtilde_06_sigbuf, this->maxvs, maxBlockSize);
         this->paramtilde_07_sigbuf = resizeSignal(this->paramtilde_07_sigbuf, this->maxvs, maxBlockSize);
-        this->paramtilde_08_sigbuf = resizeSignal(this->paramtilde_08_sigbuf, this->maxvs, maxBlockSize);
+        this->ip_02_sigbuf = resizeSignal(this->ip_02_sigbuf, this->maxvs, maxBlockSize);
         this->globaltransport_tempo = resizeSignal(this->globaltransport_tempo, this->maxvs, maxBlockSize);
         this->globaltransport_state = resizeSignal(this->globaltransport_state, this->maxvs, maxBlockSize);
         this->zeroBuffer = resizeSignal(this->zeroBuffer, this->maxvs, maxBlockSize);
@@ -2777,10 +2778,10 @@ void prepareToProcess(number sampleRate, Index maxBlockSize, bool force) {
     this->paramtilde_05_dspsetup(forceDSPSetup);
     this->paramtilde_06_dspsetup(forceDSPSetup);
     this->paramtilde_07_dspsetup(forceDSPSetup);
-    this->paramtilde_08_dspsetup(forceDSPSetup);
+    this->ip_02_dspsetup(forceDSPSetup);
     this->globaltransport_dspsetup(forceDSPSetup);
 
-    for (Index i = 0; i < 32; i++) {
+    for (Index i = 0; i < 12; i++) {
         this->p_01[i]->prepareToProcess(sampleRate, maxBlockSize, force);
     }
 
@@ -2845,7 +2846,7 @@ void fillDataRef(DataRefIndex index, DataRef& ref) {
 }
 
 void processDataViewUpdate(DataRefIndex index, MillisecondTime time) {
-    for (Index i = 0; i < 32; i++) {
+    for (Index i = 0; i < 12; i++) {
         this->p_01[i]->processDataViewUpdate(index, time);
     }
 }
@@ -2875,8 +2876,8 @@ Index getPatcherSerial() const {
 void getState(PatcherStateInterface& ) {}
 
 void setState() {
-    for (Index i = 0; i < 32; i++) {
-        this->p_01[(Index)i] = new RNBOSubpatcher_24();
+    for (Index i = 0; i < 12; i++) {
+        this->p_01[(Index)i] = new RNBOSubpatcher_25();
         this->p_01[(Index)i]->setEngineAndPatcher(this->getEngine(), this);
         this->p_01[(Index)i]->initialize();
         this->p_01[(Index)i]->setParameterOffset(this->getParameterOffset(this->p_01[0]));
@@ -2887,23 +2888,27 @@ void setState() {
 void getPreset(PatcherStateInterface& preset) {
     preset["__presetid"] = "rnbo";
     this->param_01_getPresetValue(getSubState(preset, "PitchBendRange"));
-    this->param_02_getPresetValue(getSubState(preset, "PitchBend"));
+    this->param_02_getPresetValue(getSubState(preset, "Output"));
+    this->param_03_getPresetValue(getSubState(preset, "PitchBend"));
+    this->param_04_getPresetValue(getSubState(preset, "LeavesType"));
 
-    for (Index i = 0; i < 32; i++)
+    for (Index i = 0; i < 12; i++)
         this->p_01[i]->getPreset(getSubStateAt(getSubState(preset, "__sps"), "Cannabis", i));
 }
 
 void setPreset(MillisecondTime time, PatcherStateInterface& preset) {
     this->updateTime(time);
+    this->param_02_setPresetValue(getSubState(preset, "Output"));
+    this->param_04_setPresetValue(getSubState(preset, "LeavesType"));
     this->param_01_setPresetValue(getSubState(preset, "PitchBendRange"));
-    this->param_02_setPresetValue(getSubState(preset, "PitchBend"));
+    this->param_03_setPresetValue(getSubState(preset, "PitchBend"));
 }
 
 void processTempoEvent(MillisecondTime time, Tempo tempo) {
     this->updateTime(time);
 
     if (this->globaltransport_setTempo(tempo, false)) {
-        for (Index i = 0; i < 32; i++) {
+        for (Index i = 0; i < 12; i++) {
             this->p_01[i]->processTempoEvent(time, tempo);
         }
     }
@@ -2913,7 +2918,7 @@ void processTransportEvent(MillisecondTime time, TransportState state) {
     this->updateTime(time);
 
     if (this->globaltransport_setState(state, false)) {
-        for (Index i = 0; i < 32; i++) {
+        for (Index i = 0; i < 12; i++) {
             this->p_01[i]->processTransportEvent(time, state);
         }
     }
@@ -2923,7 +2928,7 @@ void processBeatTimeEvent(MillisecondTime time, BeatTime beattime) {
     this->updateTime(time);
 
     if (this->globaltransport_setBeatTime(beattime, false)) {
-        for (Index i = 0; i < 32; i++) {
+        for (Index i = 0; i < 12; i++) {
             this->p_01[i]->processBeatTimeEvent(time, beattime);
         }
     }
@@ -2935,7 +2940,7 @@ void processTimeSignatureEvent(MillisecondTime time, int numerator, int denomina
     this->updateTime(time);
 
     if (this->globaltransport_setTimeSignature(numerator, denominator, false)) {
-        for (Index i = 0; i < 32; i++) {
+        for (Index i = 0; i < 12; i++) {
             this->p_01[i]->processTimeSignatureEvent(time, numerator, denominator);
         }
     }
@@ -2957,52 +2962,52 @@ void setParameterValue(ParameterIndex index, ParameterValue v, MillisecondTime t
         }
     case 2:
         {
-        this->paramtilde_01_value_set(v);
+        this->param_03_value_set(v);
         break;
         }
     case 3:
         {
-        this->paramtilde_02_value_set(v);
+        this->param_04_value_set(v);
         break;
         }
     case 4:
         {
-        this->paramtilde_03_value_set(v);
+        this->paramtilde_01_value_set(v);
         break;
         }
     case 5:
         {
-        this->paramtilde_04_value_set(v);
+        this->paramtilde_02_value_set(v);
         break;
         }
     case 6:
         {
-        this->paramtilde_05_value_set(v);
+        this->paramtilde_03_value_set(v);
         break;
         }
     case 7:
         {
-        this->paramtilde_06_value_set(v);
+        this->paramtilde_04_value_set(v);
         break;
         }
     case 8:
         {
-        this->paramtilde_07_value_set(v);
+        this->paramtilde_05_value_set(v);
         break;
         }
     case 9:
         {
-        this->paramtilde_08_value_set(v);
+        this->paramtilde_06_value_set(v);
         break;
         }
     case 10:
         {
-        // namedAudioIn: Rotation
+        this->paramtilde_07_value_set(v);
         break;
         }
     case 11:
         {
-        // namedAudioIn: Gain
+        // namedAudioIn: Rotation
         break;
         }
     case 12:
@@ -3067,44 +3072,43 @@ ParameterValue getParameterValue(ParameterIndex index)  {
         }
     case 2:
         {
-        return this->paramtilde_01_value;
+        return this->param_03_value;
         }
     case 3:
         {
-        return this->paramtilde_02_value;
+        return this->param_04_value;
         }
     case 4:
         {
-        return this->paramtilde_03_value;
+        return this->paramtilde_01_value;
         }
     case 5:
         {
-        return this->paramtilde_04_value;
+        return this->paramtilde_02_value;
         }
     case 6:
         {
-        return this->paramtilde_05_value;
+        return this->paramtilde_03_value;
         }
     case 7:
         {
-        return this->paramtilde_06_value;
+        return this->paramtilde_04_value;
         }
     case 8:
         {
-        return this->paramtilde_07_value;
+        return this->paramtilde_05_value;
         }
     case 9:
         {
-        return this->paramtilde_08_value;
+        return this->paramtilde_06_value;
         }
     case 10:
         {
-        // namedAudioIn: Rotation
-        return 0;
+        return this->paramtilde_07_value;
         }
     case 11:
         {
-        // namedAudioIn: Gain
+        // namedAudioIn: Rotation
         return 0;
         }
     case 12:
@@ -3150,7 +3154,7 @@ ParameterValue getParameterValue(ParameterIndex index)  {
 }
 
 ParameterIndex getNumSignalInParameters() const {
-    return 8;
+    return 7;
 }
 
 ParameterIndex getNumSignalOutParameters() const {
@@ -3169,47 +3173,47 @@ ConstCharPointer getParameterName(ParameterIndex index) const {
         }
     case 1:
         {
-        return "PitchBend";
+        return "Output";
         }
     case 2:
         {
-        return "Rotation";
+        return "PitchBend";
         }
     case 3:
         {
-        return "Gain";
+        return "LeavesType";
         }
     case 4:
         {
-        return "Release";
+        return "Rotation";
         }
     case 5:
         {
-        return "Sustain";
+        return "Release";
         }
     case 6:
         {
-        return "Decay";
+        return "Sustain";
         }
     case 7:
         {
-        return "Attack";
+        return "Decay";
         }
     case 8:
         {
-        return "Ramp";
+        return "Attack";
         }
     case 9:
         {
-        return "Leaves";
+        return "Ramp";
         }
     case 10:
         {
-        return "Rotation";
+        return "Leaves";
         }
     case 11:
         {
-        return "Gain";
+        return "Rotation";
         }
     case 12:
         {
@@ -3258,47 +3262,47 @@ ConstCharPointer getParameterId(ParameterIndex index) const {
         }
     case 1:
         {
-        return "PitchBend";
+        return "Output";
         }
     case 2:
         {
-        return "Rotation";
+        return "PitchBend";
         }
     case 3:
         {
-        return "Gain";
+        return "LeavesType";
         }
     case 4:
         {
-        return "Release";
+        return "Rotation";
         }
     case 5:
         {
-        return "Sustain";
+        return "Release";
         }
     case 6:
         {
-        return "Decay";
+        return "Sustain";
         }
     case 7:
         {
-        return "Attack";
+        return "Decay";
         }
     case 8:
         {
-        return "Ramp";
+        return "Attack";
         }
     case 9:
         {
-        return "Leaves";
+        return "Ramp";
         }
     case 10:
         {
-        return "/signals/Rotation";
+        return "Leaves";
         }
     case 11:
         {
-        return "/signals/Gain";
+        return "/signals/Rotation";
         }
     case 12:
         {
@@ -3365,6 +3369,25 @@ void getParameterInfo(ParameterIndex index, ParameterInfo * info) const {
             {
             info->type = ParameterTypeNumber;
             info->initialValue = 0;
+            info->min = -70;
+            info->max = 6;
+            info->exponent = 0.5;
+            info->steps = 0;
+            info->debug = false;
+            info->saveable = true;
+            info->transmittable = true;
+            info->initialized = true;
+            info->visible = true;
+            info->displayName = "";
+            info->unit = "dB";
+            info->ioType = IOTypeUndefined;
+            info->signalIndex = INVALID_INDEX;
+            break;
+            }
+        case 2:
+            {
+            info->type = ParameterTypeNumber;
+            info->initialValue = 0;
             info->min = -1;
             info->max = 1;
             info->exponent = 1;
@@ -3380,7 +3403,28 @@ void getParameterInfo(ParameterIndex index, ParameterInfo * info) const {
             info->signalIndex = INVALID_INDEX;
             break;
             }
-        case 2:
+        case 3:
+            {
+            info->type = ParameterTypeNumber;
+            info->initialValue = 1;
+            info->min = 0;
+            info->max = 1;
+            info->exponent = 1;
+            info->steps = 2;
+            static const char * eVal3[] = {"Float", "Int"};
+            info->enumValues = eVal3;
+            info->debug = false;
+            info->saveable = true;
+            info->transmittable = true;
+            info->initialized = true;
+            info->visible = true;
+            info->displayName = "";
+            info->unit = "";
+            info->ioType = IOTypeUndefined;
+            info->signalIndex = INVALID_INDEX;
+            break;
+            }
+        case 4:
             {
             info->type = ParameterTypeNumber;
             info->initialValue = 0;
@@ -3399,26 +3443,7 @@ void getParameterInfo(ParameterIndex index, ParameterInfo * info) const {
             info->signalIndex = INVALID_INDEX;
             break;
             }
-        case 3:
-            {
-            info->type = ParameterTypeNumber;
-            info->initialValue = 0;
-            info->min = -70;
-            info->max = 6;
-            info->exponent = 1;
-            info->steps = 0;
-            info->debug = false;
-            info->saveable = true;
-            info->transmittable = true;
-            info->initialized = true;
-            info->visible = true;
-            info->displayName = "";
-            info->unit = "";
-            info->ioType = IOTypeUndefined;
-            info->signalIndex = INVALID_INDEX;
-            break;
-            }
-        case 4:
+        case 5:
             {
             info->type = ParameterTypeNumber;
             info->initialValue = 100;
@@ -3437,31 +3462,12 @@ void getParameterInfo(ParameterIndex index, ParameterInfo * info) const {
             info->signalIndex = INVALID_INDEX;
             break;
             }
-        case 5:
+        case 6:
             {
             info->type = ParameterTypeNumber;
             info->initialValue = 0;
             info->min = -70;
             info->max = 0;
-            info->exponent = 1;
-            info->steps = 0;
-            info->debug = false;
-            info->saveable = true;
-            info->transmittable = true;
-            info->initialized = true;
-            info->visible = true;
-            info->displayName = "";
-            info->unit = "";
-            info->ioType = IOTypeUndefined;
-            info->signalIndex = INVALID_INDEX;
-            break;
-            }
-        case 6:
-            {
-            info->type = ParameterTypeNumber;
-            info->initialValue = 10;
-            info->min = 0;
-            info->max = 10000;
             info->exponent = 1;
             info->steps = 0;
             info->debug = false;
@@ -3497,6 +3503,25 @@ void getParameterInfo(ParameterIndex index, ParameterInfo * info) const {
         case 8:
             {
             info->type = ParameterTypeNumber;
+            info->initialValue = 10;
+            info->min = 0;
+            info->max = 10000;
+            info->exponent = 1;
+            info->steps = 0;
+            info->debug = false;
+            info->saveable = true;
+            info->transmittable = true;
+            info->initialized = true;
+            info->visible = true;
+            info->displayName = "";
+            info->unit = "";
+            info->ioType = IOTypeUndefined;
+            info->signalIndex = INVALID_INDEX;
+            break;
+            }
+        case 9:
+            {
+            info->type = ParameterTypeNumber;
             info->initialValue = 100;
             info->min = 0;
             info->max = 100;
@@ -3513,7 +3538,7 @@ void getParameterInfo(ParameterIndex index, ParameterInfo * info) const {
             info->signalIndex = INVALID_INDEX;
             break;
             }
-        case 9:
+        case 10:
             {
             info->type = ParameterTypeNumber;
             info->initialValue = 8;
@@ -3532,7 +3557,7 @@ void getParameterInfo(ParameterIndex index, ParameterInfo * info) const {
             info->signalIndex = INVALID_INDEX;
             break;
             }
-        case 10:
+        case 11:
             {
             info->type = ParameterTypeSignal;
             info->initialValue = 0;
@@ -3551,7 +3576,7 @@ void getParameterInfo(ParameterIndex index, ParameterInfo * info) const {
             info->signalIndex = 0;
             break;
             }
-        case 11:
+        case 12:
             {
             info->type = ParameterTypeSignal;
             info->initialValue = 0;
@@ -3570,7 +3595,7 @@ void getParameterInfo(ParameterIndex index, ParameterInfo * info) const {
             info->signalIndex = 1;
             break;
             }
-        case 12:
+        case 13:
             {
             info->type = ParameterTypeSignal;
             info->initialValue = 0;
@@ -3589,7 +3614,7 @@ void getParameterInfo(ParameterIndex index, ParameterInfo * info) const {
             info->signalIndex = 2;
             break;
             }
-        case 13:
+        case 14:
             {
             info->type = ParameterTypeSignal;
             info->initialValue = 0;
@@ -3608,7 +3633,7 @@ void getParameterInfo(ParameterIndex index, ParameterInfo * info) const {
             info->signalIndex = 3;
             break;
             }
-        case 14:
+        case 15:
             {
             info->type = ParameterTypeSignal;
             info->initialValue = 0;
@@ -3627,7 +3652,7 @@ void getParameterInfo(ParameterIndex index, ParameterInfo * info) const {
             info->signalIndex = 4;
             break;
             }
-        case 15:
+        case 16:
             {
             info->type = ParameterTypeSignal;
             info->initialValue = 0;
@@ -3646,7 +3671,7 @@ void getParameterInfo(ParameterIndex index, ParameterInfo * info) const {
             info->signalIndex = 5;
             break;
             }
-        case 16:
+        case 17:
             {
             info->type = ParameterTypeSignal;
             info->initialValue = 0;
@@ -3665,31 +3690,12 @@ void getParameterInfo(ParameterIndex index, ParameterInfo * info) const {
             info->signalIndex = 6;
             break;
             }
-        case 17:
-            {
-            info->type = ParameterTypeSignal;
-            info->initialValue = 0;
-            info->min = 0;
-            info->max = 1;
-            info->exponent = 1;
-            info->steps = 0;
-            info->debug = false;
-            info->saveable = false;
-            info->transmittable = false;
-            info->initialized = false;
-            info->visible = false;
-            info->displayName = "";
-            info->unit = "";
-            info->ioType = IOTypeInput;
-            info->signalIndex = 7;
-            break;
-            }
         default:
             {
             index -= 18;
 
             if (index < this->p_01[0]->getNumParameters()) {
-                for (Index i = 0; i < 32; i++) {
+                for (Index i = 0; i < 12; i++) {
                     this->p_01[i]->getParameterInfo(index, info);
                 }
             }
@@ -3727,7 +3733,20 @@ ParameterValue applyStepsToNormalizedParameterValue(ParameterValue normalizedVal
 
 ParameterValue convertToNormalizedParameterValue(ParameterIndex index, ParameterValue value) const {
     switch (index) {
-    case 9:
+    case 3:
+        {
+        {
+            value = (value < 0 ? 0 : (value > 1 ? 1 : value));
+            ParameterValue normalizedValue = (value - 0) / (1 - 0);
+
+            {
+                normalizedValue = this->applyStepsToNormalizedParameterValue(normalizedValue, 2);
+            }
+
+            return normalizedValue;
+        }
+        }
+    case 10:
         {
         {
             value = (value < 0 ? 0 : (value > 24 ? 24 : value));
@@ -3735,7 +3754,7 @@ ParameterValue convertToNormalizedParameterValue(ParameterIndex index, Parameter
             return normalizedValue;
         }
         }
-    case 8:
+    case 9:
         {
         {
             value = (value < 0 ? 0 : (value > 100 ? 100 : value));
@@ -3743,9 +3762,9 @@ ParameterValue convertToNormalizedParameterValue(ParameterIndex index, Parameter
             return normalizedValue;
         }
         }
-    case 4:
-    case 6:
+    case 5:
     case 7:
+    case 8:
         {
         {
             value = (value < 0 ? 0 : (value > 10000 ? 10000 : value));
@@ -3766,7 +3785,28 @@ ParameterValue convertToNormalizedParameterValue(ParameterIndex index, Parameter
             return normalizedValue;
         }
         }
+    case 6:
+        {
+        {
+            value = (value < -70 ? -70 : (value > 0 ? 0 : value));
+            ParameterValue normalizedValue = (value - -70) / (0 - -70);
+            return normalizedValue;
+        }
+        }
     case 1:
+        {
+        {
+            value = (value < -70 ? -70 : (value > 6 ? 6 : value));
+            ParameterValue normalizedValue = (value - -70) / (6 - -70);
+
+            {
+                normalizedValue = rnbo_exp(rnbo_log(normalizedValue) * 1. / (number)0.5);
+            }
+
+            return normalizedValue;
+        }
+        }
+    case 2:
         {
         {
             value = (value < -1 ? -1 : (value > 1 ? 1 : value));
@@ -3779,27 +3819,11 @@ ParameterValue convertToNormalizedParameterValue(ParameterIndex index, Parameter
             return normalizedValue;
         }
         }
-    case 2:
+    case 4:
         {
         {
             value = (value < -180 ? -180 : (value > 180 ? 180 : value));
             ParameterValue normalizedValue = (value - -180) / (180 - -180);
-            return normalizedValue;
-        }
-        }
-    case 5:
-        {
-        {
-            value = (value < -70 ? -70 : (value > 0 ? 0 : value));
-            ParameterValue normalizedValue = (value - -70) / (0 - -70);
-            return normalizedValue;
-        }
-        }
-    case 3:
-        {
-        {
-            value = (value < -70 ? -70 : (value > 6 ? 6 : value));
-            ParameterValue normalizedValue = (value - -70) / (6 - -70);
             return normalizedValue;
         }
         }
@@ -3822,7 +3846,21 @@ ParameterValue convertFromNormalizedParameterValue(ParameterIndex index, Paramet
     value = (value < 0 ? 0 : (value > 1 ? 1 : value));
 
     switch (index) {
-    case 9:
+    case 3:
+        {
+        {
+            value = (value < 0 ? 0 : (value > 1 ? 1 : value));
+
+            {
+                value = this->applyStepsToNormalizedParameterValue(value, 2);
+            }
+
+            {
+                return 0 + value * (1 - 0);
+            }
+        }
+        }
+    case 10:
         {
         {
             value = (value < 0 ? 0 : (value > 1 ? 1 : value));
@@ -3832,7 +3870,7 @@ ParameterValue convertFromNormalizedParameterValue(ParameterIndex index, Paramet
             }
         }
         }
-    case 8:
+    case 9:
         {
         {
             value = (value < 0 ? 0 : (value > 1 ? 1 : value));
@@ -3842,9 +3880,9 @@ ParameterValue convertFromNormalizedParameterValue(ParameterIndex index, Paramet
             }
         }
         }
-    case 4:
-    case 6:
+    case 5:
     case 7:
+    case 8:
         {
         {
             value = (value < 0 ? 0 : (value > 1 ? 1 : value));
@@ -3868,7 +3906,27 @@ ParameterValue convertFromNormalizedParameterValue(ParameterIndex index, Paramet
             }
         }
         }
+    case 6:
+        {
+        {
+            value = (value < 0 ? 0 : (value > 1 ? 1 : value));
+
+            {
+                return -70 + value * (0 - -70);
+            }
+        }
+        }
     case 1:
+        {
+        {
+            value = (value < 0 ? 0 : (value > 1 ? 1 : value));
+
+            {
+                return -70 + rnbo_exp(rnbo_log(value) * 0.5) * (6 - -70);
+            }
+        }
+        }
+    case 2:
         {
         {
             value = (value < 0 ? 0 : (value > 1 ? 1 : value));
@@ -3882,33 +3940,13 @@ ParameterValue convertFromNormalizedParameterValue(ParameterIndex index, Paramet
             }
         }
         }
-    case 2:
+    case 4:
         {
         {
             value = (value < 0 ? 0 : (value > 1 ? 1 : value));
 
             {
                 return -180 + value * (180 - -180);
-            }
-        }
-        }
-    case 5:
-        {
-        {
-            value = (value < 0 ? 0 : (value > 1 ? 1 : value));
-
-            {
-                return -70 + value * (0 - -70);
-            }
-        }
-        }
-    case 3:
-        {
-        {
-            value = (value < 0 ? 0 : (value > 1 ? 1 : value));
-
-            {
-                return -70 + value * (6 - -70);
             }
         }
         }
@@ -3936,6 +3974,14 @@ ParameterValue constrainParameterValue(ParameterIndex index, ParameterValue valu
     case 1:
         {
         return this->param_02_value_constrain(value);
+        }
+    case 2:
+        {
+        return this->param_03_value_constrain(value);
+        }
+    case 3:
+        {
+        return this->param_04_value_constrain(value);
         }
     default:
         {
@@ -3993,7 +4039,7 @@ void processNumMessage(MessageTag tag, MessageTag objectId, MillisecondTime time
     RNBO_UNUSED(objectId);
     this->updateTime(time);
 
-    for (Index i = 0; i < 32; i++) {
+    for (Index i = 0; i < 12; i++) {
         this->p_01[i]->processNumMessage(tag, objectId, time, payload);
     }
 }
@@ -4007,7 +4053,7 @@ void processListMessage(
     RNBO_UNUSED(objectId);
     this->updateTime(time);
 
-    for (Index i = 0; i < 32; i++) {
+    for (Index i = 0; i < 12; i++) {
         this->p_01[i]->processListMessage(tag, objectId, time, payload);
     }
 }
@@ -4016,7 +4062,7 @@ void processBangMessage(MessageTag tag, MessageTag objectId, MillisecondTime tim
     RNBO_UNUSED(objectId);
     this->updateTime(time);
 
-    for (Index i = 0; i < 32; i++) {
+    for (Index i = 0; i < 12; i++) {
         this->p_01[i]->processBangMessage(tag, objectId, time);
     }
 }
@@ -4086,13 +4132,39 @@ void param_02_value_set(number v) {
         this->param_02_lastValue = this->param_02_value;
     }
 
+    this->dspexpr_26_in1_set(v);
+}
+
+void param_03_value_set(number v) {
+    v = this->param_03_value_constrain(v);
+    this->param_03_value = v;
+    this->sendParameter(2, false);
+
+    if (this->param_03_value != this->param_03_lastValue) {
+        this->getEngine()->presetTouched();
+        this->param_03_lastValue = this->param_03_value;
+    }
+
     this->midiformat_02_pitchbend_set(v);
+}
+
+void param_04_value_set(number v) {
+    v = this->param_04_value_constrain(v);
+    this->param_04_value = v;
+    this->sendParameter(3, false);
+
+    if (this->param_04_value != this->param_04_lastValue) {
+        this->getEngine()->presetTouched();
+        this->param_04_lastValue = this->param_04_value;
+    }
+
+    this->expr_04_in1_set(v);
 }
 
 void paramtilde_01_value_set(number v) {
     this->paramtilde_01_value_setter(v);
     v = this->paramtilde_01_value;
-    this->sendParameter(2, false);
+    this->sendParameter(4, false);
     SampleIndex k = (SampleIndex)(this->sampleOffsetIntoNextAudioBuffer);
 
     if ((bool)(this->paramtilde_01_sigbuf)) {
@@ -4106,7 +4178,7 @@ void paramtilde_01_value_set(number v) {
 void paramtilde_02_value_set(number v) {
     this->paramtilde_02_value_setter(v);
     v = this->paramtilde_02_value;
-    this->sendParameter(3, false);
+    this->sendParameter(5, false);
     SampleIndex k = (SampleIndex)(this->sampleOffsetIntoNextAudioBuffer);
 
     if ((bool)(this->paramtilde_02_sigbuf)) {
@@ -4120,7 +4192,7 @@ void paramtilde_02_value_set(number v) {
 void paramtilde_03_value_set(number v) {
     this->paramtilde_03_value_setter(v);
     v = this->paramtilde_03_value;
-    this->sendParameter(4, false);
+    this->sendParameter(6, false);
     SampleIndex k = (SampleIndex)(this->sampleOffsetIntoNextAudioBuffer);
 
     if ((bool)(this->paramtilde_03_sigbuf)) {
@@ -4134,7 +4206,7 @@ void paramtilde_03_value_set(number v) {
 void paramtilde_04_value_set(number v) {
     this->paramtilde_04_value_setter(v);
     v = this->paramtilde_04_value;
-    this->sendParameter(5, false);
+    this->sendParameter(7, false);
     SampleIndex k = (SampleIndex)(this->sampleOffsetIntoNextAudioBuffer);
 
     if ((bool)(this->paramtilde_04_sigbuf)) {
@@ -4148,7 +4220,7 @@ void paramtilde_04_value_set(number v) {
 void paramtilde_05_value_set(number v) {
     this->paramtilde_05_value_setter(v);
     v = this->paramtilde_05_value;
-    this->sendParameter(6, false);
+    this->sendParameter(8, false);
     SampleIndex k = (SampleIndex)(this->sampleOffsetIntoNextAudioBuffer);
 
     if ((bool)(this->paramtilde_05_sigbuf)) {
@@ -4162,7 +4234,7 @@ void paramtilde_05_value_set(number v) {
 void paramtilde_06_value_set(number v) {
     this->paramtilde_06_value_setter(v);
     v = this->paramtilde_06_value;
-    this->sendParameter(7, false);
+    this->sendParameter(9, false);
     SampleIndex k = (SampleIndex)(this->sampleOffsetIntoNextAudioBuffer);
 
     if ((bool)(this->paramtilde_06_sigbuf)) {
@@ -4176,27 +4248,13 @@ void paramtilde_06_value_set(number v) {
 void paramtilde_07_value_set(number v) {
     this->paramtilde_07_value_setter(v);
     v = this->paramtilde_07_value;
-    this->sendParameter(8, false);
+    this->sendParameter(10, false);
     SampleIndex k = (SampleIndex)(this->sampleOffsetIntoNextAudioBuffer);
 
     if ((bool)(this->paramtilde_07_sigbuf)) {
         for (SampleIndex i = (SampleIndex)(this->paramtilde_07_lastIndex); i < k; i++) {
             this->paramtilde_07_sigbuf[(Index)i] = v;
             this->paramtilde_07_lastIndex = k;
-        }
-    }
-}
-
-void paramtilde_08_value_set(number v) {
-    this->paramtilde_08_value_setter(v);
-    v = this->paramtilde_08_value;
-    this->sendParameter(9, false);
-    SampleIndex k = (SampleIndex)(this->sampleOffsetIntoNextAudioBuffer);
-
-    if ((bool)(this->paramtilde_08_sigbuf)) {
-        for (SampleIndex i = (SampleIndex)(this->paramtilde_08_lastIndex); i < k; i++) {
-            this->paramtilde_08_sigbuf[(Index)i] = v;
-            this->paramtilde_08_lastIndex = k;
         }
     }
 }
@@ -4230,7 +4288,7 @@ Index getNumOutputChannels() const {
 }
 
 void allocateDataRefs() {
-    for (Index i = 0; i < 32; i++) {
+    for (Index i = 0; i < 12; i++) {
         this->p_01[i]->allocateDataRefs();
     }
 
@@ -4243,9 +4301,10 @@ void allocateDataRefs() {
 }
 
 void initializeObjects() {
+    this->ip_02_init();
     this->midinotecontroller_01_init();
 
-    for (Index i = 0; i < 32; i++) {
+    for (Index i = 0; i < 12; i++) {
         this->p_01[i]->initializeObjects();
     }
 }
@@ -4257,7 +4316,7 @@ void sendOutlet(OutletIndex index, ParameterValue value) {
 void startup() {
     this->updateTime(this->getEngine()->getCurrentTime());
 
-    for (Index i = 0; i < 32; i++) {
+    for (Index i = 0; i < 12; i++) {
         this->p_01[i]->startup();
     }
 
@@ -4266,7 +4325,15 @@ void startup() {
     }
 
     {
-        this->scheduleParamInit(1, 0);
+        this->scheduleParamInit(1, -2147483647);
+    }
+
+    {
+        this->scheduleParamInit(2, 0);
+    }
+
+    {
+        this->scheduleParamInit(3, -2147483647);
     }
 
     this->processParamInitEvents();
@@ -4294,13 +4361,13 @@ void p_01_out3_list_set(const list& v) {
 }
 
 void p_01_target_PB_number_set(number v) {
-    for (Index i = 0; i < 32; i++) {
+    for (Index i = 0; i < 12; i++) {
         if (i + 1 == this->p_01_target || 0 == this->p_01_target) {
             this->p_01[i]->updateTime(this->_currentTime);
         }
     }
 
-    for (Index i = 0; i < 32; i++) {
+    for (Index i = 0; i < 12; i++) {
         this->p_01[i]->receive_01_output_number_set(v);
     }
 }
@@ -4311,6 +4378,15 @@ void send_01_input_number_set(number v) {
 }
 
 static number param_02_value_constrain(number v) {
+    v = (v > 6 ? 6 : (v < -70 ? -70 : v));
+    return v;
+}
+
+void dspexpr_26_in1_set(number v) {
+    this->dspexpr_26_in1 = v;
+}
+
+static number param_03_value_constrain(number v) {
     v = (v > 1 ? 1 : (v < -1 ? -1 : v));
 
     {
@@ -4375,11 +4451,11 @@ void p_01_midiininternal_set(number v) {
     if (sendlen > 0) {
         number i;
 
-        if (this->p_01_target > 0 && this->p_01_target <= 32) {
+        if (this->p_01_target > 0 && this->p_01_target <= 12) {
             i = this->p_01_target - 1;
             this->p_01[(Index)i]->processMidiEvent(_currentTime, 0, this->p_01_mididata, sendlen);
         } else if (this->p_01_target == 0) {
-            for (i = 0; i < 32; i++) {
+            for (i = 0; i < 12; i++) {
                 this->p_01[(Index)i]->processMidiEvent(_currentTime, 0, this->p_01_mididata, sendlen);
             }
         }
@@ -4410,13 +4486,13 @@ void midinotecontroller_01_voicestatus_set(const list& v) {
 }
 
 void p_01_voicestatus_set(const list& v) {
-    for (Index i = 0; i < 32; i++) {
+    for (Index i = 0; i < 12; i++) {
         if (i + 1 == this->p_01_target || 0 == this->p_01_target) {
             this->p_01[i]->updateTime(this->_currentTime);
         }
     }
 
-    for (Index i = 0; i < 32; i++) {
+    for (Index i = 0; i < 12; i++) {
         if (i + 1 == this->p_01_target || 0 == this->p_01_target) {
             this->p_01[i]->voice_01_mutein_list_set(v);
         }
@@ -4426,13 +4502,13 @@ void p_01_voicestatus_set(const list& v) {
 }
 
 void p_01_activevoices_set(number v) {
-    for (Index i = 0; i < 32; i++) {
+    for (Index i = 0; i < 12; i++) {
         if (i + 1 == this->p_01_target || 0 == this->p_01_target) {
             this->p_01[i]->updateTime(this->_currentTime);
         }
     }
 
-    for (Index i = 0; i < 32; i++) {
+    for (Index i = 0; i < 12; i++) {
         this->p_01[i]->voice_01_activevoices_set(v);
     }
 }
@@ -4442,13 +4518,13 @@ void p_01_mute_set(const list& v) {
     Index muteState = (Index)(v[1]);
 
     if (voiceNumber == 0) {
-        for (Index i = 0; i < 32; i++) {
+        for (Index i = 0; i < 12; i++) {
             this->p_01[(Index)i]->setIsMuted(muteState);
         }
     } else {
         Index subpatcherIndex = voiceNumber - 1;
 
-        if (subpatcherIndex >= 0 && subpatcherIndex < 32) {
+        if (subpatcherIndex >= 0 && subpatcherIndex < 12) {
             this->p_01[(Index)subpatcherIndex]->setIsMuted(muteState);
         }
     }
@@ -4494,7 +4570,7 @@ void midinotecontroller_01_midiin_set(number v) {
             number oldest = this->midinotecontroller_01_voice_lastontime[0];
             number target_state = this->midinotecontroller_01_voice_state[0];
 
-            for (Index i = 0; i < 32; i++) {
+            for (Index i = 0; i < 12; i++) {
                 number candidate_state = this->midinotecontroller_01_voice_state[(Index)i];
 
                 if (this->midinotecontroller_01_voice_notenumber[(Index)i] == this->midinotecontroller_01_byte1 && candidate_state == MIDI_NoteState_On) {
@@ -4560,7 +4636,7 @@ void midinotecontroller_01_midiin_set(number v) {
             number notenumber = this->midinotecontroller_01_byte1;
             number channel = (BinOpInt)((UBinOpInt)this->midinotecontroller_01_status & (UBinOpInt)0x0F);
 
-            for (Index i = 0; i < 32; i++) {
+            for (Index i = 0; i < 12; i++) {
                 if (this->midinotecontroller_01_voice_notenumber[(Index)i] == notenumber && this->midinotecontroller_01_voice_channel[(Index)i] == channel && this->midinotecontroller_01_voice_state[(Index)i] == MIDI_NoteState_On) {
                     target = i + 1;
                     break;
@@ -4634,7 +4710,7 @@ void midinotecontroller_01_midiin_set(number v) {
                     this->midinotecontroller_01_channel_sustain[((bool)(ignoresustainchannel) ? 0 : j)] = pedaldown;
 
                     if ((bool)(!(bool)(pedaldown))) {
-                        for (Index i = 0; i < 32; i++) {
+                        for (Index i = 0; i < 12; i++) {
                             if (((bool)(ignoresustainchannel) || this->midinotecontroller_01_voice_channel[(Index)i] == channel) && this->midinotecontroller_01_voice_state[(Index)i] == MIDI_NoteState_Sustained) {
                                 number currentTarget = this->midinotecontroller_01_currenttarget;
                                 this->midinotecontroller_01_target_set(i + 1);
@@ -4658,7 +4734,7 @@ void midinotecontroller_01_midiin_set(number v) {
                     number timbre = (BinOpInt)(((UBinOpInt)((UBinOpInt)k & (UBinOpInt)0x7F)) << (UBinOpInt)7);
                     this->midinotecontroller_01_channel_timbre[(Index)((UBinOpInt)this->midinotecontroller_01_status & (UBinOpInt)0x0F)] = timbre;
 
-                    for (Index i = 0; i < 32; i++) {
+                    for (Index i = 0; i < 12; i++) {
                         if (this->midinotecontroller_01_voice_channel[(Index)i] == channel && this->midinotecontroller_01_voice_state[(Index)i] != MIDI_NoteState_Off) {
                             this->midinotecontroller_01_sendtimbre(i);
                         }
@@ -4711,7 +4787,7 @@ void midinotecontroller_01_midiin_set(number v) {
         {
             number channel = (BinOpInt)((UBinOpInt)this->midinotecontroller_01_status & (UBinOpInt)0x0F);
 
-            for (number i = 0; i < 32; i++) {
+            for (number i = 0; i < 12; i++) {
                 if (this->midinotecontroller_01_voice_state[(Index)i] != MIDI_NoteState_Off && this->midinotecontroller_01_voice_channel[(Index)i] == channel) {
                     int k = (int)(channel);
                     this->midinotecontroller_01_channel_pressure[(Index)k] = v;
@@ -4729,7 +4805,7 @@ void midinotecontroller_01_midiin_set(number v) {
             int channel = (int)((BinOpInt)((UBinOpInt)this->midinotecontroller_01_status & (UBinOpInt)0x0F));
             this->midinotecontroller_01_channel_pitchbend[(Index)channel] = bendamount;
 
-            for (Index i = 0; i < 32; i++) {
+            for (Index i = 0; i < 12; i++) {
                 if (this->midinotecontroller_01_voice_state[(Index)i] != MIDI_NoteState_Off && this->midinotecontroller_01_voice_channel[(Index)i] == channel) {
                     this->midinotecontroller_01_sendpitchbend(i);
                 }
@@ -4753,6 +4829,35 @@ void midiformat_02_midimessage_set(number v) {
 void midiformat_02_pitchbend_set(number v) {
     this->midiformat_02_pitchbend = v;
     this->midiformat_02_send3byte(this->midiformat_02_innerFormat_pitchbend(v, this->midiformat_02_channel));
+}
+
+static number param_04_value_constrain(number v) {
+    v = (v > 1 ? 1 : (v < 0 ? 0 : v));
+
+    {
+        number oneStep = (number)1 / (number)1;
+        number oneStepInv = (oneStep != 0 ? (number)1 / oneStep : 0);
+        number numberOfSteps = rnbo_fround(v * oneStepInv * 1 / (number)1) * 1;
+        v = numberOfSteps * oneStep;
+    }
+
+    return v;
+}
+
+void ip_02_value_set(number v) {
+    this->ip_02_value = v;
+    this->ip_02_fillSigBuf();
+    this->ip_02_lastValue = v;
+}
+
+void expr_04_out1_set(number v) {
+    this->expr_04_out1 = v;
+    this->ip_02_value_set(this->expr_04_out1);
+}
+
+void expr_04_in1_set(number in1) {
+    this->expr_04_in1 = in1;
+    this->expr_04_out1_set(this->expr_04_in1 + this->expr_04_in2);//#map:+_obj-22:1
 }
 
 void midiformat_02_channel_set(number v) {
@@ -4829,7 +4934,7 @@ void midiparse_02_aftertouch_set(number v) {
 }
 
 void midiparse_02_pitchbend_set(number v) {
-    this->param_02_value_set(v);
+    this->param_03_value_set(v);
 }
 
 void midiparse_02_midiin_set(number midivalue) {
@@ -4995,46 +5100,29 @@ void signalsend_03_perform(const SampleValue * input, SampleValue * send, Index 
     }
 }
 
-void paramtilde_02_perform(const SampleValue * Gain, SampleValue * out, Index n) {
+void dspexpr_26_perform(number in1, SampleValue * out1, Index n) {
+    Index i;
+
+    for (i = 0; i < n; i++) {
+        out1[(Index)i] = rnbo_pow(10, in1 * 0.05);//#map:_###_obj_###_:1
+    }
+}
+
+void paramtilde_02_perform(const SampleValue * Release, SampleValue * out, Index n) {
     auto __paramtilde_02_sigbuf = this->paramtilde_02_sigbuf;
     auto __paramtilde_02_value = this->paramtilde_02_value;
     auto __paramtilde_02_lastIndex = this->paramtilde_02_lastIndex;
 
     for (Index i = 0; i < n; i++) {
         if (i >= __paramtilde_02_lastIndex) {
-            out[(Index)i] = Gain[(Index)i] + __paramtilde_02_value;
+            out[(Index)i] = Release[(Index)i] + __paramtilde_02_value;
         } else {
-            out[(Index)i] = Gain[(Index)i] + __paramtilde_02_sigbuf[(Index)i];
+            out[(Index)i] = Release[(Index)i] + __paramtilde_02_sigbuf[(Index)i];
         }
     }
 
     __paramtilde_02_lastIndex = 0;
     this->paramtilde_02_lastIndex = __paramtilde_02_lastIndex;
-}
-
-void dspexpr_26_perform(const Sample * in1, SampleValue * out1, Index n) {
-    Index i;
-
-    for (i = 0; i < n; i++) {
-        out1[(Index)i] = rnbo_pow(10, in1[(Index)i] * 0.05);//#map:_###_obj_###_:1
-    }
-}
-
-void paramtilde_03_perform(const SampleValue * Release, SampleValue * out, Index n) {
-    auto __paramtilde_03_sigbuf = this->paramtilde_03_sigbuf;
-    auto __paramtilde_03_value = this->paramtilde_03_value;
-    auto __paramtilde_03_lastIndex = this->paramtilde_03_lastIndex;
-
-    for (Index i = 0; i < n; i++) {
-        if (i >= __paramtilde_03_lastIndex) {
-            out[(Index)i] = Release[(Index)i] + __paramtilde_03_value;
-        } else {
-            out[(Index)i] = Release[(Index)i] + __paramtilde_03_sigbuf[(Index)i];
-        }
-    }
-
-    __paramtilde_03_lastIndex = 0;
-    this->paramtilde_03_lastIndex = __paramtilde_03_lastIndex;
 }
 
 void signalsend_06_perform(const SampleValue * input, SampleValue * send, Index n) {
@@ -5043,21 +5131,21 @@ void signalsend_06_perform(const SampleValue * input, SampleValue * send, Index 
     }
 }
 
-void paramtilde_04_perform(const SampleValue * Sustain, SampleValue * out, Index n) {
-    auto __paramtilde_04_sigbuf = this->paramtilde_04_sigbuf;
-    auto __paramtilde_04_value = this->paramtilde_04_value;
-    auto __paramtilde_04_lastIndex = this->paramtilde_04_lastIndex;
+void paramtilde_03_perform(const SampleValue * Sustain, SampleValue * out, Index n) {
+    auto __paramtilde_03_sigbuf = this->paramtilde_03_sigbuf;
+    auto __paramtilde_03_value = this->paramtilde_03_value;
+    auto __paramtilde_03_lastIndex = this->paramtilde_03_lastIndex;
 
     for (Index i = 0; i < n; i++) {
-        if (i >= __paramtilde_04_lastIndex) {
-            out[(Index)i] = Sustain[(Index)i] + __paramtilde_04_value;
+        if (i >= __paramtilde_03_lastIndex) {
+            out[(Index)i] = Sustain[(Index)i] + __paramtilde_03_value;
         } else {
-            out[(Index)i] = Sustain[(Index)i] + __paramtilde_04_sigbuf[(Index)i];
+            out[(Index)i] = Sustain[(Index)i] + __paramtilde_03_sigbuf[(Index)i];
         }
     }
 
-    __paramtilde_04_lastIndex = 0;
-    this->paramtilde_04_lastIndex = __paramtilde_04_lastIndex;
+    __paramtilde_03_lastIndex = 0;
+    this->paramtilde_03_lastIndex = __paramtilde_03_lastIndex;
 }
 
 void dspexpr_27_perform(const Sample * in1, SampleValue * out1, Index n) {
@@ -5083,21 +5171,21 @@ void signalsend_02_perform(const SampleValue * input, SampleValue * send, Index 
     }
 }
 
-void paramtilde_05_perform(const SampleValue * Decay, SampleValue * out, Index n) {
-    auto __paramtilde_05_sigbuf = this->paramtilde_05_sigbuf;
-    auto __paramtilde_05_value = this->paramtilde_05_value;
-    auto __paramtilde_05_lastIndex = this->paramtilde_05_lastIndex;
+void paramtilde_04_perform(const SampleValue * Decay, SampleValue * out, Index n) {
+    auto __paramtilde_04_sigbuf = this->paramtilde_04_sigbuf;
+    auto __paramtilde_04_value = this->paramtilde_04_value;
+    auto __paramtilde_04_lastIndex = this->paramtilde_04_lastIndex;
 
     for (Index i = 0; i < n; i++) {
-        if (i >= __paramtilde_05_lastIndex) {
-            out[(Index)i] = Decay[(Index)i] + __paramtilde_05_value;
+        if (i >= __paramtilde_04_lastIndex) {
+            out[(Index)i] = Decay[(Index)i] + __paramtilde_04_value;
         } else {
-            out[(Index)i] = Decay[(Index)i] + __paramtilde_05_sigbuf[(Index)i];
+            out[(Index)i] = Decay[(Index)i] + __paramtilde_04_sigbuf[(Index)i];
         }
     }
 
-    __paramtilde_05_lastIndex = 0;
-    this->paramtilde_05_lastIndex = __paramtilde_05_lastIndex;
+    __paramtilde_04_lastIndex = 0;
+    this->paramtilde_04_lastIndex = __paramtilde_04_lastIndex;
 }
 
 void signalsend_04_perform(const SampleValue * input, SampleValue * send, Index n) {
@@ -5106,21 +5194,21 @@ void signalsend_04_perform(const SampleValue * input, SampleValue * send, Index 
     }
 }
 
-void paramtilde_06_perform(const SampleValue * Attack, SampleValue * out, Index n) {
-    auto __paramtilde_06_sigbuf = this->paramtilde_06_sigbuf;
-    auto __paramtilde_06_value = this->paramtilde_06_value;
-    auto __paramtilde_06_lastIndex = this->paramtilde_06_lastIndex;
+void paramtilde_05_perform(const SampleValue * Attack, SampleValue * out, Index n) {
+    auto __paramtilde_05_sigbuf = this->paramtilde_05_sigbuf;
+    auto __paramtilde_05_value = this->paramtilde_05_value;
+    auto __paramtilde_05_lastIndex = this->paramtilde_05_lastIndex;
 
     for (Index i = 0; i < n; i++) {
-        if (i >= __paramtilde_06_lastIndex) {
-            out[(Index)i] = Attack[(Index)i] + __paramtilde_06_value;
+        if (i >= __paramtilde_05_lastIndex) {
+            out[(Index)i] = Attack[(Index)i] + __paramtilde_05_value;
         } else {
-            out[(Index)i] = Attack[(Index)i] + __paramtilde_06_sigbuf[(Index)i];
+            out[(Index)i] = Attack[(Index)i] + __paramtilde_05_sigbuf[(Index)i];
         }
     }
 
-    __paramtilde_06_lastIndex = 0;
-    this->paramtilde_06_lastIndex = __paramtilde_06_lastIndex;
+    __paramtilde_05_lastIndex = 0;
+    this->paramtilde_05_lastIndex = __paramtilde_05_lastIndex;
 }
 
 void signalsend_05_perform(const SampleValue * input, SampleValue * send, Index n) {
@@ -5129,21 +5217,21 @@ void signalsend_05_perform(const SampleValue * input, SampleValue * send, Index 
     }
 }
 
-void paramtilde_07_perform(const SampleValue * Ramp, SampleValue * out, Index n) {
-    auto __paramtilde_07_sigbuf = this->paramtilde_07_sigbuf;
-    auto __paramtilde_07_value = this->paramtilde_07_value;
-    auto __paramtilde_07_lastIndex = this->paramtilde_07_lastIndex;
+void paramtilde_06_perform(const SampleValue * Ramp, SampleValue * out, Index n) {
+    auto __paramtilde_06_sigbuf = this->paramtilde_06_sigbuf;
+    auto __paramtilde_06_value = this->paramtilde_06_value;
+    auto __paramtilde_06_lastIndex = this->paramtilde_06_lastIndex;
 
     for (Index i = 0; i < n; i++) {
-        if (i >= __paramtilde_07_lastIndex) {
-            out[(Index)i] = Ramp[(Index)i] + __paramtilde_07_value;
+        if (i >= __paramtilde_06_lastIndex) {
+            out[(Index)i] = Ramp[(Index)i] + __paramtilde_06_value;
         } else {
-            out[(Index)i] = Ramp[(Index)i] + __paramtilde_07_sigbuf[(Index)i];
+            out[(Index)i] = Ramp[(Index)i] + __paramtilde_06_sigbuf[(Index)i];
         }
     }
 
-    __paramtilde_07_lastIndex = 0;
-    this->paramtilde_07_lastIndex = __paramtilde_07_lastIndex;
+    __paramtilde_06_lastIndex = 0;
+    this->paramtilde_06_lastIndex = __paramtilde_06_lastIndex;
 }
 
 void dspexpr_28_perform(const Sample * in1, number in2, SampleValue * out1, Index n) {
@@ -5161,21 +5249,61 @@ void signalsend_01_perform(const SampleValue * input, SampleValue * send, Index 
     }
 }
 
-void paramtilde_08_perform(const SampleValue * Leaves, SampleValue * out, Index n) {
-    auto __paramtilde_08_sigbuf = this->paramtilde_08_sigbuf;
-    auto __paramtilde_08_value = this->paramtilde_08_value;
-    auto __paramtilde_08_lastIndex = this->paramtilde_08_lastIndex;
+void paramtilde_07_perform(const SampleValue * Leaves, SampleValue * out, Index n) {
+    auto __paramtilde_07_sigbuf = this->paramtilde_07_sigbuf;
+    auto __paramtilde_07_value = this->paramtilde_07_value;
+    auto __paramtilde_07_lastIndex = this->paramtilde_07_lastIndex;
 
     for (Index i = 0; i < n; i++) {
-        if (i >= __paramtilde_08_lastIndex) {
-            out[(Index)i] = Leaves[(Index)i] + __paramtilde_08_value;
+        if (i >= __paramtilde_07_lastIndex) {
+            out[(Index)i] = Leaves[(Index)i] + __paramtilde_07_value;
         } else {
-            out[(Index)i] = Leaves[(Index)i] + __paramtilde_08_sigbuf[(Index)i];
+            out[(Index)i] = Leaves[(Index)i] + __paramtilde_07_sigbuf[(Index)i];
         }
     }
 
-    __paramtilde_08_lastIndex = 0;
-    this->paramtilde_08_lastIndex = __paramtilde_08_lastIndex;
+    __paramtilde_07_lastIndex = 0;
+    this->paramtilde_07_lastIndex = __paramtilde_07_lastIndex;
+}
+
+void dspexpr_32_perform(const Sample * in1, SampleValue * out1, Index n) {
+    Index i;
+
+    for (i = 0; i < n; i++) {
+        out1[(Index)i] = rnbo_floor(in1[(Index)i]);//#map:_###_obj_###_:1
+    }
+}
+
+void ip_02_perform(SampleValue * out, Index n) {
+    auto __ip_02_sigbuf = this->ip_02_sigbuf;
+    auto __ip_02_lastValue = this->ip_02_lastValue;
+    auto __ip_02_lastIndex = this->ip_02_lastIndex;
+
+    for (Index i = 0; i < n; i++) {
+        out[(Index)i] = ((SampleIndex)(i) >= __ip_02_lastIndex ? __ip_02_lastValue : __ip_02_sigbuf[(Index)i]);
+    }
+
+    __ip_02_lastIndex = 0;
+    this->ip_02_lastIndex = __ip_02_lastIndex;
+}
+
+void selector_01_perform(
+    const Sample * onoff,
+    const SampleValue * in1,
+    const SampleValue * in2,
+    SampleValue * out,
+    Index n
+) {
+    Index i;
+
+    for (i = 0; i < n; i++) {
+        if (onoff[(Index)i] >= 1 && onoff[(Index)i] < 2)
+            out[(Index)i] = in1[(Index)i];
+        else if (onoff[(Index)i] >= 2 && onoff[(Index)i] < 3)
+            out[(Index)i] = in2[(Index)i];
+        else
+            out[(Index)i] = 0;
+    }
 }
 
 void signalsend_07_perform(const SampleValue * input, SampleValue * send, Index n) {
@@ -5204,7 +5332,7 @@ void p_01_perform(
     for (number chan = 0; chan < 2; chan++)
         zeroSignal(outs[(Index)chan], n);
 
-    for (Index i = 0; i < 32; i++)
+    for (Index i = 0; i < 12; i++)
         this->p_01[(Index)i]->process(ins, 7, outs, 2, n);
 }
 
@@ -5248,18 +5376,6 @@ void paramtilde_01_value_setter(number v) {
 }
 
 void paramtilde_02_value_setter(number v) {
-    if ((bool)(!(bool)(isNaN(6))) && v >= 6) {
-        v = 6;
-    }
-
-    if ((bool)(!(bool)(isNaN(-70))) && v <= -70) {
-        v = -70;
-    }
-
-    this->paramtilde_02_value = v;
-}
-
-void paramtilde_03_value_setter(number v) {
     if ((bool)(!(bool)(isNaN(10000))) && v >= 10000) {
         v = 10000;
     }
@@ -5268,16 +5384,28 @@ void paramtilde_03_value_setter(number v) {
         v = 0;
     }
 
-    this->paramtilde_03_value = v;
+    this->paramtilde_02_value = v;
 }
 
-void paramtilde_04_value_setter(number v) {
+void paramtilde_03_value_setter(number v) {
     if ((bool)(!(bool)(isNaN(0))) && v >= 0) {
         v = 0;
     }
 
     if ((bool)(!(bool)(isNaN(-70))) && v <= -70) {
         v = -70;
+    }
+
+    this->paramtilde_03_value = v;
+}
+
+void paramtilde_04_value_setter(number v) {
+    if ((bool)(!(bool)(isNaN(10000))) && v >= 10000) {
+        v = 10000;
+    }
+
+    if ((bool)(!(bool)(isNaN(0))) && v <= 0) {
+        v = 0;
     }
 
     this->paramtilde_04_value = v;
@@ -5296,8 +5424,8 @@ void paramtilde_05_value_setter(number v) {
 }
 
 void paramtilde_06_value_setter(number v) {
-    if ((bool)(!(bool)(isNaN(10000))) && v >= 10000) {
-        v = 10000;
+    if ((bool)(!(bool)(isNaN(100))) && v >= 100) {
+        v = 100;
     }
 
     if ((bool)(!(bool)(isNaN(0))) && v <= 0) {
@@ -5308,18 +5436,6 @@ void paramtilde_06_value_setter(number v) {
 }
 
 void paramtilde_07_value_setter(number v) {
-    if ((bool)(!(bool)(isNaN(100))) && v >= 100) {
-        v = 100;
-    }
-
-    if ((bool)(!(bool)(isNaN(0))) && v <= 0) {
-        v = 0;
-    }
-
-    this->paramtilde_07_value = v;
-}
-
-void paramtilde_08_value_setter(number v) {
     if ((bool)(!(bool)(isNaN(24))) && v >= 24) {
         v = 24;
     }
@@ -5328,7 +5444,7 @@ void paramtilde_08_value_setter(number v) {
         v = 0;
     }
 
-    this->paramtilde_08_value = v;
+    this->paramtilde_07_value = v;
 }
 
 number midiformat_02_innerFormat_cclamp(number v) {
@@ -5505,13 +5621,24 @@ number p_01_calcActiveVoices() {
     {
         number activeVoices = 0;
 
-        for (Index i = 0; i < 32; i++) {
+        for (Index i = 0; i < 12; i++) {
             if ((bool)(!(bool)(this->p_01[(Index)i]->getIsMuted())))
                 activeVoices++;
         }
 
         return activeVoices;
     }
+}
+
+void param_02_getPresetValue(PatcherStateInterface& preset) {
+    preset["value"] = this->param_02_value;
+}
+
+void param_02_setPresetValue(PatcherStateInterface& preset) {
+    if ((bool)(stateIsEmpty(preset)))
+        return;
+
+    this->param_02_value_set(preset["value"]);
 }
 
 void paramtilde_02_dspsetup(bool force) {
@@ -5554,31 +5681,23 @@ void paramtilde_06_dspsetup(bool force) {
     this->paramtilde_06_setupDone = true;
 }
 
+void param_03_getPresetValue(PatcherStateInterface& preset) {
+    preset["value"] = this->param_03_value;
+}
+
+void param_03_setPresetValue(PatcherStateInterface& preset) {
+    if ((bool)(stateIsEmpty(preset)))
+        return;
+
+    this->param_03_value_set(preset["value"]);
+}
+
 void paramtilde_07_dspsetup(bool force) {
     if ((bool)(this->paramtilde_07_setupDone) && (bool)(!(bool)(force)))
         return;
 
     this->paramtilde_07_lastIndex = 0;
     this->paramtilde_07_setupDone = true;
-}
-
-void param_02_getPresetValue(PatcherStateInterface& preset) {
-    preset["value"] = this->param_02_value;
-}
-
-void param_02_setPresetValue(PatcherStateInterface& preset) {
-    if ((bool)(stateIsEmpty(preset)))
-        return;
-
-    this->param_02_value_set(preset["value"]);
-}
-
-void paramtilde_08_dspsetup(bool force) {
-    if ((bool)(this->paramtilde_08_setupDone) && (bool)(!(bool)(force)))
-        return;
-
-    this->paramtilde_08_lastIndex = 0;
-    this->paramtilde_08_setupDone = true;
 }
 
 list midiparse_02_parser_next(number midiin) {
@@ -5731,12 +5850,55 @@ void midiparse_02_parser_reset() {
     this->midiparse_02_parser_byte1 = -1;
 }
 
+void ip_02_init() {
+    this->ip_02_lastValue = this->ip_02_value;
+}
+
+void ip_02_fillSigBuf() {
+    if ((bool)(this->ip_02_sigbuf)) {
+        SampleIndex k = (SampleIndex)(this->sampleOffsetIntoNextAudioBuffer);
+
+        if (k >= (SampleIndex)(this->vs))
+            k = (SampleIndex)(this->vs) - 1;
+
+        for (SampleIndex i = (SampleIndex)(this->ip_02_lastIndex); i < k; i++) {
+            if (this->ip_02_resetCount > 0) {
+                this->ip_02_sigbuf[(Index)i] = 1;
+                this->ip_02_resetCount--;
+            } else {
+                this->ip_02_sigbuf[(Index)i] = this->ip_02_lastValue;
+            }
+        }
+
+        this->ip_02_lastIndex = k;
+    }
+}
+
+void ip_02_dspsetup(bool force) {
+    if ((bool)(this->ip_02_setupDone) && (bool)(!(bool)(force)))
+        return;
+
+    this->ip_02_lastIndex = 0;
+    this->ip_02_setupDone = true;
+}
+
+void param_04_getPresetValue(PatcherStateInterface& preset) {
+    preset["value"] = this->param_04_value;
+}
+
+void param_04_setPresetValue(PatcherStateInterface& preset) {
+    if ((bool)(stateIsEmpty(preset)))
+        return;
+
+    this->param_04_value_set(preset["value"]);
+}
+
 void midinotecontroller_01_init() {
     for (Index i = 0; i < 16; i++) {
         this->midinotecontroller_01_channel_pitchbend[(Index)i] = 0x2000;
     }
 
-    for (Index i = 0; i < 32; i++) {
+    for (Index i = 0; i < 12; i++) {
         this->midinotecontroller_01_voice_lastontime[(Index)i] = -1;
     }
 }
@@ -5760,7 +5922,7 @@ void midinotecontroller_01_sendnoteoff(int target) {
 }
 
 void midinotecontroller_01_sendpitchbend(int v) {
-    if (v >= 0 && v < 32) {
+    if (v >= 0 && v < 12) {
         number currentTarget = this->midinotecontroller_01_currenttarget;
         this->midinotecontroller_01_target_set(v + 1);
         int totalbendamount = (int)(this->midinotecontroller_01_channel_pitchbend[(Index)this->midinotecontroller_01_voice_channel[(Index)v]]);
@@ -5822,7 +5984,7 @@ void midinotecontroller_01_sendtimbre(int v) {
 }
 
 void midinotecontroller_01_sendallnotesoff() {
-    for (Index i = 1; i <= 32; i++) {
+    for (Index i = 1; i <= 12; i++) {
         this->midinotecontroller_01_sendnoteoff(i);
     }
 }
@@ -6076,32 +6238,39 @@ void assign_defaults()
     p_01_target = 0;
     p_01_midiin = 0;
     dspexpr_26_in1 = 0;
-    paramtilde_02_value = 0;
-    paramtilde_02_value_setter(paramtilde_02_value);
+    param_02_value = 0;
     dspexpr_27_in1 = 0;
-    paramtilde_03_value = 100;
+    paramtilde_02_value = 100;
+    paramtilde_02_value_setter(paramtilde_02_value);
+    paramtilde_03_value = 0;
     paramtilde_03_value_setter(paramtilde_03_value);
-    paramtilde_04_value = 0;
+    paramtilde_04_value = 10;
     paramtilde_04_value_setter(paramtilde_04_value);
     paramtilde_05_value = 10;
     paramtilde_05_value_setter(paramtilde_05_value);
-    paramtilde_06_value = 10;
-    paramtilde_06_value_setter(paramtilde_06_value);
     dspexpr_28_in1 = 0;
     dspexpr_28_in2 = 100;
-    paramtilde_07_value = 100;
-    paramtilde_07_value_setter(paramtilde_07_value);
+    paramtilde_06_value = 100;
+    paramtilde_06_value_setter(paramtilde_06_value);
     dspexpr_29_in1 = 0;
     dspexpr_29_in2 = 1;
     dspexpr_30_in1 = 0;
     dspexpr_30_in2 = 0.01;
     dspexpr_31_in1 = 0;
     dspexpr_31_in2 = 1;
-    param_02_value = 0;
-    paramtilde_08_value = 8;
-    paramtilde_08_value_setter(paramtilde_08_value);
+    param_03_value = 0;
+    dspexpr_32_in1 = 0;
+    paramtilde_07_value = 8;
+    paramtilde_07_value_setter(paramtilde_07_value);
     midiout_02_port = 0;
+    selector_01_onoff = 1;
+    ip_02_value = 2;
+    ip_02_impulse = 0;
     midiin_02_port = 0;
+    expr_04_in1 = 0;
+    expr_04_in2 = 1;
+    expr_04_out1 = 0;
+    param_04_value = 1;
     midinotecontroller_01_currenttarget = 0;
     midinotecontroller_01_midiin = 0;
     _currentTime = 0;
@@ -6119,6 +6288,7 @@ void assign_defaults()
     signals[7] = nullptr;
     signals[8] = nullptr;
     signals[9] = nullptr;
+    signals[10] = nullptr;
     didAllocateSignals = 0;
     vs = 0;
     maxvs = 0;
@@ -6132,6 +6302,7 @@ void assign_defaults()
     p_01_mididata[0] = 0;
     p_01_mididata[1] = 0;
     p_01_mididata[2] = 0;
+    param_02_lastValue = 0;
     paramtilde_02_lastIndex = 0;
     paramtilde_02_sigbuf = nullptr;
     paramtilde_02_setupDone = false;
@@ -6147,18 +6318,21 @@ void assign_defaults()
     paramtilde_06_lastIndex = 0;
     paramtilde_06_sigbuf = nullptr;
     paramtilde_06_setupDone = false;
+    param_03_lastValue = 0;
     paramtilde_07_lastIndex = 0;
     paramtilde_07_sigbuf = nullptr;
     paramtilde_07_setupDone = false;
-    param_02_lastValue = 0;
-    paramtilde_08_lastIndex = 0;
-    paramtilde_08_sigbuf = nullptr;
-    paramtilde_08_setupDone = false;
     midiout_02_currentStatus = -1;
     midiout_02_status = -1;
     midiout_02_byte1 = -1;
     midiparse_02_parser_status = -1;
     midiparse_02_parser_byte1 = -1;
+    ip_02_lastIndex = 0;
+    ip_02_lastValue = 0;
+    ip_02_resetCount = 0;
+    ip_02_sigbuf = nullptr;
+    ip_02_setupDone = false;
+    param_04_lastValue = 0;
     midinotecontroller_01_currentStatus = -1;
     midinotecontroller_01_status = -1;
     midinotecontroller_01_byte1 = -1;
@@ -6195,25 +6369,33 @@ void assign_defaults()
     number p_01_target;
     number p_01_midiin;
     number dspexpr_26_in1;
-    number paramtilde_02_value;
+    number param_02_value;
     number dspexpr_27_in1;
+    number paramtilde_02_value;
     number paramtilde_03_value;
     number paramtilde_04_value;
     number paramtilde_05_value;
-    number paramtilde_06_value;
     number dspexpr_28_in1;
     number dspexpr_28_in2;
-    number paramtilde_07_value;
+    number paramtilde_06_value;
     number dspexpr_29_in1;
     number dspexpr_29_in2;
     number dspexpr_30_in1;
     number dspexpr_30_in2;
     number dspexpr_31_in1;
     number dspexpr_31_in2;
-    number param_02_value;
-    number paramtilde_08_value;
+    number param_03_value;
+    number dspexpr_32_in1;
+    number paramtilde_07_value;
     number midiout_02_port;
+    number selector_01_onoff;
+    number ip_02_value;
+    number ip_02_impulse;
     number midiin_02_port;
+    number expr_04_in1;
+    number expr_04_in2;
+    number expr_04_out1;
+    number param_04_value;
     number midinotecontroller_01_currenttarget;
     number midinotecontroller_01_midiin;
     MillisecondTime _currentTime;
@@ -6221,7 +6403,7 @@ void assign_defaults()
     SampleIndex sampleOffsetIntoNextAudioBuffer;
     signal zeroBuffer;
     signal dummyBuffer;
-    SampleValue * signals[10];
+    SampleValue * signals[11];
     bool didAllocateSignals;
     Index vs;
     Index maxvs;
@@ -6233,6 +6415,7 @@ void assign_defaults()
     bool paramtilde_01_setupDone;
     int p_01_currentStatus;
     uint8_t p_01_mididata[3];
+    number param_02_lastValue;
     SampleIndex paramtilde_02_lastIndex;
     signal paramtilde_02_sigbuf;
     bool paramtilde_02_setupDone;
@@ -6248,19 +6431,22 @@ void assign_defaults()
     SampleIndex paramtilde_06_lastIndex;
     signal paramtilde_06_sigbuf;
     bool paramtilde_06_setupDone;
+    number param_03_lastValue;
     SampleIndex paramtilde_07_lastIndex;
     signal paramtilde_07_sigbuf;
     bool paramtilde_07_setupDone;
-    number param_02_lastValue;
-    SampleIndex paramtilde_08_lastIndex;
-    signal paramtilde_08_sigbuf;
-    bool paramtilde_08_setupDone;
     int midiout_02_currentStatus;
     int midiout_02_status;
     int midiout_02_byte1;
     list midiout_02_sysex;
     int midiparse_02_parser_status;
     int midiparse_02_parser_byte1;
+    SampleIndex ip_02_lastIndex;
+    number ip_02_lastValue;
+    SampleIndex ip_02_resetCount;
+    signal ip_02_sigbuf;
+    bool ip_02_setupDone;
+    number param_04_lastValue;
     int midinotecontroller_01_currentStatus;
     int midinotecontroller_01_status;
     int midinotecontroller_01_byte1;
@@ -6272,10 +6458,10 @@ void assign_defaults()
     number midinotecontroller_01_channel_pressure[16] = { };
     number midinotecontroller_01_channel_timbre[16] = { };
     Int midinotecontroller_01_channel_sustain[16] = { };
-    number midinotecontroller_01_voice_lastontime[32] = { };
-    number midinotecontroller_01_voice_notenumber[32] = { };
-    number midinotecontroller_01_voice_channel[32] = { };
-    number midinotecontroller_01_voice_state[32] = { };
+    number midinotecontroller_01_voice_lastontime[12] = { };
+    number midinotecontroller_01_voice_notenumber[12] = { };
+    number midinotecontroller_01_voice_channel[12] = { };
+    number midinotecontroller_01_voice_state[12] = { };
     number midinotecontroller_01_notesdown[129] = { };
     number midinotecontroller_01_note_lastvelocity[128] = { };
     list midinotecontroller_01_muteval;
@@ -6296,7 +6482,7 @@ void assign_defaults()
     Index isMuted;
     indexlist paramInitIndices;
     indexlist paramInitOrder;
-    RNBOSubpatcher_24* p_01[32];
+    RNBOSubpatcher_25* p_01[12];
 
 };
 

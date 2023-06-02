@@ -2,29 +2,17 @@
   {
     "name": "CircleFX",
     "preset": {
-      "Channel": {
+      "MirrorRotation": {
         "value": 0
       },
-      "Delay": {
-        "value": 999.999999999999
-      },
-      "DelayTuning": {
+      "MirrorX": {
         "value": 0
       },
-      "Framesize": {
-        "value": 12
+      "MirrorY": {
+        "value": 0
       },
-      "Frequency": {
-        "value": 10.00000000000001
-      },
-      "MIDI": {
-        "value": 3.486820523428932
-      },
-      "Mode": {
-        "value": 1
-      },
-      "Smoothing": {
-        "value": 100
+      "Output": {
+        "value": 0
       }
     }
   }

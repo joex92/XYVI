@@ -1,13 +1,14 @@
 {
-	"name" : "XYVI",
+	"name" : "XYVI-VST",
 	"version" : 1,
 	"creationdate" : 3757855936,
-	"modificationdate" : 3767152669,
+	"modificationdate" : 3768510539,
 	"viewrect" : [ 25.0, 107.0, 300.0, 500.0 ],
 	"autoorganize" : 1,
 	"hideprojectwindow" : 0,
 	"showdependencies" : 1,
 	"autolocalize" : 1,
+	"browsertext" : "XYVI",
 	"contents" : 	{
 		"patchers" : 		{
 			"main.maxpat" : 			{
@@ -18,6 +19,34 @@
 		}
 ,
 		"code" : 		{
+
+		}
+,
+		"data" : 		{
+			"Heart.maxsnap" : 			{
+				"kind" : "maxsnapshot",
+				"local" : 1
+			}
+,
+			"Lissajous.maxsnap" : 			{
+				"kind" : "maxsnapshot",
+				"local" : 1
+			}
+,
+			"Star.maxsnap" : 			{
+				"kind" : "maxsnapshot",
+				"local" : 1
+			}
+,
+			"TTable.maxsnap" : 			{
+				"kind" : "maxsnapshot",
+				"local" : 1
+			}
+,
+			"Trochoid.maxsnap" : 			{
+				"kind" : "maxsnapshot",
+				"local" : 1
+			}
 
 		}
 ,
@@ -75,31 +104,6 @@
 				"kind" : "file",
 				"local" : 1
 			}
-,
-			"Heart.maxsnap" : 			{
-				"kind" : "file",
-				"local" : 1
-			}
-,
-			"Lissajous.maxsnap" : 			{
-				"kind" : "file",
-				"local" : 1
-			}
-,
-			"Star.maxsnap" : 			{
-				"kind" : "file",
-				"local" : 1
-			}
-,
-			"TTable.maxsnap" : 			{
-				"kind" : "file",
-				"local" : 1
-			}
-,
-			"Trochoid.maxsnap" : 			{
-				"kind" : "file",
-				"local" : 1
-			}
 
 		}
 
@@ -113,8 +117,8 @@
 
 	}
 ,
-	"detailsvisible" : 0,
-	"amxdtype" : 1768515945,
+	"detailsvisible" : 1,
+	"amxdtype" : 0,
 	"readonly" : 0,
 	"devpathtype" : 0,
 	"devpath" : ".",
