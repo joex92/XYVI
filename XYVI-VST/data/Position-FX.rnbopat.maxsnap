@@ -1,0 +1,38 @@
+{
+	"filetype" : "C74Snapshot",
+	"version" : 2,
+	"minorversion" : 0,
+	"name" : "Position-FX.rnbopat",
+	"origin" : "Position-FX",
+	"type" : "rnbo",
+	"subtype" : "",
+	"embed" : 1,
+	"snapshot" : 	{
+		"MirrorY" : 		{
+			"value" : 1.0
+		}
+,
+		"__presetid" : "Position-FX",
+		"Mirror" : 		{
+			"value" : 0.0
+		}
+,
+		"Output" : 		{
+			"value" : 0.0
+		}
+,
+		"MirrorX" : 		{
+			"value" : 1.0
+		}
+,
+		"Position" : 		{
+			"value" : 1.0
+		}
+,
+		"Rotation" : 		{
+			"value" : 0.0
+		}
+
+	}
+
+}

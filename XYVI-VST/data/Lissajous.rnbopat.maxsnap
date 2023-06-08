@@ -1,0 +1,66 @@
+{
+	"filetype" : "C74Snapshot",
+	"version" : 2,
+	"minorversion" : 0,
+	"name" : "Lissajous.rnbopat",
+	"origin" : "Lissajous",
+	"type" : "rnbo",
+	"subtype" : "",
+	"embed" : 1,
+	"snapshot" : 	{
+		"__presetid" : "Lissajous",
+		"PitchBendRange" : 		{
+			"value" : 2.0
+		}
+,
+		"PitchBend" : 		{
+			"value" : 0.0
+		}
+,
+		"Output" : 		{
+			"value" : 0.0
+		}
+,
+		"__sps" : 		{
+			"Lissajous" : [ 				{
+
+				}
+, 				{
+
+				}
+, 				{
+
+				}
+, 				{
+
+				}
+, 				{
+
+				}
+, 				{
+
+				}
+, 				{
+
+				}
+, 				{
+
+				}
+, 				{
+
+				}
+, 				{
+
+				}
+, 				{
+
+				}
+, 				{
+
+				}
+ ]
+		}
+
+	}
+
+}

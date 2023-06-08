@@ -1,0 +1,142 @@
+{
+	"filetype" : "C74Snapshot",
+	"version" : 2,
+	"minorversion" : 0,
+	"name" : "TTable.rnbopat",
+	"origin" : "TTable",
+	"type" : "rnbo",
+	"subtype" : "",
+	"embed" : 1,
+	"snapshot" : 	{
+		"__presetid" : "TTable",
+		"PitchBendRange" : 		{
+			"value" : 2.0
+		}
+,
+		"PitchBend" : 		{
+			"value" : 0.0
+		}
+,
+		"Output" : 		{
+			"value" : 0.0
+		}
+,
+		"PointsType" : 		{
+			"value" : 1.0
+		}
+,
+		"__sps" : 		{
+			"TTable" : [ 				{
+					"__sps" : 					{
+						"Bezier" : 						{
+
+						}
+
+					}
+
+				}
+, 				{
+					"__sps" : 					{
+						"Bezier" : 						{
+
+						}
+
+					}
+
+				}
+, 				{
+					"__sps" : 					{
+						"Bezier" : 						{
+
+						}
+
+					}
+
+				}
+, 				{
+					"__sps" : 					{
+						"Bezier" : 						{
+
+						}
+
+					}
+
+				}
+, 				{
+					"__sps" : 					{
+						"Bezier" : 						{
+
+						}
+
+					}
+
+				}
+, 				{
+					"__sps" : 					{
+						"Bezier" : 						{
+
+						}
+
+					}
+
+				}
+, 				{
+					"__sps" : 					{
+						"Bezier" : 						{
+
+						}
+
+					}
+
+				}
+, 				{
+					"__sps" : 					{
+						"Bezier" : 						{
+
+						}
+
+					}
+
+				}
+, 				{
+					"__sps" : 					{
+						"Bezier" : 						{
+
+						}
+
+					}
+
+				}
+, 				{
+					"__sps" : 					{
+						"Bezier" : 						{
+
+						}
+
+					}
+
+				}
+, 				{
+					"__sps" : 					{
+						"Bezier" : 						{
+
+						}
+
+					}
+
+				}
+, 				{
+					"__sps" : 					{
+						"Bezier" : 						{
+
+						}
+
+					}
+
+				}
+ ]
+		}
+
+	}
+
+}

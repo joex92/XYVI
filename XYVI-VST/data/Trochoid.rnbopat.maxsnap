@@ -1,0 +1,82 @@
+{
+	"filetype" : "C74Snapshot",
+	"version" : 2,
+	"minorversion" : 0,
+	"name" : "Trochoid.rnbopat",
+	"origin" : "Trochoid",
+	"type" : "rnbo",
+	"subtype" : "",
+	"embed" : 1,
+	"snapshot" : 	{
+		"Radius" : 		{
+			"value" : 1.0
+		}
+,
+		"__presetid" : "Trochoid",
+		"PitchBendRange" : 		{
+			"value" : 2.0
+		}
+,
+		"PitchBend" : 		{
+			"value" : 0.0
+		}
+,
+		"Output" : 		{
+			"value" : 0.0
+		}
+,
+		"Cycles" : 		{
+			"value" : 3.0
+		}
+,
+		"Mode" : 		{
+			"value" : 1.0
+		}
+,
+		"CyclesType" : 		{
+			"value" : 1.0
+		}
+,
+		"__sps" : 		{
+			"Trochoid" : [ 				{
+
+				}
+, 				{
+
+				}
+, 				{
+
+				}
+, 				{
+
+				}
+, 				{
+
+				}
+, 				{
+
+				}
+, 				{
+
+				}
+, 				{
+
+				}
+, 				{
+
+				}
+, 				{
+
+				}
+, 				{
+
+				}
+, 				{
+
+				}
+ ]
+		}
+
+	}
+
+}

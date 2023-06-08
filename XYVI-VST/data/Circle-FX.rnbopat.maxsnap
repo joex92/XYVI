@@ -1,0 +1,50 @@
+{
+	"filetype" : "C74Snapshot",
+	"version" : 2,
+	"minorversion" : 0,
+	"name" : "Circle-FX.rnbopat",
+	"origin" : "Circle-FX",
+	"type" : "rnbo",
+	"subtype" : "",
+	"embed" : 1,
+	"snapshot" : 	{
+		"__presetid" : "Circle-FX",
+		"Mode" : 		{
+			"value" : 1.0
+		}
+,
+		"Delay" : 		{
+			"value" : 76.700000000000003
+		}
+,
+		"Channel" : 		{
+			"value" : 3.0
+		}
+,
+		"MIDI" : 		{
+			"value" : -15.920761286339257
+		}
+,
+		"Output" : 		{
+			"value" : 0.0
+		}
+,
+		"Frequency" : 		{
+			"value" : 3.259452411994785
+		}
+,
+		"Smoothing" : 		{
+			"value" : 100.0
+		}
+,
+		"Framesize" : 		{
+			"value" : 12.0
+		}
+,
+		"DelayTuning" : 		{
+			"value" : 0.0
+		}
+
+	}
+
+}
