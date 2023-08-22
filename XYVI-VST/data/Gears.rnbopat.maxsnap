@@ -8,13 +8,17 @@
 	"subtype" : "",
 	"embed" : 1,
 	"snapshot" : 	{
+		"TeethType" : 		{
+			"value" : 1.0
+		}
+,
 		"__presetid" : "Gears",
 		"PitchBendRange" : 		{
 			"value" : 2.0
 		}
 ,
 		"PitchBend" : 		{
-			"value" : 0.0
+			"value" : 0.97
 		}
 ,
 		"Output" : 		{
@@ -22,7 +26,7 @@
 		}
 ,
 		"__sps" : 		{
-			"Gears[1]" : [ 				{
+			"Gears" : [ 				{
 
 				}
 , 				{
@@ -59,10 +63,6 @@
 
 				}
  ]
-		}
-,
-		"GearsType" : 		{
-			"value" : 1.0
 		}
 
 	}

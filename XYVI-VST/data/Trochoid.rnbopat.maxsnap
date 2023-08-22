@@ -18,10 +18,14 @@
 		}
 ,
 		"PitchBend" : 		{
-			"value" : 0.0
+			"value" : 0.97
 		}
 ,
 		"Output" : 		{
+			"value" : 0.0
+		}
+,
+		"CyclesType" : 		{
 			"value" : 0.0
 		}
 ,
@@ -30,11 +34,7 @@
 		}
 ,
 		"Mode" : 		{
-			"value" : 1.0
-		}
-,
-		"CyclesType" : 		{
-			"value" : 1.0
+			"value" : 0.0
 		}
 ,
 		"__sps" : 		{

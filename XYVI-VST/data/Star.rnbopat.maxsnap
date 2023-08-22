@@ -10,11 +10,11 @@
 	"snapshot" : 	{
 		"__presetid" : "Star",
 		"PitchBendRange" : 		{
-			"value" : 2.0
+			"value" : 36.0
 		}
 ,
 		"PitchBend" : 		{
-			"value" : 0.0
+			"value" : 0.56
 		}
 ,
 		"Output" : 		{

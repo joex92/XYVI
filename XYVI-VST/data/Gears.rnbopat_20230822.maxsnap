@@ -1,0 +1,70 @@
+{
+	"filetype" : "C74Snapshot",
+	"version" : 2,
+	"minorversion" : 0,
+	"name" : "Gears.rnbopat",
+	"origin" : "Gear",
+	"type" : "rnbo",
+	"subtype" : "",
+	"embed" : 1,
+	"snapshot" : 	{
+		"TeethType" : 		{
+			"value" : 1.0
+		}
+,
+		"__presetid" : "Gear",
+		"PitchBendRange" : 		{
+			"value" : 2.0
+		}
+,
+		"PitchBend" : 		{
+			"value" : 0.0
+		}
+,
+		"Output" : 		{
+			"value" : 0.0
+		}
+,
+		"__sps" : 		{
+			"Gear" : [ 				{
+
+				}
+, 				{
+
+				}
+, 				{
+
+				}
+, 				{
+
+				}
+, 				{
+
+				}
+, 				{
+
+				}
+, 				{
+
+				}
+, 				{
+
+				}
+, 				{
+
+				}
+, 				{
+
+				}
+, 				{
+
+				}
+, 				{
+
+				}
+ ]
+		}
+
+	}
+
+}

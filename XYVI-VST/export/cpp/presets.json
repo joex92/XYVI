@@ -1,21 +1,82 @@
 [
   {
-    "name": "CircleFX",
+    "name": "TTable.rnbopat",
     "preset": {
-      "MirrorRotation": {
-        "value": 1
-      },
-      "MirrorX": {
-        "value": 1
-      },
-      "MirrorY": {
-        "value": 1
-      },
       "Output": {
         "value": 0
       },
-      "Rotation": {
+      "PitchBend": {
         "value": 0
+      },
+      "PitchBendRange": {
+        "value": 2
+      },
+      "PointsType": {
+        "value": 1
+      },
+      "__sps": {
+        "MMCircle": [
+          {
+            "__sps": {
+              "Bezier": {}
+            }
+          },
+          {
+            "__sps": {
+              "Bezier": {}
+            }
+          },
+          {
+            "__sps": {
+              "Bezier": {}
+            }
+          },
+          {
+            "__sps": {
+              "Bezier": {}
+            }
+          },
+          {
+            "__sps": {
+              "Bezier": {}
+            }
+          },
+          {
+            "__sps": {
+              "Bezier": {}
+            }
+          },
+          {
+            "__sps": {
+              "Bezier": {}
+            }
+          },
+          {
+            "__sps": {
+              "Bezier": {}
+            }
+          },
+          {
+            "__sps": {
+              "Bezier": {}
+            }
+          },
+          {
+            "__sps": {
+              "Bezier": {}
+            }
+          },
+          {
+            "__sps": {
+              "Bezier": {}
+            }
+          },
+          {
+            "__sps": {
+              "Bezier": {}
+            }
+          }
+        ]
       }
     }
   }
