@@ -9,7 +9,7 @@
 	"embed" : 1,
 	"snapshot" : 	{
 		"MirrorY" : 		{
-			"value" : 1.0
+			"value" : 0.0
 		}
 ,
 		"__presetid" : "Position-FX",
@@ -22,11 +22,11 @@
 		}
 ,
 		"MirrorX" : 		{
-			"value" : 1.0
+			"value" : 0.0
 		}
 ,
 		"Position" : 		{
-			"value" : 1.0
+			"value" : 0.0
 		}
 ,
 		"Rotation" : 		{

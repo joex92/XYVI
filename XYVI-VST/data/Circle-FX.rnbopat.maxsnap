@@ -10,11 +10,11 @@
 	"snapshot" : 	{
 		"__presetid" : "Circle-FX",
 		"Mode" : 		{
-			"value" : 1.0
+			"value" : 0.0
 		}
 ,
 		"Delay" : 		{
-			"value" : 2.78508302875695
+			"value" : 249.999999999999659
 		}
 ,
 		"Channel" : 		{
@@ -22,7 +22,7 @@
 		}
 ,
 		"MIDI" : 		{
-			"value" : 41.480450778305979
+			"value" : 0.0
 		}
 ,
 		"Output" : 		{
@@ -30,7 +30,7 @@
 		}
 ,
 		"Frequency" : 		{
-			"value" : 89.763930704637218
+			"value" : 1.0
 		}
 ,
 		"Smoothing" : 		{

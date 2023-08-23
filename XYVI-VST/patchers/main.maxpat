@@ -582,7 +582,7 @@
 			}
 , 			{
 				"box" : 				{
-					"attr" : "Position",
+					"attr" : "optimization",
 					"id" : "obj-173",
 					"maxclass" : "attrui",
 					"numinlets" : 1,
@@ -635,6 +635,12 @@
 					"outlettype" : [ "signal", "signal", "list" ],
 					"patching_rect" : [ 1224.0, 163.0, 607.0, 22.0 ],
 					"rnboattrcache" : 					{
+						"PositionY" : 						{
+							"label" : "PositionY",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
 						"Rotation" : 						{
 							"label" : "Rotation",
 							"isEnum" : 0,
@@ -649,12 +655,6 @@
 ,
 						"PositionX" : 						{
 							"label" : "PositionX",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"PositionY" : 						{
-							"label" : "PositionY",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
@@ -714,7 +714,7 @@
 						"embed" : 1,
 						"snapshot" : 						{
 							"MirrorY" : 							{
-								"value" : 1.0
+								"value" : 0.0
 							}
 ,
 							"__presetid" : "Position-FX",
@@ -727,11 +727,11 @@
 							}
 ,
 							"MirrorX" : 							{
-								"value" : 1.0
+								"value" : 0.0
 							}
 ,
 							"Position" : 							{
-								"value" : 1.0
+								"value" : 0.0
 							}
 ,
 							"Rotation" : 							{
@@ -753,7 +753,7 @@
 									"embed" : 1,
 									"snapshot" : 									{
 										"MirrorY" : 										{
-											"value" : 1.0
+											"value" : 0.0
 										}
 ,
 										"__presetid" : "Position-FX",
@@ -766,11 +766,11 @@
 										}
 ,
 										"MirrorX" : 										{
-											"value" : 1.0
+											"value" : 0.0
 										}
 ,
 										"Position" : 										{
-											"value" : 1.0
+											"value" : 0.0
 										}
 ,
 										"Rotation" : 										{
@@ -2163,7 +2163,7 @@
 					"maxclass" : "scope~",
 					"numinlets" : 2,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1407.5, 187.0, 240.0, 240.0 ],
+					"patching_rect" : [ 1483.5, 297.0, 240.0, 240.0 ],
 					"range" : [ -2.0, 2.0 ]
 				}
 
@@ -2227,6 +2227,12 @@
 							"parsestring" : ""
 						}
 ,
+						"Delay" : 						{
+							"label" : "Delay",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
 						"Rotation" : 						{
 							"label" : "Rotation",
 							"isEnum" : 0,
@@ -2245,18 +2251,6 @@
 							"parsestring" : ""
 						}
 ,
-						"Smoothing" : 						{
-							"label" : "Smoothing",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"Delay" : 						{
-							"label" : "Delay",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
 						"Frequency" : 						{
 							"label" : "Frequency",
 							"isEnum" : 0,
@@ -2265,6 +2259,12 @@
 ,
 						"MIDI" : 						{
 							"label" : "MIDI",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"Smoothing" : 						{
+							"label" : "Smoothing",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
@@ -2313,11 +2313,11 @@
 						"snapshot" : 						{
 							"__presetid" : "Circle-FX",
 							"Mode" : 							{
-								"value" : 1.0
+								"value" : 0.0
 							}
 ,
 							"Delay" : 							{
-								"value" : 2.78508302875695
+								"value" : 249.999999999999659
 							}
 ,
 							"Channel" : 							{
@@ -2325,7 +2325,7 @@
 							}
 ,
 							"MIDI" : 							{
-								"value" : 41.480450778305979
+								"value" : 0.0
 							}
 ,
 							"Output" : 							{
@@ -2333,7 +2333,7 @@
 							}
 ,
 							"Frequency" : 							{
-								"value" : 89.763930704637218
+								"value" : 1.0
 							}
 ,
 							"Smoothing" : 							{
@@ -2364,11 +2364,11 @@
 									"snapshot" : 									{
 										"__presetid" : "Circle-FX",
 										"Mode" : 										{
-											"value" : 1.0
+											"value" : 0.0
 										}
 ,
 										"Delay" : 										{
-											"value" : 2.78508302875695
+											"value" : 249.999999999999659
 										}
 ,
 										"Channel" : 										{
@@ -2376,7 +2376,7 @@
 										}
 ,
 										"MIDI" : 										{
-											"value" : 41.480450778305979
+											"value" : 0.0
 										}
 ,
 										"Output" : 										{
@@ -2384,7 +2384,7 @@
 										}
 ,
 										"Frequency" : 										{
-											"value" : 89.763930704637218
+											"value" : 1.0
 										}
 ,
 										"Smoothing" : 										{
@@ -2500,14 +2500,20 @@
 					"outlettype" : [ "signal", "signal", "int", "list" ],
 					"patching_rect" : [ 14.999999999999989, 544.223632335662842, 512.0, 22.0 ],
 					"rnboattrcache" : 					{
-						"PitchBendRange" : 						{
-							"label" : "PitchBendRange",
+						"PitchBend" : 						{
+							"label" : "PitchBend",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
 ,
-						"Rotation" : 						{
-							"label" : "Rotation",
+						"Sustain" : 						{
+							"label" : "Sustain",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"Size" : 						{
+							"label" : "Size",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
@@ -2518,26 +2524,8 @@
 							"parsestring" : ""
 						}
 ,
-						"Output" : 						{
-							"label" : "Output",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"Release" : 						{
-							"label" : "Release",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"PitchBend" : 						{
-							"label" : "PitchBend",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"Decay" : 						{
-							"label" : "Decay",
+						"Rotation" : 						{
+							"label" : "Rotation",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
@@ -2554,14 +2542,26 @@
 							"parsestring" : ""
 						}
 ,
-						"Size" : 						{
-							"label" : "Size",
+						"Output" : 						{
+							"label" : "Output",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
 ,
-						"Sustain" : 						{
-							"label" : "Sustain",
+						"PitchBendRange" : 						{
+							"label" : "PitchBendRange",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"Release" : 						{
+							"label" : "Release",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"Decay" : 						{
+							"label" : "Decay",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
@@ -2829,14 +2829,14 @@
 					"outlettype" : [ "signal", "signal", "int", "list" ],
 					"patching_rect" : [ 14.999999761718755, 616.223632335662842, 573.0, 22.0 ],
 					"rnboattrcache" : 					{
-						"PitchBendRange" : 						{
-							"label" : "PitchBendRange",
+						"PitchBend" : 						{
+							"label" : "PitchBend",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
 ,
-						"Rotation" : 						{
-							"label" : "Rotation",
+						"Sustain" : 						{
+							"label" : "Sustain",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
@@ -2847,26 +2847,8 @@
 							"parsestring" : ""
 						}
 ,
-						"Output" : 						{
-							"label" : "Output",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"Release" : 						{
-							"label" : "Release",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"PitchBend" : 						{
-							"label" : "PitchBend",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"Decay" : 						{
-							"label" : "Decay",
+						"Rotation" : 						{
+							"label" : "Rotation",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
@@ -2877,14 +2859,32 @@
 							"parsestring" : ""
 						}
 ,
+						"Output" : 						{
+							"label" : "Output",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"PitchBendRange" : 						{
+							"label" : "PitchBendRange",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"Release" : 						{
+							"label" : "Release",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
 						"Leaves" : 						{
 							"label" : "Leaves",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
 ,
-						"Sustain" : 						{
-							"label" : "Sustain",
+						"Decay" : 						{
+							"label" : "Decay",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
@@ -3403,68 +3403,8 @@
 					"outlettype" : [ "signal", "signal", "int", "list" ],
 					"patching_rect" : [ 14.999999999999993, 472.223632454872131, 552.0, 22.0 ],
 					"rnboattrcache" : 					{
-						"PitchBendRange" : 						{
-							"label" : "PitchBendRange",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"Rotation" : 						{
-							"label" : "Rotation",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"P3" : 						{
-							"label" : "P3",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"Attack" : 						{
-							"label" : "Attack",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"Output" : 						{
-							"label" : "Output",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"P1" : 						{
-							"label" : "P1",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"Release" : 						{
-							"label" : "Release",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
 						"PitchBend" : 						{
 							"label" : "PitchBend",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"Decay" : 						{
-							"label" : "Decay",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"DutyCycleOffset" : 						{
-							"label" : "DutyCycleOffset",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"P2" : 						{
-							"label" : "P2",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
@@ -3477,6 +3417,66 @@
 ,
 						"Sustain" : 						{
 							"label" : "Sustain",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"P1" : 						{
+							"label" : "P1",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"Attack" : 						{
+							"label" : "Attack",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"Rotation" : 						{
+							"label" : "Rotation",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"DutyCycleOffset" : 						{
+							"label" : "DutyCycleOffset",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"Output" : 						{
+							"label" : "Output",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"PitchBendRange" : 						{
+							"label" : "PitchBendRange",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"Release" : 						{
+							"label" : "Release",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"P2" : 						{
+							"label" : "P2",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"Decay" : 						{
+							"label" : "Decay",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"P3" : 						{
+							"label" : "P3",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
@@ -3749,26 +3749,14 @@
 					"outlettype" : [ "signal", "signal", "int", "list" ],
 					"patching_rect" : [ 14.999999999999993, 400.223632574081421, 506.0, 22.0 ],
 					"rnboattrcache" : 					{
-						"PitchBendRange" : 						{
-							"label" : "PitchBendRange",
+						"PitchBend" : 						{
+							"label" : "PitchBend",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
 ,
-						"Rotation" : 						{
-							"label" : "Rotation",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"Attack" : 						{
-							"label" : "Attack",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"Output" : 						{
-							"label" : "Output",
+						"Sustain" : 						{
+							"label" : "Sustain",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
@@ -3779,20 +3767,14 @@
 							"parsestring" : ""
 						}
 ,
-						"Release" : 						{
-							"label" : "Release",
+						"Attack" : 						{
+							"label" : "Attack",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
 ,
-						"PitchBend" : 						{
-							"label" : "PitchBend",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"Decay" : 						{
-							"label" : "Decay",
+						"Rotation" : 						{
+							"label" : "Rotation",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
@@ -3803,14 +3785,32 @@
 							"parsestring" : ""
 						}
 ,
+						"Output" : 						{
+							"label" : "Output",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"PitchBendRange" : 						{
+							"label" : "PitchBendRange",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"Release" : 						{
+							"label" : "Release",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
 						"Teeth" : 						{
 							"label" : "Teeth",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
 ,
-						"Sustain" : 						{
-							"label" : "Sustain",
+						"Decay" : 						{
+							"label" : "Decay",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
@@ -4067,194 +4067,8 @@
 					"outlettype" : [ "signal", "signal", "int", "list" ],
 					"patching_rect" : [ 15.000000238281231, 760.223632216453552, 539.0, 22.0 ],
 					"rnboattrcache" : 					{
-						"P7X" : 						{
-							"label" : "P7X",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"P5Y" : 						{
-							"label" : "P5Y",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"P4X" : 						{
-							"label" : "P4X",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"B8R" : 						{
-							"label" : "B8R",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"PitchBendRange" : 						{
-							"label" : "PitchBendRange",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"Curvature" : 						{
-							"label" : "Curvature",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"Rotation" : 						{
-							"label" : "Rotation",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"B3R" : 						{
-							"label" : "B3R",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"Points" : 						{
-							"label" : "Points",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"P2X" : 						{
-							"label" : "P2X",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"Attack" : 						{
-							"label" : "Attack",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"B5T" : 						{
-							"label" : "B5T",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"B5R" : 						{
-							"label" : "B5R",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"Output" : 						{
-							"label" : "Output",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"P1X" : 						{
-							"label" : "P1X",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"B9T" : 						{
-							"label" : "B9T",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"B9R" : 						{
-							"label" : "B9R",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"B1R" : 						{
-							"label" : "B1R",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"P3X" : 						{
-							"label" : "P3X",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"P8Y" : 						{
-							"label" : "P8Y",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"B7R" : 						{
-							"label" : "B7R",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"Release" : 						{
-							"label" : "Release",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"P9Y" : 						{
-							"label" : "P9Y",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"P7Y" : 						{
-							"label" : "P7Y",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"P4Y" : 						{
-							"label" : "P4Y",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"P0Y" : 						{
-							"label" : "P0Y",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
 						"PitchBend" : 						{
 							"label" : "PitchBend",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"B4T" : 						{
-							"label" : "B4T",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"B4R" : 						{
-							"label" : "B4R",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"B2T" : 						{
-							"label" : "B2T",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"Decay" : 						{
-							"label" : "Decay",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"B7T" : 						{
-							"label" : "B7T",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
@@ -4265,62 +4079,14 @@
 							"parsestring" : ""
 						}
 ,
-						"B1T" : 						{
-							"label" : "B1T",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"P6X" : 						{
-							"label" : "P6X",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"DutyCycleOffset" : 						{
-							"label" : "DutyCycleOffset",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"P2Y" : 						{
-							"label" : "P2Y",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"B6R" : 						{
-							"label" : "B6R",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
 						"P8X" : 						{
 							"label" : "P8X",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
 ,
-						"P3Y" : 						{
-							"label" : "P3Y",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"B8T" : 						{
-							"label" : "B8T",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"P9X" : 						{
-							"label" : "P9X",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"B3T" : 						{
-							"label" : "B3T",
+						"P4X" : 						{
+							"label" : "P4X",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
@@ -4331,14 +4097,56 @@
 							"parsestring" : ""
 						}
 ,
-						"B2R" : 						{
-							"label" : "B2R",
+						"B5T" : 						{
+							"label" : "B5T",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
 ,
-						"P6Y" : 						{
-							"label" : "P6Y",
+						"B1R" : 						{
+							"label" : "B1R",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"P7Y" : 						{
+							"label" : "P7Y",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"Sustain" : 						{
+							"label" : "Sustain",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"B2T" : 						{
+							"label" : "B2T",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"P2Y" : 						{
+							"label" : "P2Y",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"P7X" : 						{
+							"label" : "P7X",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"P9X" : 						{
+							"label" : "P9X",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"B3R" : 						{
+							"label" : "B3R",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
@@ -4349,14 +4157,206 @@
 							"parsestring" : ""
 						}
 ,
+						"B9T" : 						{
+							"label" : "B9T",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"Points" : 						{
+							"label" : "Points",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"B7R" : 						{
+							"label" : "B7R",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"Attack" : 						{
+							"label" : "Attack",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"Rotation" : 						{
+							"label" : "Rotation",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"B4T" : 						{
+							"label" : "B4T",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"DutyCycleOffset" : 						{
+							"label" : "DutyCycleOffset",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"B1T" : 						{
+							"label" : "B1T",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"P3Y" : 						{
+							"label" : "P3Y",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"B8R" : 						{
+							"label" : "B8R",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"Output" : 						{
+							"label" : "Output",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"B2R" : 						{
+							"label" : "B2R",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"B5R" : 						{
+							"label" : "B5R",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"P3X" : 						{
+							"label" : "P3X",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"P4Y" : 						{
+							"label" : "P4Y",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"PitchBendRange" : 						{
+							"label" : "PitchBendRange",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"Release" : 						{
+							"label" : "Release",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"B7T" : 						{
+							"label" : "B7T",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"B6R" : 						{
+							"label" : "B6R",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"P5Y" : 						{
+							"label" : "P5Y",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"B3T" : 						{
+							"label" : "B3T",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"P2X" : 						{
+							"label" : "P2X",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
 						"P1Y" : 						{
 							"label" : "P1Y",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
 ,
-						"Sustain" : 						{
-							"label" : "Sustain",
+						"B9R" : 						{
+							"label" : "B9R",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"P9Y" : 						{
+							"label" : "P9Y",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"Decay" : 						{
+							"label" : "Decay",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"B4R" : 						{
+							"label" : "B4R",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"P6X" : 						{
+							"label" : "P6X",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"B8T" : 						{
+							"label" : "B8T",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"Curvature" : 						{
+							"label" : "Curvature",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"P6Y" : 						{
+							"label" : "P6Y",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"P1X" : 						{
+							"label" : "P1X",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"P8Y" : 						{
+							"label" : "P8Y",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"P0Y" : 						{
+							"label" : "P0Y",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
@@ -5589,14 +5589,14 @@
 					"outlettype" : [ "signal", "signal", "int", "list" ],
 					"patching_rect" : [ 14.999999999999996, 328.22363269329071, 504.0, 22.0 ],
 					"rnboattrcache" : 					{
-						"PitchBendRange" : 						{
-							"label" : "PitchBendRange",
+						"PitchBend" : 						{
+							"label" : "PitchBend",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
 ,
-						"Rotation" : 						{
-							"label" : "Rotation",
+						"Sustain" : 						{
+							"label" : "Sustain",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
@@ -5607,20 +5607,32 @@
 							"parsestring" : ""
 						}
 ,
+						"Rotation" : 						{
+							"label" : "Rotation",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"DutyCycleOffset" : 						{
+							"label" : "DutyCycleOffset",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
 						"Output" : 						{
 							"label" : "Output",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
 ,
-						"Release" : 						{
-							"label" : "Release",
+						"PitchBendRange" : 						{
+							"label" : "PitchBendRange",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
 ,
-						"PitchBend" : 						{
-							"label" : "PitchBend",
+						"Release" : 						{
+							"label" : "Release",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
@@ -5633,18 +5645,6 @@
 ,
 						"Decay" : 						{
 							"label" : "Decay",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"DutyCycleOffset" : 						{
-							"label" : "DutyCycleOffset",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"Sustain" : 						{
-							"label" : "Sustain",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
@@ -5925,32 +5925,14 @@
 					"outlettype" : [ "signal", "signal", "int", "list" ],
 					"patching_rect" : [ 15.0, 256.2236328125, 559.0, 22.0 ],
 					"rnboattrcache" : 					{
-						"PitchBendRange" : 						{
-							"label" : "PitchBendRange",
+						"PitchBend" : 						{
+							"label" : "PitchBend",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
 ,
-						"Rotation" : 						{
-							"label" : "Rotation",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"Cycles" : 						{
-							"label" : "Cycles",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"Attack" : 						{
-							"label" : "Attack",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"Output" : 						{
-							"label" : "Output",
+						"Sustain" : 						{
+							"label" : "Sustain",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
@@ -5961,20 +5943,14 @@
 							"parsestring" : ""
 						}
 ,
-						"Release" : 						{
-							"label" : "Release",
+						"Attack" : 						{
+							"label" : "Attack",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
 ,
-						"PitchBend" : 						{
-							"label" : "PitchBend",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"Decay" : 						{
-							"label" : "Decay",
+						"Rotation" : 						{
+							"label" : "Rotation",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
@@ -5985,8 +5961,32 @@
 							"parsestring" : ""
 						}
 ,
-						"Sustain" : 						{
-							"label" : "Sustain",
+						"Output" : 						{
+							"label" : "Output",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"PitchBendRange" : 						{
+							"label" : "PitchBendRange",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"Release" : 						{
+							"label" : "Release",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"Decay" : 						{
+							"label" : "Decay",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"Cycles" : 						{
+							"label" : "Cycles",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
@@ -6801,60 +6801,6 @@
 					"outlettype" : [ "signal", "signal", "int", "list" ],
 					"patching_rect" : [ 15.0, 184.2236328125, 508.0, 22.0 ],
 					"rnboattrcache" : 					{
-						"PitchBendRange" : 						{
-							"label" : "PitchBendRange",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"Rotation" : 						{
-							"label" : "Rotation",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"Y3" : 						{
-							"label" : "Y3",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"Attack" : 						{
-							"label" : "Attack",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"Yt2" : 						{
-							"label" : "Yt2",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"Output" : 						{
-							"label" : "Output",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"Y1" : 						{
-							"label" : "Y1",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"Y4" : 						{
-							"label" : "Y4",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"Release" : 						{
-							"label" : "Release",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
 						"PitchBend" : 						{
 							"label" : "PitchBend",
 							"isEnum" : 0,
@@ -6867,32 +6813,14 @@
 							"parsestring" : ""
 						}
 ,
-						"Decay" : 						{
-							"label" : "Decay",
+						"Sustain" : 						{
+							"label" : "Sustain",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
 ,
-						"Y2" : 						{
-							"label" : "Y2",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"X" : 						{
-							"label" : "X",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"DutyCycleOffset" : 						{
-							"label" : "DutyCycleOffset",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"Yt1" : 						{
-							"label" : "Yt1",
+						"Y1" : 						{
+							"label" : "Y1",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
@@ -6903,14 +6831,86 @@
 							"parsestring" : ""
 						}
 ,
+						"Attack" : 						{
+							"label" : "Attack",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"Rotation" : 						{
+							"label" : "Rotation",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"DutyCycleOffset" : 						{
+							"label" : "DutyCycleOffset",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"Y3" : 						{
+							"label" : "Y3",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"Y2" : 						{
+							"label" : "Y2",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"Output" : 						{
+							"label" : "Output",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"PitchBendRange" : 						{
+							"label" : "PitchBendRange",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"Release" : 						{
+							"label" : "Release",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"Y4" : 						{
+							"label" : "Y4",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"X" : 						{
+							"label" : "X",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
 						"Yt4" : 						{
 							"label" : "Yt4",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
 ,
-						"Sustain" : 						{
-							"label" : "Sustain",
+						"Decay" : 						{
+							"label" : "Decay",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"Yt2" : 						{
+							"label" : "Yt2",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"Yt1" : 						{
+							"label" : "Yt1",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
@@ -7140,62 +7140,20 @@
 					"outlettype" : [ "signal", "signal", "int", "list" ],
 					"patching_rect" : [ 15.0, 112.2236328125, 571.0, 22.0 ],
 					"rnboattrcache" : 					{
-						"Y" : 						{
-							"label" : "Y",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"PitchBendRange" : 						{
-							"label" : "PitchBendRange",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"Rotation" : 						{
-							"label" : "Rotation",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"Attack" : 						{
-							"label" : "Attack",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"Output" : 						{
-							"label" : "Output",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"Release" : 						{
-							"label" : "Release",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
 						"PitchBend" : 						{
 							"label" : "PitchBend",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
 ,
-						"Decay" : 						{
-							"label" : "Decay",
+						"Y" : 						{
+							"label" : "Y",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
 ,
-						"X" : 						{
-							"label" : "X",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"DutyCycleOffset" : 						{
-							"label" : "DutyCycleOffset",
+						"Sustain" : 						{
+							"label" : "Sustain",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
@@ -7206,8 +7164,50 @@
 							"parsestring" : ""
 						}
 ,
-						"Sustain" : 						{
-							"label" : "Sustain",
+						"Attack" : 						{
+							"label" : "Attack",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"Rotation" : 						{
+							"label" : "Rotation",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"DutyCycleOffset" : 						{
+							"label" : "DutyCycleOffset",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"Output" : 						{
+							"label" : "Output",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"PitchBendRange" : 						{
+							"label" : "PitchBendRange",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"Release" : 						{
+							"label" : "Release",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"X" : 						{
+							"label" : "X",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"Decay" : 						{
+							"label" : "Decay",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
@@ -8450,10 +8450,6 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 279.0, 163.0, 28.0, 22.0 ],
-													"saved_object_attributes" : 													{
-														"attr_comment" : ""
-													}
-,
 													"text" : "in 2"
 												}
 
@@ -10565,74 +10561,8 @@
 					"outlettype" : [ "signal", "signal", "int", "list" ],
 					"patching_rect" : [ 14.999999761718747, 688.223632216453552, 558.0, 22.0 ],
 					"rnboattrcache" : 					{
-						"PitchBendRange" : 						{
-							"label" : "PitchBendRange",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"Rotation" : 						{
-							"label" : "Rotation",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"Points" : 						{
-							"label" : "Points",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"Attack" : 						{
-							"label" : "Attack",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"Output" : 						{
-							"label" : "Output",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"CurvatureMag" : 						{
-							"label" : "CurvatureMag",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"Straight" : 						{
-							"label" : "Straight",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"Release" : 						{
-							"label" : "Release",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
 						"PitchBend" : 						{
 							"label" : "PitchBend",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"Multiplier" : 						{
-							"label" : "Multiplier",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"Decay" : 						{
-							"label" : "Decay",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"DutyCycleOffset" : 						{
-							"label" : "DutyCycleOffset",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
@@ -10651,6 +10581,72 @@
 ,
 						"Sustain" : 						{
 							"label" : "Sustain",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"Points" : 						{
+							"label" : "Points",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"Attack" : 						{
+							"label" : "Attack",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"Rotation" : 						{
+							"label" : "Rotation",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"DutyCycleOffset" : 						{
+							"label" : "DutyCycleOffset",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"Output" : 						{
+							"label" : "Output",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"Straight" : 						{
+							"label" : "Straight",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"PitchBendRange" : 						{
+							"label" : "PitchBendRange",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"Release" : 						{
+							"label" : "Release",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"CurvatureMag" : 						{
+							"label" : "CurvatureMag",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"Multiplier" : 						{
+							"label" : "Multiplier",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"Decay" : 						{
+							"label" : "Decay",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
@@ -11631,14 +11627,26 @@
 					"outlettype" : [ "signal", "signal", "int", "list" ],
 					"patching_rect" : [ 15.0, 40.2236328125, 585.0, 22.0 ],
 					"rnboattrcache" : 					{
+						"PitchBend" : 						{
+							"label" : "PitchBend",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
 						"Rigidity" : 						{
 							"label" : "Rigidity",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
 ,
-						"PitchBendRange" : 						{
-							"label" : "PitchBendRange",
+						"Sustain" : 						{
+							"label" : "Sustain",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"Attack" : 						{
+							"label" : "Attack",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
@@ -11649,14 +11657,8 @@
 							"parsestring" : ""
 						}
 ,
-						"Cycles" : 						{
-							"label" : "Cycles",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"Attack" : 						{
-							"label" : "Attack",
+						"DutyCycleOffset" : 						{
+							"label" : "DutyCycleOffset",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
@@ -11673,14 +11675,14 @@
 							"parsestring" : ""
 						}
 ,
-						"Release" : 						{
-							"label" : "Release",
+						"PitchBendRange" : 						{
+							"label" : "PitchBendRange",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
 ,
-						"PitchBend" : 						{
-							"label" : "PitchBend",
+						"Release" : 						{
+							"label" : "Release",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
@@ -11691,20 +11693,14 @@
 							"parsestring" : ""
 						}
 ,
+						"Cycles" : 						{
+							"label" : "Cycles",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
 						"Sharpness" : 						{
 							"label" : "Sharpness",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"DutyCycleOffset" : 						{
-							"label" : "DutyCycleOffset",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"Sustain" : 						{
-							"label" : "Sustain",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
