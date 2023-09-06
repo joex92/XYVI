@@ -75,17 +75,17 @@ namespace RNBO {
 class rnbomatic : public PatcherInterfaceImpl {
 public:
 
-class RNBOSubpatcher_28 : public PatcherInterfaceImpl {
+class RNBOSubpatcher_36 : public PatcherInterfaceImpl {
     
     friend class rnbomatic;
     
     public:
     
-    RNBOSubpatcher_28()
+    RNBOSubpatcher_36()
     {
     }
     
-    ~RNBOSubpatcher_28()
+    ~RNBOSubpatcher_36()
     {
     }
     
@@ -147,12 +147,12 @@ class RNBOSubpatcher_28 : public PatcherInterfaceImpl {
         return a->concat(b);
     }
     
-    int notenumber() {
-        return this->_noteNumber;
-    }
-    
     Index voice() {
         return this->_voiceIndex;
+    }
+    
+    int notenumber() {
+        return this->_noteNumber;
     }
     
     inline number safesqrt(number num) {
@@ -634,117 +634,18 @@ class RNBOSubpatcher_28 : public PatcherInterfaceImpl {
         this->mtof_tilde_01_midivalue = v;
     }
     
-    void join_01_in1_set(const list& v) {
-        this->join_01_in1 = jsCreateListCopy(v);
-    }
-    
-    void voice_01_noteNumber_set(number v) {
-        {
-            list converted = {v};
-            this->join_01_in1_set(converted);
-        }
-    }
-    
-    void eventoutlet_01_in1_list_set(const list& v) {
-        this->getPatcher()->updateTime(this->_currentTime);
-        this->getPatcher()->p_01_out3_list_set((list)v);
-    }
-    
-    void join_01_out_set(const list& v) {
-        this->eventoutlet_01_in1_list_set(v);
-    }
-    
-    void join_01_in0_set(const list& v) {
-        this->join_01_in0 = jsCreateListCopy(v);
-        list l = list();
-        l = this->join_01_in0;
-        l = this->append(l, this->join_01_in1);
-        l = this->append(l, this->join_01_in2);
-        l = this->append(l, this->join_01_in3);
-        l = this->append(l, this->join_01_in4);
-    
-        if (l->length > 0)
-            this->join_01_out_set(l);
-    }
-    
-    void voice_01_voicenumber_set(number v) {
-        {
-            list converted = {v};
-            this->join_01_in0_set(converted);
-        }
-    }
-    
-    void voice_01_voicebang_bang() {
-        this->voice_01_noteNumber_set(this->notenumber());
-        this->voice_01_voicenumber_set(this->voice());
-    }
-    
-    void select_01_match1_bang() {}
-    
-    void phasor_01_phase_set(number v) {
-        if (v >= 0 && (bool)(this->phasor_01_sigbuf)) {
-            this->phasor_01_sigbuf[(Index)this->sampleOffsetIntoNextAudioBuffer] = v;
-        }
-    }
-    
-    void select_01_nomatch_number_set(number v) {
-        this->phasor_01_phase_set(v);
-    }
-    
-    void select_01_input_number_set(number v) {
-        if (v == this->select_01_test1)
-            this->select_01_match1_bang();
-        else
-            this->select_01_nomatch_number_set(v);
-    }
-    
-    void intnum_01_out_set(number v) {
-        this->select_01_input_number_set(v);
-    }
-    
-    void intnum_01_input_bang_bang() {
-        this->intnum_01_out_set(rnbo_floor(this->intnum_01_stored));
-    }
-    
-    void trigger_01_out2_bang() {
-        this->voice_01_voicebang_bang();
-        this->intnum_01_input_bang_bang();
+    void expr_01_out1_set(number v) {
+        this->expr_01_out1 = v;
+        this->mtof_tilde_01_midivalue_set(this->expr_01_out1);
     }
     
     void expr_01_in1_set(number in1) {
-        if (this->stackprotect_check())
-            return;
-    
         this->expr_01_in1 = in1;
         this->expr_01_out1_set(this->expr_01_in1 + this->expr_01_in2);//#map:Lissajous/+_obj-52:1
     }
     
     void floatnum_01_out_set(number v) {
-        if (this->stackprotect_check())
-            return;
-    
         this->expr_01_in1_set(v);
-    }
-    
-    void floatnum_01_input_number_set(number v) {
-        this->floatnum_01_input_number = v;
-        this->floatnum_01_stored = v;
-        this->floatnum_01_out_set(v);
-    }
-    
-    void trigger_01_out1_set(number v) {
-        this->floatnum_01_input_number_set(v);
-    }
-    
-    void trigger_01_input_number_set(number v) {
-        this->trigger_01_out2_bang();
-        this->trigger_01_out1_set(rnbo_trunc(v));
-    }
-    
-    void expr_01_out1_set(number v) {
-        this->expr_01_out1 = v;
-        this->mtof_tilde_01_midivalue_set(this->expr_01_out1);
-        this->trigger_01_input_number_set(this->expr_01_out1);
     }
     
     void floatnum_01_input_bang_bang() {
@@ -959,6 +860,98 @@ class RNBOSubpatcher_28 : public PatcherInterfaceImpl {
     
         this->expr_03_in1_set(v);
         this->expr_02_in1_set(v);
+    }
+    
+    void join_01_in1_set(const list& v) {
+        this->join_01_in1 = jsCreateListCopy(v);
+    }
+    
+    void voice_01_noteNumber_set(number v) {
+        {
+            list converted = {v};
+            this->join_01_in1_set(converted);
+        }
+    }
+    
+    void eventoutlet_01_in1_list_set(const list& v) {
+        this->getPatcher()->updateTime(this->_currentTime);
+        this->getPatcher()->p_01_out3_list_set((list)v);
+    }
+    
+    void join_01_out_set(const list& v) {
+        this->eventoutlet_01_in1_list_set(v);
+    }
+    
+    void join_01_in0_set(const list& v) {
+        this->join_01_in0 = jsCreateListCopy(v);
+        list l = list();
+        l = this->join_01_in0;
+        l = this->append(l, this->join_01_in1);
+        l = this->append(l, this->join_01_in2);
+        l = this->append(l, this->join_01_in3);
+        l = this->append(l, this->join_01_in4);
+    
+        if (l->length > 0)
+            this->join_01_out_set(l);
+    }
+    
+    void voice_01_voicenumber_set(number v) {
+        {
+            list converted = {v};
+            this->join_01_in0_set(converted);
+        }
+    }
+    
+    void voice_01_voicebang_bang() {
+        this->voice_01_noteNumber_set(this->notenumber());
+        this->voice_01_voicenumber_set(this->voice());
+    }
+    
+    void select_01_match1_bang() {}
+    
+    void phasor_01_phase_set(number v) {
+        if (v >= 0 && (bool)(this->phasor_01_sigbuf)) {
+            this->phasor_01_sigbuf[(Index)this->sampleOffsetIntoNextAudioBuffer] = v;
+        }
+    }
+    
+    void select_01_nomatch_number_set(number v) {
+        this->phasor_01_phase_set(v);
+    }
+    
+    void select_01_input_number_set(number v) {
+        if (v == this->select_01_test1)
+            this->select_01_match1_bang();
+        else
+            this->select_01_nomatch_number_set(v);
+    }
+    
+    void intnum_01_out_set(number v) {
+        this->select_01_input_number_set(v);
+    }
+    
+    void intnum_01_input_bang_bang() {
+        this->intnum_01_out_set(rnbo_floor(this->intnum_01_stored));
+    }
+    
+    void trigger_01_out2_bang() {
+        this->voice_01_voicebang_bang();
+        this->intnum_01_input_bang_bang();
+    }
+    
+    void floatnum_01_input_number_set(number v) {
+        this->floatnum_01_input_number = v;
+        this->floatnum_01_stored = v;
+        this->floatnum_01_out_set(v);
+    }
+    
+    void trigger_01_out1_set(number v) {
+        this->floatnum_01_input_number_set(v);
+    }
+    
+    void trigger_01_input_number_set(number v) {
+        this->trigger_01_out2_bang();
+        this->trigger_01_out1_set(rnbo_trunc(v));
     }
     
     void unpack_01_out1_set(number v) {
@@ -2857,7 +2850,7 @@ void getState(PatcherStateInterface& ) {}
 
 void setState() {
     for (Index i = 0; i < 12; i++) {
-        this->p_01[(Index)i] = new RNBOSubpatcher_28();
+        this->p_01[(Index)i] = new RNBOSubpatcher_36();
         this->p_01[(Index)i]->setEngineAndPatcher(this->getEngine(), this);
         this->p_01[(Index)i]->initialize();
         this->p_01[(Index)i]->setParameterOffset(this->getParameterOffset(this->p_01[0]));
@@ -4422,14 +4415,6 @@ static number param_01_value_constrain(number v) {
     return v;
 }
 
-void outport_01_input_list_set(const list& v) {
-    this->getEngine()->sendListMessage(TAG("voice"), TAG(""), v, this->_currentTime);
-}
-
-void p_01_out3_list_set(const list& v) {
-    this->outport_01_input_list_set(v);
-}
-
 void p_01_target_PB_number_set(number v) {
     for (Index i = 0; i < 12; i++) {
         if (i + 1 == this->p_01_target || 0 == this->p_01_target) {
@@ -5036,6 +5021,14 @@ void midiin_02_midihandler(int status, int channel, int port, ConstByteArray dat
     for (i = 0; i < length; i++) {
         this->midiin_02_midiout_set(data[i]);
     }
+}
+
+void outport_01_input_list_set(const list& v) {
+    this->getEngine()->sendListMessage(TAG("voice"), TAG(""), v, this->_currentTime);
+}
+
+void p_01_out3_list_set(const list& v) {
+    this->outport_01_input_list_set(v);
 }
 
 void midiout_02_midiin_set(number v) {
@@ -6591,7 +6584,7 @@ void assign_defaults()
     Index isMuted;
     indexlist paramInitIndices;
     indexlist paramInitOrder;
-    RNBOSubpatcher_28* p_01[12];
+    RNBOSubpatcher_36* p_01[12];
 
 };
 

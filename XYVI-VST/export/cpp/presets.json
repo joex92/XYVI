@@ -1,6 +1,6 @@
 [
   {
-    "name": "TTable.rnbopat",
+    "name": "Lissajous.rnbopat",
     "preset": {
       "Output": {
         "value": 0
@@ -11,71 +11,20 @@
       "PitchBendRange": {
         "value": 2
       },
-      "PointsType": {
-        "value": 1
-      },
       "__sps": {
-        "MMCircle": [
-          {
-            "__sps": {
-              "Bezier": {}
-            }
-          },
-          {
-            "__sps": {
-              "Bezier": {}
-            }
-          },
-          {
-            "__sps": {
-              "Bezier": {}
-            }
-          },
-          {
-            "__sps": {
-              "Bezier": {}
-            }
-          },
-          {
-            "__sps": {
-              "Bezier": {}
-            }
-          },
-          {
-            "__sps": {
-              "Bezier": {}
-            }
-          },
-          {
-            "__sps": {
-              "Bezier": {}
-            }
-          },
-          {
-            "__sps": {
-              "Bezier": {}
-            }
-          },
-          {
-            "__sps": {
-              "Bezier": {}
-            }
-          },
-          {
-            "__sps": {
-              "Bezier": {}
-            }
-          },
-          {
-            "__sps": {
-              "Bezier": {}
-            }
-          },
-          {
-            "__sps": {
-              "Bezier": {}
-            }
-          }
+        "Lissajous": [
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {}
         ]
       }
     }

@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 562.0, 85.0, 1129.0, 923.0 ],
+		"rect" : [ 34.0, 85.0, 1373.0, 939.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -40,6 +40,7 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"hidden" : 1,
 					"id" : "obj-207",
 					"maxclass" : "message",
 					"numinlets" : 2,
@@ -53,6 +54,7 @@
 , 			{
 				"box" : 				{
 					"format" : 6,
+					"hidden" : 1,
 					"id" : "obj-205",
 					"maxclass" : "flonum",
 					"numinlets" : 1,
@@ -66,6 +68,7 @@
 , 			{
 				"box" : 				{
 					"format" : 6,
+					"hidden" : 1,
 					"id" : "obj-200",
 					"maxclass" : "flonum",
 					"numinlets" : 1,
@@ -78,6 +81,7 @@
 			}
 , 			{
 				"box" : 				{
+					"hidden" : 1,
 					"id" : "obj-203",
 					"maxclass" : "newobj",
 					"numinlets" : 6,
@@ -91,6 +95,7 @@
 , 			{
 				"box" : 				{
 					"format" : 6,
+					"hidden" : 1,
 					"id" : "obj-196",
 					"maxclass" : "flonum",
 					"numinlets" : 1,
@@ -103,6 +108,7 @@
 			}
 , 			{
 				"box" : 				{
+					"hidden" : 1,
 					"id" : "obj-193",
 					"maxclass" : "number",
 					"numinlets" : 1,
@@ -115,6 +121,7 @@
 			}
 , 			{
 				"box" : 				{
+					"hidden" : 1,
 					"id" : "obj-185",
 					"maxclass" : "newobj",
 					"numinlets" : 6,
@@ -128,6 +135,7 @@
 , 			{
 				"box" : 				{
 					"format" : 6,
+					"hidden" : 1,
 					"id" : "obj-263",
 					"maxclass" : "flonum",
 					"numinlets" : 1,
@@ -140,6 +148,7 @@
 			}
 , 			{
 				"box" : 				{
+					"hidden" : 1,
 					"id" : "obj-262",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
@@ -152,6 +161,7 @@
 			}
 , 			{
 				"box" : 				{
+					"hidden" : 1,
 					"id" : "obj-261",
 					"maxclass" : "newobj",
 					"numinlets" : 6,
@@ -164,6 +174,7 @@
 			}
 , 			{
 				"box" : 				{
+					"hidden" : 1,
 					"id" : "obj-260",
 					"maxclass" : "newobj",
 					"numinlets" : 6,
@@ -176,6 +187,7 @@
 			}
 , 			{
 				"box" : 				{
+					"hidden" : 1,
 					"id" : "obj-259",
 					"maxclass" : "newobj",
 					"numinlets" : 3,
@@ -188,6 +200,7 @@
 			}
 , 			{
 				"box" : 				{
+					"hidden" : 1,
 					"id" : "obj-258",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
@@ -200,6 +213,7 @@
 			}
 , 			{
 				"box" : 				{
+					"hidden" : 1,
 					"id" : "obj-257",
 					"maxclass" : "newobj",
 					"numinlets" : 6,
@@ -212,6 +226,7 @@
 			}
 , 			{
 				"box" : 				{
+					"hidden" : 1,
 					"id" : "obj-255",
 					"maxclass" : "newobj",
 					"numinlets" : 5,
@@ -225,6 +240,7 @@
 , 			{
 				"box" : 				{
 					"format" : 6,
+					"hidden" : 1,
 					"id" : "obj-254",
 					"maxclass" : "flonum",
 					"numinlets" : 1,
@@ -237,6 +253,7 @@
 			}
 , 			{
 				"box" : 				{
+					"hidden" : 1,
 					"id" : "obj-252",
 					"maxclass" : "newobj",
 					"numinlets" : 6,
@@ -250,6 +267,7 @@
 , 			{
 				"box" : 				{
 					"format" : 6,
+					"hidden" : 1,
 					"id" : "obj-251",
 					"maxclass" : "flonum",
 					"numinlets" : 1,
@@ -262,6 +280,7 @@
 			}
 , 			{
 				"box" : 				{
+					"hidden" : 1,
 					"id" : "obj-249",
 					"maxclass" : "newobj",
 					"numinlets" : 6,
@@ -274,6 +293,7 @@
 			}
 , 			{
 				"box" : 				{
+					"hidden" : 1,
 					"id" : "obj-244",
 					"maxclass" : "newobj",
 					"numinlets" : 2,
@@ -286,6 +306,7 @@
 			}
 , 			{
 				"box" : 				{
+					"hidden" : 1,
 					"id" : "obj-243",
 					"maxclass" : "newobj",
 					"numinlets" : 2,
@@ -298,6 +319,7 @@
 			}
 , 			{
 				"box" : 				{
+					"hidden" : 1,
 					"id" : "obj-242",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
@@ -310,6 +332,7 @@
 			}
 , 			{
 				"box" : 				{
+					"hidden" : 1,
 					"id" : "obj-238",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
@@ -323,6 +346,7 @@
 , 			{
 				"box" : 				{
 					"format" : 6,
+					"hidden" : 1,
 					"id" : "obj-237",
 					"maxclass" : "flonum",
 					"numinlets" : 1,
@@ -335,6 +359,7 @@
 			}
 , 			{
 				"box" : 				{
+					"hidden" : 1,
 					"id" : "obj-235",
 					"maxclass" : "newobj",
 					"numinlets" : 2,
@@ -347,6 +372,7 @@
 			}
 , 			{
 				"box" : 				{
+					"hidden" : 1,
 					"id" : "obj-234",
 					"maxclass" : "newobj",
 					"numinlets" : 2,
@@ -360,6 +386,7 @@
 , 			{
 				"box" : 				{
 					"format" : 6,
+					"hidden" : 1,
 					"id" : "obj-231",
 					"maxclass" : "flonum",
 					"numinlets" : 1,
@@ -372,6 +399,7 @@
 			}
 , 			{
 				"box" : 				{
+					"hidden" : 1,
 					"id" : "obj-229",
 					"maxclass" : "newobj",
 					"numinlets" : 2,
@@ -384,6 +412,7 @@
 			}
 , 			{
 				"box" : 				{
+					"hidden" : 1,
 					"id" : "obj-226",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
@@ -396,6 +425,7 @@
 			}
 , 			{
 				"box" : 				{
+					"hidden" : 1,
 					"id" : "obj-225",
 					"maxclass" : "newobj",
 					"numinlets" : 2,
@@ -409,6 +439,7 @@
 , 			{
 				"box" : 				{
 					"format" : 6,
+					"hidden" : 1,
 					"id" : "obj-220",
 					"maxclass" : "flonum",
 					"numinlets" : 1,
@@ -421,6 +452,7 @@
 			}
 , 			{
 				"box" : 				{
+					"hidden" : 1,
 					"id" : "obj-218",
 					"maxclass" : "newobj",
 					"numinlets" : 2,
@@ -433,6 +465,7 @@
 			}
 , 			{
 				"box" : 				{
+					"hidden" : 1,
 					"id" : "obj-217",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
@@ -445,6 +478,7 @@
 			}
 , 			{
 				"box" : 				{
+					"hidden" : 1,
 					"id" : "obj-216",
 					"maxclass" : "newobj",
 					"numinlets" : 2,
@@ -457,6 +491,7 @@
 			}
 , 			{
 				"box" : 				{
+					"hidden" : 1,
 					"id" : "obj-212",
 					"maxclass" : "newobj",
 					"numinlets" : 6,
@@ -469,6 +504,7 @@
 			}
 , 			{
 				"box" : 				{
+					"hidden" : 1,
 					"id" : "obj-208",
 					"maxclass" : "button",
 					"numinlets" : 1,
@@ -482,6 +518,7 @@
 , 			{
 				"box" : 				{
 					"format" : 6,
+					"hidden" : 1,
 					"id" : "obj-204",
 					"maxclass" : "flonum",
 					"numinlets" : 1,
@@ -494,6 +531,7 @@
 			}
 , 			{
 				"box" : 				{
+					"hidden" : 1,
 					"id" : "obj-202",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
@@ -507,6 +545,7 @@
 , 			{
 				"box" : 				{
 					"format" : 6,
+					"hidden" : 1,
 					"id" : "obj-201",
 					"maxclass" : "flonum",
 					"numinlets" : 1,
@@ -519,6 +558,7 @@
 			}
 , 			{
 				"box" : 				{
+					"hidden" : 1,
 					"id" : "obj-199",
 					"maxclass" : "number",
 					"numinlets" : 1,
@@ -532,6 +572,7 @@
 , 			{
 				"box" : 				{
 					"format" : 6,
+					"hidden" : 1,
 					"id" : "obj-194",
 					"maxclass" : "flonum",
 					"numinlets" : 1,
@@ -544,6 +585,7 @@
 			}
 , 			{
 				"box" : 				{
+					"hidden" : 1,
 					"id" : "obj-114",
 					"maxclass" : "newobj",
 					"numinlets" : 6,
@@ -635,14 +677,8 @@
 					"outlettype" : [ "signal", "signal", "list" ],
 					"patching_rect" : [ 1224.0, 163.0, 607.0, 22.0 ],
 					"rnboattrcache" : 					{
-						"PositionY" : 						{
-							"label" : "PositionY",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"Rotation" : 						{
-							"label" : "Rotation",
+						"PositionX" : 						{
+							"label" : "PositionX",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
@@ -653,8 +689,14 @@
 							"parsestring" : ""
 						}
 ,
-						"PositionX" : 						{
-							"label" : "PositionX",
+						"PositionY" : 						{
+							"label" : "PositionY",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"Rotation" : 						{
+							"label" : "Rotation",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
@@ -1039,6 +1081,7 @@
 			}
 , 			{
 				"box" : 				{
+					"hidden" : 1,
 					"id" : "obj-316",
 					"maxclass" : "message",
 					"numinlets" : 2,
@@ -1051,6 +1094,7 @@
 			}
 , 			{
 				"box" : 				{
+					"hidden" : 1,
 					"id" : "obj-315",
 					"maxclass" : "gswitch",
 					"numinlets" : 3,
@@ -1063,6 +1107,7 @@
 			}
 , 			{
 				"box" : 				{
+					"hidden" : 1,
 					"id" : "obj-314",
 					"maxclass" : "newobj",
 					"numinlets" : 2,
@@ -1075,6 +1120,7 @@
 			}
 , 			{
 				"box" : 				{
+					"hidden" : 1,
 					"id" : "obj-313",
 					"maxclass" : "newobj",
 					"numinlets" : 2,
@@ -1087,6 +1133,7 @@
 			}
 , 			{
 				"box" : 				{
+					"hidden" : 1,
 					"id" : "obj-312",
 					"maxclass" : "newobj",
 					"numinlets" : 2,
@@ -1099,6 +1146,7 @@
 			}
 , 			{
 				"box" : 				{
+					"hidden" : 1,
 					"id" : "obj-310",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
@@ -1111,6 +1159,7 @@
 			}
 , 			{
 				"box" : 				{
+					"hidden" : 1,
 					"id" : "obj-296",
 					"maxclass" : "message",
 					"numinlets" : 2,
@@ -1123,6 +1172,7 @@
 			}
 , 			{
 				"box" : 				{
+					"hidden" : 1,
 					"id" : "obj-292",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
@@ -1135,6 +1185,7 @@
 			}
 , 			{
 				"box" : 				{
+					"hidden" : 1,
 					"id" : "obj-291",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
@@ -1147,6 +1198,7 @@
 			}
 , 			{
 				"box" : 				{
+					"hidden" : 1,
 					"id" : "obj-290",
 					"maxclass" : "newobj",
 					"numinlets" : 2,
@@ -1159,6 +1211,7 @@
 			}
 , 			{
 				"box" : 				{
+					"hidden" : 1,
 					"id" : "obj-289",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
@@ -1171,6 +1224,7 @@
 			}
 , 			{
 				"box" : 				{
+					"hidden" : 1,
 					"id" : "obj-286",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
@@ -2004,6 +2058,7 @@
 			}
 , 			{
 				"box" : 				{
+					"hidden" : 1,
 					"id" : "obj-189",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
@@ -2017,6 +2072,7 @@
 , 			{
 				"box" : 				{
 					"format" : 6,
+					"hidden" : 1,
 					"id" : "obj-188",
 					"maxclass" : "flonum",
 					"numdecimalplaces" : 15,
@@ -2030,6 +2086,7 @@
 			}
 , 			{
 				"box" : 				{
+					"hidden" : 1,
 					"id" : "obj-187",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
@@ -2042,6 +2099,7 @@
 			}
 , 			{
 				"box" : 				{
+					"hidden" : 1,
 					"id" : "obj-186",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
@@ -2055,6 +2113,7 @@
 , 			{
 				"box" : 				{
 					"format" : 6,
+					"hidden" : 1,
 					"id" : "obj-184",
 					"maxclass" : "flonum",
 					"numinlets" : 1,
@@ -2067,6 +2126,7 @@
 			}
 , 			{
 				"box" : 				{
+					"hidden" : 1,
 					"id" : "obj-183",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
@@ -2079,6 +2139,7 @@
 			}
 , 			{
 				"box" : 				{
+					"hidden" : 1,
 					"id" : "obj-180",
 					"maxclass" : "live.slider",
 					"numinlets" : 1,
@@ -2221,8 +2282,8 @@
 					"outlettype" : [ "signal", "signal", "list" ],
 					"patching_rect" : [ 1224.0, 115.0, 570.0, 22.0 ],
 					"rnboattrcache" : 					{
-						"Framesize" : 						{
-							"label" : "Framesize",
+						"DelayTuning" : 						{
+							"label" : "DelayTuning",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
@@ -2233,20 +2294,8 @@
 							"parsestring" : ""
 						}
 ,
-						"Rotation" : 						{
-							"label" : "Rotation",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
 						"Output" : 						{
 							"label" : "Output",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"DelayTuning" : 						{
-							"label" : "DelayTuning",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
@@ -2259,6 +2308,18 @@
 ,
 						"MIDI" : 						{
 							"label" : "MIDI",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"Rotation" : 						{
+							"label" : "Rotation",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"Framesize" : 						{
+							"label" : "Framesize",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
@@ -2500,8 +2561,8 @@
 					"outlettype" : [ "signal", "signal", "int", "list" ],
 					"patching_rect" : [ 14.999999999999989, 544.223632335662842, 512.0, 22.0 ],
 					"rnboattrcache" : 					{
-						"PitchBend" : 						{
-							"label" : "PitchBend",
+						"PitchBendRange" : 						{
+							"label" : "PitchBendRange",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
@@ -2512,8 +2573,8 @@
 							"parsestring" : ""
 						}
 ,
-						"Size" : 						{
-							"label" : "Size",
+						"Output" : 						{
+							"label" : "Output",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
@@ -2524,8 +2585,8 @@
 							"parsestring" : ""
 						}
 ,
-						"Rotation" : 						{
-							"label" : "Rotation",
+						"Size" : 						{
+							"label" : "Size",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
@@ -2542,20 +2603,20 @@
 							"parsestring" : ""
 						}
 ,
-						"Output" : 						{
-							"label" : "Output",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"PitchBendRange" : 						{
-							"label" : "PitchBendRange",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
 						"Release" : 						{
 							"label" : "Release",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"Rotation" : 						{
+							"label" : "Rotation",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"PitchBend" : 						{
+							"label" : "PitchBend",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
@@ -2829,8 +2890,14 @@
 					"outlettype" : [ "signal", "signal", "int", "list" ],
 					"patching_rect" : [ 14.999999761718755, 616.223632335662842, 573.0, 22.0 ],
 					"rnboattrcache" : 					{
-						"PitchBend" : 						{
-							"label" : "PitchBend",
+						"PitchBendRange" : 						{
+							"label" : "PitchBendRange",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"Leaves" : 						{
+							"label" : "Leaves",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
@@ -2841,14 +2908,14 @@
 							"parsestring" : ""
 						}
 ,
-						"Attack" : 						{
-							"label" : "Attack",
+						"Output" : 						{
+							"label" : "Output",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
 ,
-						"Rotation" : 						{
-							"label" : "Rotation",
+						"Attack" : 						{
+							"label" : "Attack",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
@@ -2859,26 +2926,20 @@
 							"parsestring" : ""
 						}
 ,
-						"Output" : 						{
-							"label" : "Output",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"PitchBendRange" : 						{
-							"label" : "PitchBendRange",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
 						"Release" : 						{
 							"label" : "Release",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
 ,
-						"Leaves" : 						{
-							"label" : "Leaves",
+						"Rotation" : 						{
+							"label" : "Rotation",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"PitchBend" : 						{
+							"label" : "PitchBend",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
@@ -3403,8 +3464,14 @@
 					"outlettype" : [ "signal", "signal", "int", "list" ],
 					"patching_rect" : [ 14.999999999999993, 472.223632454872131, 552.0, 22.0 ],
 					"rnboattrcache" : 					{
-						"PitchBend" : 						{
-							"label" : "PitchBend",
+						"PitchBendRange" : 						{
+							"label" : "PitchBendRange",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"P2" : 						{
+							"label" : "P2",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
@@ -3421,8 +3488,8 @@
 							"parsestring" : ""
 						}
 ,
-						"P1" : 						{
-							"label" : "P1",
+						"Output" : 						{
+							"label" : "Output",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
@@ -3433,8 +3500,8 @@
 							"parsestring" : ""
 						}
 ,
-						"Rotation" : 						{
-							"label" : "Rotation",
+						"P3" : 						{
+							"label" : "P3",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
@@ -3445,14 +3512,8 @@
 							"parsestring" : ""
 						}
 ,
-						"Output" : 						{
-							"label" : "Output",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"PitchBendRange" : 						{
-							"label" : "PitchBendRange",
+						"P1" : 						{
+							"label" : "P1",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
@@ -3463,20 +3524,20 @@
 							"parsestring" : ""
 						}
 ,
-						"P2" : 						{
-							"label" : "P2",
+						"Rotation" : 						{
+							"label" : "Rotation",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"PitchBend" : 						{
+							"label" : "PitchBend",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
 ,
 						"Decay" : 						{
 							"label" : "Decay",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"P3" : 						{
-							"label" : "P3",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
@@ -3749,14 +3810,8 @@
 					"outlettype" : [ "signal", "signal", "int", "list" ],
 					"patching_rect" : [ 14.999999999999993, 400.223632574081421, 506.0, 22.0 ],
 					"rnboattrcache" : 					{
-						"PitchBend" : 						{
-							"label" : "PitchBend",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"Sustain" : 						{
-							"label" : "Sustain",
+						"PitchBendRange" : 						{
+							"label" : "PitchBendRange",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
@@ -3767,20 +3822,8 @@
 							"parsestring" : ""
 						}
 ,
-						"Attack" : 						{
-							"label" : "Attack",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"Rotation" : 						{
-							"label" : "Rotation",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"DutyCycleOffset" : 						{
-							"label" : "DutyCycleOffset",
+						"Sustain" : 						{
+							"label" : "Sustain",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
@@ -3791,8 +3834,20 @@
 							"parsestring" : ""
 						}
 ,
-						"PitchBendRange" : 						{
-							"label" : "PitchBendRange",
+						"Attack" : 						{
+							"label" : "Attack",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"Teeth" : 						{
+							"label" : "Teeth",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"DutyCycleOffset" : 						{
+							"label" : "DutyCycleOffset",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
@@ -3803,8 +3858,14 @@
 							"parsestring" : ""
 						}
 ,
-						"Teeth" : 						{
-							"label" : "Teeth",
+						"Rotation" : 						{
+							"label" : "Rotation",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"PitchBend" : 						{
+							"label" : "PitchBend",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
@@ -4067,182 +4128,8 @@
 					"outlettype" : [ "signal", "signal", "int", "list" ],
 					"patching_rect" : [ 15.000000238281231, 760.223632216453552, 539.0, 22.0 ],
 					"rnboattrcache" : 					{
-						"PitchBend" : 						{
-							"label" : "PitchBend",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"P5X" : 						{
-							"label" : "P5X",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"P8X" : 						{
-							"label" : "P8X",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"P4X" : 						{
-							"label" : "P4X",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"P0X" : 						{
-							"label" : "P0X",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"B5T" : 						{
-							"label" : "B5T",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"B1R" : 						{
-							"label" : "B1R",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"P7Y" : 						{
-							"label" : "P7Y",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"Sustain" : 						{
-							"label" : "Sustain",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"B2T" : 						{
-							"label" : "B2T",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
 						"P2Y" : 						{
 							"label" : "P2Y",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"P7X" : 						{
-							"label" : "P7X",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"P9X" : 						{
-							"label" : "P9X",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"B3R" : 						{
-							"label" : "B3R",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"B6T" : 						{
-							"label" : "B6T",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"B9T" : 						{
-							"label" : "B9T",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"Points" : 						{
-							"label" : "Points",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"B7R" : 						{
-							"label" : "B7R",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"Attack" : 						{
-							"label" : "Attack",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"Rotation" : 						{
-							"label" : "Rotation",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"B4T" : 						{
-							"label" : "B4T",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"DutyCycleOffset" : 						{
-							"label" : "DutyCycleOffset",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"B1T" : 						{
-							"label" : "B1T",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"P3Y" : 						{
-							"label" : "P3Y",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"B8R" : 						{
-							"label" : "B8R",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"Output" : 						{
-							"label" : "Output",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"B2R" : 						{
-							"label" : "B2R",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"B5R" : 						{
-							"label" : "B5R",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"P3X" : 						{
-							"label" : "P3X",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"P4Y" : 						{
-							"label" : "P4Y",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
@@ -4253,62 +4140,14 @@
 							"parsestring" : ""
 						}
 ,
-						"Release" : 						{
-							"label" : "Release",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"B7T" : 						{
-							"label" : "B7T",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"B6R" : 						{
-							"label" : "B6R",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"P5Y" : 						{
-							"label" : "P5Y",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
 						"B3T" : 						{
 							"label" : "B3T",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
 ,
-						"P2X" : 						{
-							"label" : "P2X",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"P1Y" : 						{
-							"label" : "P1Y",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"B9R" : 						{
-							"label" : "B9R",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"P9Y" : 						{
-							"label" : "P9Y",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"Decay" : 						{
-							"label" : "Decay",
+						"B6T" : 						{
+							"label" : "B6T",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
@@ -4319,14 +4158,56 @@
 							"parsestring" : ""
 						}
 ,
-						"P6X" : 						{
-							"label" : "P6X",
+						"P1X" : 						{
+							"label" : "P1X",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
 ,
-						"B8T" : 						{
-							"label" : "B8T",
+						"B7R" : 						{
+							"label" : "B7R",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"P8X" : 						{
+							"label" : "P8X",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"B2R" : 						{
+							"label" : "B2R",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"P7Y" : 						{
+							"label" : "P7Y",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"B6R" : 						{
+							"label" : "B6R",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"P9X" : 						{
+							"label" : "P9X",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"B9R" : 						{
+							"label" : "B9R",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"Sustain" : 						{
+							"label" : "Sustain",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
@@ -4337,14 +4218,182 @@
 							"parsestring" : ""
 						}
 ,
+						"P0Y" : 						{
+							"label" : "P0Y",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"P3Y" : 						{
+							"label" : "P3Y",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"B5T" : 						{
+							"label" : "B5T",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"Output" : 						{
+							"label" : "Output",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"P4Y" : 						{
+							"label" : "P4Y",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"Points" : 						{
+							"label" : "Points",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"P2X" : 						{
+							"label" : "P2X",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"Attack" : 						{
+							"label" : "Attack",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"P6X" : 						{
+							"label" : "P6X",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"B4T" : 						{
+							"label" : "B4T",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"P4X" : 						{
+							"label" : "P4X",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"B5R" : 						{
+							"label" : "B5R",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"B2T" : 						{
+							"label" : "B2T",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"DutyCycleOffset" : 						{
+							"label" : "DutyCycleOffset",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"P5Y" : 						{
+							"label" : "P5Y",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"B3R" : 						{
+							"label" : "B3R",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"P9Y" : 						{
+							"label" : "P9Y",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"Release" : 						{
+							"label" : "Release",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
 						"P6Y" : 						{
 							"label" : "P6Y",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
 ,
-						"P1X" : 						{
-							"label" : "P1X",
+						"B9T" : 						{
+							"label" : "B9T",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"P5X" : 						{
+							"label" : "P5X",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"B8R" : 						{
+							"label" : "B8R",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"B1R" : 						{
+							"label" : "B1R",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"Rotation" : 						{
+							"label" : "Rotation",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"PitchBend" : 						{
+							"label" : "PitchBend",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"B7T" : 						{
+							"label" : "B7T",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"P7X" : 						{
+							"label" : "P7X",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"P1Y" : 						{
+							"label" : "P1Y",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"Decay" : 						{
+							"label" : "Decay",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"B8T" : 						{
+							"label" : "B8T",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
@@ -4355,8 +4404,20 @@
 							"parsestring" : ""
 						}
 ,
-						"P0Y" : 						{
-							"label" : "P0Y",
+						"B1T" : 						{
+							"label" : "B1T",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"P0X" : 						{
+							"label" : "P0X",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"P3X" : 						{
+							"label" : "P3X",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
@@ -5589,8 +5650,14 @@
 					"outlettype" : [ "signal", "signal", "int", "list" ],
 					"patching_rect" : [ 14.999999999999996, 328.22363269329071, 504.0, 22.0 ],
 					"rnboattrcache" : 					{
-						"PitchBend" : 						{
-							"label" : "PitchBend",
+						"PitchBendRange" : 						{
+							"label" : "PitchBendRange",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"Petals" : 						{
+							"label" : "Petals",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
@@ -5601,14 +5668,14 @@
 							"parsestring" : ""
 						}
 ,
-						"Attack" : 						{
-							"label" : "Attack",
+						"Output" : 						{
+							"label" : "Output",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
 ,
-						"Rotation" : 						{
-							"label" : "Rotation",
+						"Attack" : 						{
+							"label" : "Attack",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
@@ -5619,26 +5686,20 @@
 							"parsestring" : ""
 						}
 ,
-						"Output" : 						{
-							"label" : "Output",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"PitchBendRange" : 						{
-							"label" : "PitchBendRange",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
 						"Release" : 						{
 							"label" : "Release",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
 ,
-						"Petals" : 						{
-							"label" : "Petals",
+						"Rotation" : 						{
+							"label" : "Rotation",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"PitchBend" : 						{
+							"label" : "PitchBend",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
@@ -5925,14 +5986,8 @@
 					"outlettype" : [ "signal", "signal", "int", "list" ],
 					"patching_rect" : [ 15.0, 256.2236328125, 559.0, 22.0 ],
 					"rnboattrcache" : 					{
-						"PitchBend" : 						{
-							"label" : "PitchBend",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"Sustain" : 						{
-							"label" : "Sustain",
+						"PitchBendRange" : 						{
+							"label" : "PitchBendRange",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
@@ -5943,20 +5998,8 @@
 							"parsestring" : ""
 						}
 ,
-						"Attack" : 						{
-							"label" : "Attack",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"Rotation" : 						{
-							"label" : "Rotation",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"DutyCycleOffset" : 						{
-							"label" : "DutyCycleOffset",
+						"Sustain" : 						{
+							"label" : "Sustain",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
@@ -5967,8 +6010,20 @@
 							"parsestring" : ""
 						}
 ,
-						"PitchBendRange" : 						{
-							"label" : "PitchBendRange",
+						"Cycles" : 						{
+							"label" : "Cycles",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"Attack" : 						{
+							"label" : "Attack",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"DutyCycleOffset" : 						{
+							"label" : "DutyCycleOffset",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
@@ -5979,14 +6034,20 @@
 							"parsestring" : ""
 						}
 ,
-						"Decay" : 						{
-							"label" : "Decay",
+						"Rotation" : 						{
+							"label" : "Rotation",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
 ,
-						"Cycles" : 						{
-							"label" : "Cycles",
+						"PitchBend" : 						{
+							"label" : "PitchBend",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"Decay" : 						{
+							"label" : "Decay",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
@@ -6801,20 +6862,8 @@
 					"outlettype" : [ "signal", "signal", "int", "list" ],
 					"patching_rect" : [ 15.0, 184.2236328125, 508.0, 22.0 ],
 					"rnboattrcache" : 					{
-						"PitchBend" : 						{
-							"label" : "PitchBend",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"Yt3" : 						{
-							"label" : "Yt3",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"Sustain" : 						{
-							"label" : "Sustain",
+						"PitchBendRange" : 						{
+							"label" : "PitchBendRange",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
@@ -6825,26 +6874,14 @@
 							"parsestring" : ""
 						}
 ,
-						"Delta" : 						{
-							"label" : "Delta",
+						"Y4" : 						{
+							"label" : "Y4",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
 ,
-						"Attack" : 						{
-							"label" : "Attack",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"Rotation" : 						{
-							"label" : "Rotation",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"DutyCycleOffset" : 						{
-							"label" : "DutyCycleOffset",
+						"Sustain" : 						{
+							"label" : "Sustain",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
@@ -6855,8 +6892,8 @@
 							"parsestring" : ""
 						}
 ,
-						"Y2" : 						{
-							"label" : "Y2",
+						"Yt1" : 						{
+							"label" : "Yt1",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
@@ -6867,20 +6904,20 @@
 							"parsestring" : ""
 						}
 ,
-						"PitchBendRange" : 						{
-							"label" : "PitchBendRange",
+						"Attack" : 						{
+							"label" : "Attack",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
 ,
-						"Release" : 						{
-							"label" : "Release",
+						"Delta" : 						{
+							"label" : "Delta",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
 ,
-						"Y4" : 						{
-							"label" : "Y4",
+						"Yt4" : 						{
+							"label" : "Yt4",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
@@ -6891,8 +6928,38 @@
 							"parsestring" : ""
 						}
 ,
-						"Yt4" : 						{
-							"label" : "Yt4",
+						"DutyCycleOffset" : 						{
+							"label" : "DutyCycleOffset",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"Yt3" : 						{
+							"label" : "Yt3",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"Release" : 						{
+							"label" : "Release",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"Y2" : 						{
+							"label" : "Y2",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"Rotation" : 						{
+							"label" : "Rotation",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"PitchBend" : 						{
+							"label" : "PitchBend",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
@@ -6905,12 +6972,6 @@
 ,
 						"Yt2" : 						{
 							"label" : "Yt2",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"Yt1" : 						{
-							"label" : "Yt1",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
@@ -7140,14 +7201,8 @@
 					"outlettype" : [ "signal", "signal", "int", "list" ],
 					"patching_rect" : [ 15.0, 112.2236328125, 571.0, 22.0 ],
 					"rnboattrcache" : 					{
-						"PitchBend" : 						{
-							"label" : "PitchBend",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"Y" : 						{
-							"label" : "Y",
+						"PitchBendRange" : 						{
+							"label" : "PitchBendRange",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
@@ -7158,8 +7213,8 @@
 							"parsestring" : ""
 						}
 ,
-						"Delta" : 						{
-							"label" : "Delta",
+						"Output" : 						{
+							"label" : "Output",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
@@ -7170,32 +7225,8 @@
 							"parsestring" : ""
 						}
 ,
-						"Rotation" : 						{
-							"label" : "Rotation",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"DutyCycleOffset" : 						{
-							"label" : "DutyCycleOffset",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"Output" : 						{
-							"label" : "Output",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"PitchBendRange" : 						{
-							"label" : "PitchBendRange",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"Release" : 						{
-							"label" : "Release",
+						"Delta" : 						{
+							"label" : "Delta",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
@@ -7206,8 +7237,38 @@
 							"parsestring" : ""
 						}
 ,
+						"DutyCycleOffset" : 						{
+							"label" : "DutyCycleOffset",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"Release" : 						{
+							"label" : "Release",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"Rotation" : 						{
+							"label" : "Rotation",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"PitchBend" : 						{
+							"label" : "PitchBend",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
 						"Decay" : 						{
 							"label" : "Decay",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"Y" : 						{
+							"label" : "Y",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
@@ -8450,6 +8511,10 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 279.0, 163.0, 28.0, 22.0 ],
+													"saved_object_attributes" : 													{
+														"attr_comment" : ""
+													}
+,
 													"text" : "in 2"
 												}
 
@@ -10561,14 +10626,8 @@
 					"outlettype" : [ "signal", "signal", "int", "list" ],
 					"patching_rect" : [ 14.999999761718747, 688.223632216453552, 558.0, 22.0 ],
 					"rnboattrcache" : 					{
-						"PitchBend" : 						{
-							"label" : "PitchBend",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"CurvatureAngle" : 						{
-							"label" : "CurvatureAngle",
+						"PitchBendRange" : 						{
+							"label" : "PitchBendRange",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
@@ -10585,6 +10644,12 @@
 							"parsestring" : ""
 						}
 ,
+						"Output" : 						{
+							"label" : "Output",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
 						"Points" : 						{
 							"label" : "Points",
 							"isEnum" : 0,
@@ -10597,8 +10662,8 @@
 							"parsestring" : ""
 						}
 ,
-						"Rotation" : 						{
-							"label" : "Rotation",
+						"CurvatureMag" : 						{
+							"label" : "CurvatureMag",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
@@ -10609,8 +10674,8 @@
 							"parsestring" : ""
 						}
 ,
-						"Output" : 						{
-							"label" : "Output",
+						"CurvatureAngle" : 						{
+							"label" : "CurvatureAngle",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
@@ -10621,20 +10686,20 @@
 							"parsestring" : ""
 						}
 ,
-						"PitchBendRange" : 						{
-							"label" : "PitchBendRange",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
 						"Release" : 						{
 							"label" : "Release",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
 ,
-						"CurvatureMag" : 						{
-							"label" : "CurvatureMag",
+						"Rotation" : 						{
+							"label" : "Rotation",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"PitchBend" : 						{
+							"label" : "PitchBend",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
@@ -11458,6 +11523,7 @@
 			}
 , 			{
 				"box" : 				{
+					"hidden" : 1,
 					"id" : "obj-30",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
@@ -11470,6 +11536,7 @@
 			}
 , 			{
 				"box" : 				{
+					"hidden" : 1,
 					"id" : "obj-19",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
@@ -11482,6 +11549,7 @@
 			}
 , 			{
 				"box" : 				{
+					"hidden" : 1,
 					"id" : "obj-12",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
@@ -11494,6 +11562,7 @@
 			}
 , 			{
 				"box" : 				{
+					"hidden" : 1,
 					"id" : "obj-11",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
@@ -11507,6 +11576,7 @@
 			}
 , 			{
 				"box" : 				{
+					"hidden" : 1,
 					"id" : "obj-10",
 					"maxclass" : "message",
 					"numinlets" : 2,
@@ -11519,6 +11589,7 @@
 			}
 , 			{
 				"box" : 				{
+					"hidden" : 1,
 					"id" : "obj-6",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
@@ -11536,6 +11607,7 @@
 			}
 , 			{
 				"box" : 				{
+					"hidden" : 1,
 					"id" : "obj-5",
 					"maxclass" : "newobj",
 					"numinlets" : 4,
@@ -11553,6 +11625,7 @@
 			}
 , 			{
 				"box" : 				{
+					"hidden" : 1,
 					"id" : "obj-3",
 					"maxclass" : "newobj",
 					"numinlets" : 4,
@@ -11570,6 +11643,7 @@
 			}
 , 			{
 				"box" : 				{
+					"hidden" : 1,
 					"id" : "obj-2",
 					"maxclass" : "newobj",
 					"numinlets" : 7,
@@ -11627,14 +11701,8 @@
 					"outlettype" : [ "signal", "signal", "int", "list" ],
 					"patching_rect" : [ 15.0, 40.2236328125, 585.0, 22.0 ],
 					"rnboattrcache" : 					{
-						"PitchBend" : 						{
-							"label" : "PitchBend",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"Rigidity" : 						{
-							"label" : "Rigidity",
+						"PitchBendRange" : 						{
+							"label" : "PitchBendRange",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
@@ -11645,50 +11713,8 @@
 							"parsestring" : ""
 						}
 ,
-						"Attack" : 						{
-							"label" : "Attack",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"Rotation" : 						{
-							"label" : "Rotation",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"DutyCycleOffset" : 						{
-							"label" : "DutyCycleOffset",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
 						"Output" : 						{
 							"label" : "Output",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"Vertices" : 						{
-							"label" : "Vertices",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"PitchBendRange" : 						{
-							"label" : "PitchBendRange",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"Release" : 						{
-							"label" : "Release",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"Decay" : 						{
-							"label" : "Decay",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
@@ -11699,8 +11725,56 @@
 							"parsestring" : ""
 						}
 ,
+						"Attack" : 						{
+							"label" : "Attack",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"Rigidity" : 						{
+							"label" : "Rigidity",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"DutyCycleOffset" : 						{
+							"label" : "DutyCycleOffset",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"Release" : 						{
+							"label" : "Release",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
 						"Sharpness" : 						{
 							"label" : "Sharpness",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"Rotation" : 						{
+							"label" : "Rotation",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"PitchBend" : 						{
+							"label" : "PitchBend",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"Decay" : 						{
+							"label" : "Decay",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"Vertices" : 						{
+							"label" : "Vertices",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}

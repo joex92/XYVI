@@ -41,6 +41,952 @@
 		"title" : "Star",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-29",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 15.0, 240.0, 41.0, 23.0 ],
+					"rnbo_classname" : "/",
+					"rnbo_extra_attributes" : 					{
+						"hot" : 0
+					}
+,
+					"rnbo_serial" : 2,
+					"rnbo_uniqueid" : "/_obj-29",
+					"text" : "/ 100."
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-28",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 15.0, 190.0, 41.0, 23.0 ],
+					"rnbo_classname" : "/",
+					"rnbo_extra_attributes" : 					{
+						"hot" : 0
+					}
+,
+					"rnbo_serial" : 1,
+					"rnbo_uniqueid" : "/_obj-28",
+					"text" : "/ 100."
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-24",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "signal" ],
+					"patching_rect" : [ 58.0, 240.0, 40.0, 23.0 ],
+					"rnbo_classname" : "sig~",
+					"rnbo_extra_attributes" : 					{
+						"unit" : "ms"
+					}
+,
+					"rnbo_serial" : 7,
+					"rnbo_uniqueid" : "sig~_obj-24",
+					"text" : "sig~ 1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-25",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 100.0, 240.0, 54.0, 23.0 ],
+					"rnbo_classname" : "s~",
+					"rnbo_serial" : 15,
+					"rnbo_uniqueid" : "s~_obj-25",
+					"text" : "s~ dMax"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-11",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "signal" ],
+					"patching_rect" : [ 58.0, 190.0, 40.0, 23.0 ],
+					"rnbo_classname" : "sig~",
+					"rnbo_extra_attributes" : 					{
+						"unit" : "ms"
+					}
+,
+					"rnbo_serial" : 4,
+					"rnbo_uniqueid" : "sig~_obj-11",
+					"text" : "sig~ 0"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-10",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 100.0, 190.0, 51.0, 23.0 ],
+					"rnbo_classname" : "s~",
+					"rnbo_serial" : 13,
+					"rnbo_uniqueid" : "s~_obj-10",
+					"text" : "s~ dMin"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-9",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 15.0, 215.0, 303.0, 23.0 ],
+					"rnbo_classname" : "param",
+					"rnbo_extra_attributes" : 					{
+						"preset" : 1,
+						"exponent" : 1.0,
+						"tonormalized" : "",
+						"order" : "0",
+						"meta" : "",
+						"enum" : "",
+						"ctlin" : 0.0,
+						"sendinit" : 1,
+						"displayname" : "",
+						"steps" : 0.0,
+						"unit" : "",
+						"fromnormalized" : "",
+						"displayorder" : "-"
+					}
+,
+					"rnbo_serial" : 7,
+					"rnbo_uniqueid" : "DutyCycleMax",
+					"rnboinfo" : 					{
+						"needsInstanceInfo" : 1,
+						"argnames" : 						{
+							"value" : 							{
+								"attrOrProp" : 2,
+								"digest" : "Set initial value",
+								"defaultarg" : 2,
+								"isalias" : 0,
+								"aliases" : [  ],
+								"settable" : 1,
+								"attachable" : 0,
+								"isparam" : 0,
+								"deprecated" : 0,
+								"type" : "number",
+								"defaultValue" : "0",
+								"label" : "Initial Value",
+								"displayorder" : 3
+							}
+,
+							"normalizedvalue" : 							{
+								"attrOrProp" : 1,
+								"digest" : "Set value normalized. ",
+								"isalias" : 0,
+								"aliases" : [  ],
+								"attachable" : 0,
+								"isparam" : 0,
+								"deprecated" : 0,
+								"inlet" : 1,
+								"type" : "number"
+							}
+,
+							"reset" : 							{
+								"attrOrProp" : 1,
+								"digest" : "Reset param to initial value",
+								"isalias" : 0,
+								"aliases" : [  ],
+								"attachable" : 1,
+								"isparam" : 0,
+								"deprecated" : 0,
+								"type" : "bang"
+							}
+,
+							"normalized" : 							{
+								"attrOrProp" : 1,
+								"digest" : "Normalized parameter value.",
+								"isalias" : 0,
+								"aliases" : [  ],
+								"attachable" : 0,
+								"isparam" : 0,
+								"deprecated" : 0,
+								"outlet" : 1,
+								"type" : "number"
+							}
+,
+							"name" : 							{
+								"attrOrProp" : 2,
+								"digest" : "Name of the parameter",
+								"defaultarg" : 1,
+								"isalias" : 0,
+								"aliases" : [  ],
+								"settable" : 1,
+								"attachable" : 0,
+								"isparam" : 0,
+								"deprecated" : 0,
+								"type" : "symbol",
+								"label" : "Parameter Name",
+								"mandatory" : 1
+							}
+,
+							"enum" : 							{
+								"attrOrProp" : 2,
+								"digest" : "Use an enumerated output",
+								"isalias" : 0,
+								"aliases" : [  ],
+								"settable" : 1,
+								"attachable" : 0,
+								"isparam" : 0,
+								"deprecated" : 0,
+								"type" : "list",
+								"label" : "Enum Values",
+								"displayorder" : 6
+							}
+,
+							"minimum" : 							{
+								"attrOrProp" : 2,
+								"digest" : "Minimum value",
+								"isalias" : 0,
+								"aliases" : [ "min" ],
+								"settable" : 1,
+								"attachable" : 0,
+								"isparam" : 0,
+								"deprecated" : 0,
+								"type" : "number",
+								"defaultValue" : "0",
+								"label" : "Minimum",
+								"displayorder" : 1
+							}
+,
+							"min" : 							{
+								"attrOrProp" : 2,
+								"digest" : "Minimum value",
+								"isalias" : 1,
+								"aliasOf" : "minimum",
+								"aliases" : [  ],
+								"settable" : 1,
+								"attachable" : 0,
+								"isparam" : 0,
+								"deprecated" : 0,
+								"type" : "number",
+								"defaultValue" : "0",
+								"label" : "Minimum",
+								"displayorder" : 1
+							}
+,
+							"maximum" : 							{
+								"attrOrProp" : 2,
+								"digest" : "Maximum value",
+								"isalias" : 0,
+								"aliases" : [ "max" ],
+								"settable" : 1,
+								"attachable" : 0,
+								"isparam" : 0,
+								"deprecated" : 0,
+								"type" : "number",
+								"defaultValue" : "1",
+								"label" : "Maximum",
+								"displayorder" : 2
+							}
+,
+							"max" : 							{
+								"attrOrProp" : 2,
+								"digest" : "Maximum value",
+								"isalias" : 1,
+								"aliasOf" : "maximum",
+								"aliases" : [  ],
+								"settable" : 1,
+								"attachable" : 0,
+								"isparam" : 0,
+								"deprecated" : 0,
+								"type" : "number",
+								"defaultValue" : "1",
+								"label" : "Maximum",
+								"displayorder" : 2
+							}
+,
+							"exponent" : 							{
+								"attrOrProp" : 2,
+								"digest" : "Scale values exponentially",
+								"isalias" : 0,
+								"aliases" : [  ],
+								"settable" : 1,
+								"attachable" : 0,
+								"isparam" : 0,
+								"deprecated" : 0,
+								"type" : "number",
+								"defaultValue" : "1",
+								"label" : "Exponent",
+								"displayorder" : 7
+							}
+,
+							"steps" : 							{
+								"attrOrProp" : 2,
+								"digest" : "Divide the output into a number of discrete steps",
+								"isalias" : 0,
+								"aliases" : [  ],
+								"settable" : 1,
+								"attachable" : 0,
+								"isparam" : 0,
+								"deprecated" : 0,
+								"type" : "number",
+								"defaultValue" : "0",
+								"label" : "Steps",
+								"displayorder" : 8
+							}
+,
+							"displayname" : 							{
+								"attrOrProp" : 2,
+								"digest" : "A more readable name for the parameter in an external RNBO target",
+								"isalias" : 0,
+								"aliases" : [ "displayName" ],
+								"settable" : 1,
+								"attachable" : 0,
+								"isparam" : 0,
+								"deprecated" : 0,
+								"type" : "symbol",
+								"defaultValue" : "",
+								"label" : "Display Name",
+								"displayorder" : 14
+							}
+,
+							"displayName" : 							{
+								"attrOrProp" : 2,
+								"digest" : "A more readable name for the parameter in an external RNBO target",
+								"isalias" : 1,
+								"aliasOf" : "displayname",
+								"aliases" : [  ],
+								"settable" : 1,
+								"attachable" : 0,
+								"isparam" : 0,
+								"deprecated" : 0,
+								"type" : "symbol",
+								"defaultValue" : "",
+								"label" : "Display Name",
+								"displayorder" : 14
+							}
+,
+							"unit" : 							{
+								"attrOrProp" : 2,
+								"digest" : "A symbol to describe the unit of the parameter in an external RNBO target",
+								"isalias" : 0,
+								"aliases" : [  ],
+								"settable" : 1,
+								"attachable" : 0,
+								"isparam" : 0,
+								"deprecated" : 0,
+								"type" : "symbol",
+								"defaultValue" : "",
+								"label" : "Unit",
+								"displayorder" : 15
+							}
+,
+							"tonormalized" : 							{
+								"attrOrProp" : 2,
+								"digest" : "Converts a real parameter value to its normalized form.",
+								"isalias" : 0,
+								"aliases" : [  ],
+								"settable" : 1,
+								"attachable" : 0,
+								"isparam" : 0,
+								"deprecated" : 0,
+								"type" : "symbol",
+								"label" : "To Normalized Expression",
+								"displayorder" : 10
+							}
+,
+							"fromnormalized" : 							{
+								"attrOrProp" : 2,
+								"digest" : "Converts a normalized parameter into its actual parameter value.",
+								"isalias" : 0,
+								"aliases" : [  ],
+								"settable" : 1,
+								"attachable" : 0,
+								"isparam" : 0,
+								"deprecated" : 0,
+								"type" : "symbol",
+								"label" : "From Normalized Expression",
+								"displayorder" : 9
+							}
+,
+							"order" : 							{
+								"attrOrProp" : 2,
+								"digest" : "Order in which initial parameter values will be sent out on patcher load. The order can be numeric or symbolic ('first' and 'last')",
+								"isalias" : 0,
+								"aliases" : [  ],
+								"settable" : 1,
+								"attachable" : 0,
+								"isparam" : 0,
+								"deprecated" : 0,
+								"type" : "symbol",
+								"defaultValue" : "0",
+								"label" : "Restore Order",
+								"displayorder" : 12
+							}
+,
+							"displayorder" : 							{
+								"attrOrProp" : 2,
+								"digest" : "Order in which parameters will show up in a list of all parameters. The order can be numeric or symbolic ('first' and 'last')",
+								"isalias" : 0,
+								"aliases" : [  ],
+								"settable" : 1,
+								"attachable" : 0,
+								"isparam" : 0,
+								"deprecated" : 0,
+								"type" : "symbol",
+								"defaultValue" : "-",
+								"label" : "Display Order",
+								"displayorder" : 13
+							}
+,
+							"sendinit" : 							{
+								"attrOrProp" : 2,
+								"digest" : "Send initial value",
+								"isalias" : 0,
+								"aliases" : [  ],
+								"settable" : 1,
+								"attachable" : 0,
+								"isparam" : 0,
+								"deprecated" : 0,
+								"type" : "bool",
+								"defaultValue" : "true",
+								"label" : "Send Init",
+								"displayorder" : 4
+							}
+,
+							"ctlin" : 							{
+								"attrOrProp" : 2,
+								"digest" : "MIDI controller number to control this parameter.",
+								"isalias" : 0,
+								"aliases" : [  ],
+								"settable" : 1,
+								"attachable" : 0,
+								"isparam" : 0,
+								"deprecated" : 0,
+								"type" : "number",
+								"label" : "MIDI Controller Number.",
+								"displayorder" : 16
+							}
+,
+							"meta" : 							{
+								"attrOrProp" : 2,
+								"digest" : "A JSON formatted string containing metadata for use by the exported code",
+								"isalias" : 0,
+								"aliases" : [  ],
+								"settable" : 1,
+								"attachable" : 0,
+								"isparam" : 0,
+								"deprecated" : 0,
+								"type" : "symbol",
+								"defaultValue" : "",
+								"label" : "Metadata",
+								"displayorder" : 17
+							}
+,
+							"nopreset" : 							{
+								"attrOrProp" : 2,
+								"digest" : "Do not add this value to the preset [DEPRECATED - USE @preset 0 instead].",
+								"isalias" : 0,
+								"aliases" : [  ],
+								"settable" : 1,
+								"attachable" : 0,
+								"isparam" : 0,
+								"deprecated" : 1,
+								"type" : "bool",
+								"defaultValue" : "false"
+							}
+,
+							"preset" : 							{
+								"attrOrProp" : 2,
+								"digest" : "Add this value to the preset.",
+								"isalias" : 0,
+								"aliases" : [  ],
+								"settable" : 1,
+								"attachable" : 0,
+								"isparam" : 0,
+								"deprecated" : 0,
+								"type" : "bool",
+								"defaultValue" : "true",
+								"label" : "Include In Preset",
+								"displayorder" : 11
+							}
+
+						}
+,
+						"inputs" : [ 							{
+								"name" : "value",
+								"type" : "number",
+								"digest" : "Parameter value",
+								"hot" : 1,
+								"docked" : 0
+							}
+, 							{
+								"name" : "normalizedvalue",
+								"type" : "number",
+								"digest" : "Set value normalized. ",
+								"docked" : 0
+							}
+ ],
+						"outputs" : [ 							{
+								"name" : "value",
+								"type" : "number",
+								"digest" : "Parameter value",
+								"hot" : 1,
+								"docked" : 0
+							}
+, 							{
+								"name" : "normalized",
+								"type" : "number",
+								"digest" : "Normalized parameter value.",
+								"docked" : 0
+							}
+ ],
+						"helpname" : "param",
+						"aliasOf" : "param",
+						"classname" : "param",
+						"operator" : 0,
+						"versionId" : -1445040964,
+						"changesPatcherIO" : 0
+					}
+,
+					"text" : "param DutyCycleMax 100. @min 0. @max 100. @unit %",
+					"varname" : "DutyCycleMax"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-8",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 15.0, 165.0, 287.0, 23.0 ],
+					"rnbo_classname" : "param",
+					"rnbo_extra_attributes" : 					{
+						"preset" : 1,
+						"exponent" : 1.0,
+						"tonormalized" : "",
+						"order" : "0",
+						"meta" : "",
+						"enum" : "",
+						"ctlin" : 0.0,
+						"sendinit" : 1,
+						"displayname" : "",
+						"steps" : 0.0,
+						"unit" : "",
+						"fromnormalized" : "",
+						"displayorder" : "-"
+					}
+,
+					"rnbo_serial" : 5,
+					"rnbo_uniqueid" : "DutyCycleMin",
+					"rnboinfo" : 					{
+						"needsInstanceInfo" : 1,
+						"argnames" : 						{
+							"value" : 							{
+								"attrOrProp" : 2,
+								"digest" : "Set initial value",
+								"defaultarg" : 2,
+								"isalias" : 0,
+								"aliases" : [  ],
+								"settable" : 1,
+								"attachable" : 0,
+								"isparam" : 0,
+								"deprecated" : 0,
+								"type" : "number",
+								"defaultValue" : "0",
+								"label" : "Initial Value",
+								"displayorder" : 3
+							}
+,
+							"normalizedvalue" : 							{
+								"attrOrProp" : 1,
+								"digest" : "Set value normalized. ",
+								"isalias" : 0,
+								"aliases" : [  ],
+								"attachable" : 0,
+								"isparam" : 0,
+								"deprecated" : 0,
+								"inlet" : 1,
+								"type" : "number"
+							}
+,
+							"reset" : 							{
+								"attrOrProp" : 1,
+								"digest" : "Reset param to initial value",
+								"isalias" : 0,
+								"aliases" : [  ],
+								"attachable" : 1,
+								"isparam" : 0,
+								"deprecated" : 0,
+								"type" : "bang"
+							}
+,
+							"normalized" : 							{
+								"attrOrProp" : 1,
+								"digest" : "Normalized parameter value.",
+								"isalias" : 0,
+								"aliases" : [  ],
+								"attachable" : 0,
+								"isparam" : 0,
+								"deprecated" : 0,
+								"outlet" : 1,
+								"type" : "number"
+							}
+,
+							"name" : 							{
+								"attrOrProp" : 2,
+								"digest" : "Name of the parameter",
+								"defaultarg" : 1,
+								"isalias" : 0,
+								"aliases" : [  ],
+								"settable" : 1,
+								"attachable" : 0,
+								"isparam" : 0,
+								"deprecated" : 0,
+								"type" : "symbol",
+								"label" : "Parameter Name",
+								"mandatory" : 1
+							}
+,
+							"enum" : 							{
+								"attrOrProp" : 2,
+								"digest" : "Use an enumerated output",
+								"isalias" : 0,
+								"aliases" : [  ],
+								"settable" : 1,
+								"attachable" : 0,
+								"isparam" : 0,
+								"deprecated" : 0,
+								"type" : "list",
+								"label" : "Enum Values",
+								"displayorder" : 6
+							}
+,
+							"minimum" : 							{
+								"attrOrProp" : 2,
+								"digest" : "Minimum value",
+								"isalias" : 0,
+								"aliases" : [ "min" ],
+								"settable" : 1,
+								"attachable" : 0,
+								"isparam" : 0,
+								"deprecated" : 0,
+								"type" : "number",
+								"defaultValue" : "0",
+								"label" : "Minimum",
+								"displayorder" : 1
+							}
+,
+							"min" : 							{
+								"attrOrProp" : 2,
+								"digest" : "Minimum value",
+								"isalias" : 1,
+								"aliasOf" : "minimum",
+								"aliases" : [  ],
+								"settable" : 1,
+								"attachable" : 0,
+								"isparam" : 0,
+								"deprecated" : 0,
+								"type" : "number",
+								"defaultValue" : "0",
+								"label" : "Minimum",
+								"displayorder" : 1
+							}
+,
+							"maximum" : 							{
+								"attrOrProp" : 2,
+								"digest" : "Maximum value",
+								"isalias" : 0,
+								"aliases" : [ "max" ],
+								"settable" : 1,
+								"attachable" : 0,
+								"isparam" : 0,
+								"deprecated" : 0,
+								"type" : "number",
+								"defaultValue" : "1",
+								"label" : "Maximum",
+								"displayorder" : 2
+							}
+,
+							"max" : 							{
+								"attrOrProp" : 2,
+								"digest" : "Maximum value",
+								"isalias" : 1,
+								"aliasOf" : "maximum",
+								"aliases" : [  ],
+								"settable" : 1,
+								"attachable" : 0,
+								"isparam" : 0,
+								"deprecated" : 0,
+								"type" : "number",
+								"defaultValue" : "1",
+								"label" : "Maximum",
+								"displayorder" : 2
+							}
+,
+							"exponent" : 							{
+								"attrOrProp" : 2,
+								"digest" : "Scale values exponentially",
+								"isalias" : 0,
+								"aliases" : [  ],
+								"settable" : 1,
+								"attachable" : 0,
+								"isparam" : 0,
+								"deprecated" : 0,
+								"type" : "number",
+								"defaultValue" : "1",
+								"label" : "Exponent",
+								"displayorder" : 7
+							}
+,
+							"steps" : 							{
+								"attrOrProp" : 2,
+								"digest" : "Divide the output into a number of discrete steps",
+								"isalias" : 0,
+								"aliases" : [  ],
+								"settable" : 1,
+								"attachable" : 0,
+								"isparam" : 0,
+								"deprecated" : 0,
+								"type" : "number",
+								"defaultValue" : "0",
+								"label" : "Steps",
+								"displayorder" : 8
+							}
+,
+							"displayname" : 							{
+								"attrOrProp" : 2,
+								"digest" : "A more readable name for the parameter in an external RNBO target",
+								"isalias" : 0,
+								"aliases" : [ "displayName" ],
+								"settable" : 1,
+								"attachable" : 0,
+								"isparam" : 0,
+								"deprecated" : 0,
+								"type" : "symbol",
+								"defaultValue" : "",
+								"label" : "Display Name",
+								"displayorder" : 14
+							}
+,
+							"displayName" : 							{
+								"attrOrProp" : 2,
+								"digest" : "A more readable name for the parameter in an external RNBO target",
+								"isalias" : 1,
+								"aliasOf" : "displayname",
+								"aliases" : [  ],
+								"settable" : 1,
+								"attachable" : 0,
+								"isparam" : 0,
+								"deprecated" : 0,
+								"type" : "symbol",
+								"defaultValue" : "",
+								"label" : "Display Name",
+								"displayorder" : 14
+							}
+,
+							"unit" : 							{
+								"attrOrProp" : 2,
+								"digest" : "A symbol to describe the unit of the parameter in an external RNBO target",
+								"isalias" : 0,
+								"aliases" : [  ],
+								"settable" : 1,
+								"attachable" : 0,
+								"isparam" : 0,
+								"deprecated" : 0,
+								"type" : "symbol",
+								"defaultValue" : "",
+								"label" : "Unit",
+								"displayorder" : 15
+							}
+,
+							"tonormalized" : 							{
+								"attrOrProp" : 2,
+								"digest" : "Converts a real parameter value to its normalized form.",
+								"isalias" : 0,
+								"aliases" : [  ],
+								"settable" : 1,
+								"attachable" : 0,
+								"isparam" : 0,
+								"deprecated" : 0,
+								"type" : "symbol",
+								"label" : "To Normalized Expression",
+								"displayorder" : 10
+							}
+,
+							"fromnormalized" : 							{
+								"attrOrProp" : 2,
+								"digest" : "Converts a normalized parameter into its actual parameter value.",
+								"isalias" : 0,
+								"aliases" : [  ],
+								"settable" : 1,
+								"attachable" : 0,
+								"isparam" : 0,
+								"deprecated" : 0,
+								"type" : "symbol",
+								"label" : "From Normalized Expression",
+								"displayorder" : 9
+							}
+,
+							"order" : 							{
+								"attrOrProp" : 2,
+								"digest" : "Order in which initial parameter values will be sent out on patcher load. The order can be numeric or symbolic ('first' and 'last')",
+								"isalias" : 0,
+								"aliases" : [  ],
+								"settable" : 1,
+								"attachable" : 0,
+								"isparam" : 0,
+								"deprecated" : 0,
+								"type" : "symbol",
+								"defaultValue" : "0",
+								"label" : "Restore Order",
+								"displayorder" : 12
+							}
+,
+							"displayorder" : 							{
+								"attrOrProp" : 2,
+								"digest" : "Order in which parameters will show up in a list of all parameters. The order can be numeric or symbolic ('first' and 'last')",
+								"isalias" : 0,
+								"aliases" : [  ],
+								"settable" : 1,
+								"attachable" : 0,
+								"isparam" : 0,
+								"deprecated" : 0,
+								"type" : "symbol",
+								"defaultValue" : "-",
+								"label" : "Display Order",
+								"displayorder" : 13
+							}
+,
+							"sendinit" : 							{
+								"attrOrProp" : 2,
+								"digest" : "Send initial value",
+								"isalias" : 0,
+								"aliases" : [  ],
+								"settable" : 1,
+								"attachable" : 0,
+								"isparam" : 0,
+								"deprecated" : 0,
+								"type" : "bool",
+								"defaultValue" : "true",
+								"label" : "Send Init",
+								"displayorder" : 4
+							}
+,
+							"ctlin" : 							{
+								"attrOrProp" : 2,
+								"digest" : "MIDI controller number to control this parameter.",
+								"isalias" : 0,
+								"aliases" : [  ],
+								"settable" : 1,
+								"attachable" : 0,
+								"isparam" : 0,
+								"deprecated" : 0,
+								"type" : "number",
+								"label" : "MIDI Controller Number.",
+								"displayorder" : 16
+							}
+,
+							"meta" : 							{
+								"attrOrProp" : 2,
+								"digest" : "A JSON formatted string containing metadata for use by the exported code",
+								"isalias" : 0,
+								"aliases" : [  ],
+								"settable" : 1,
+								"attachable" : 0,
+								"isparam" : 0,
+								"deprecated" : 0,
+								"type" : "symbol",
+								"defaultValue" : "",
+								"label" : "Metadata",
+								"displayorder" : 17
+							}
+,
+							"nopreset" : 							{
+								"attrOrProp" : 2,
+								"digest" : "Do not add this value to the preset [DEPRECATED - USE @preset 0 instead].",
+								"isalias" : 0,
+								"aliases" : [  ],
+								"settable" : 1,
+								"attachable" : 0,
+								"isparam" : 0,
+								"deprecated" : 1,
+								"type" : "bool",
+								"defaultValue" : "false"
+							}
+,
+							"preset" : 							{
+								"attrOrProp" : 2,
+								"digest" : "Add this value to the preset.",
+								"isalias" : 0,
+								"aliases" : [  ],
+								"settable" : 1,
+								"attachable" : 0,
+								"isparam" : 0,
+								"deprecated" : 0,
+								"type" : "bool",
+								"defaultValue" : "true",
+								"label" : "Include In Preset",
+								"displayorder" : 11
+							}
+
+						}
+,
+						"inputs" : [ 							{
+								"name" : "value",
+								"type" : "number",
+								"digest" : "Parameter value",
+								"hot" : 1,
+								"docked" : 0
+							}
+, 							{
+								"name" : "normalizedvalue",
+								"type" : "number",
+								"digest" : "Set value normalized. ",
+								"docked" : 0
+							}
+ ],
+						"outputs" : [ 							{
+								"name" : "value",
+								"type" : "number",
+								"digest" : "Parameter value",
+								"hot" : 1,
+								"docked" : 0
+							}
+, 							{
+								"name" : "normalized",
+								"type" : "number",
+								"digest" : "Normalized parameter value.",
+								"docked" : 0
+							}
+ ],
+						"helpname" : "param",
+						"aliasOf" : "param",
+						"classname" : "param",
+						"operator" : 0,
+						"versionId" : -1445040964,
+						"changesPatcherIO" : 0
+					}
+,
+					"text" : "param DutyCycleMin 0. @min 0. @max 100. @unit %",
+					"varname" : "DutyCycleMin"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-41",
 					"maxclass" : "newobj",
 					"numinlets" : 3,
@@ -465,7 +1411,7 @@
 						"id" : ""
 					}
 ,
-					"rnbo_serial" : 12,
+					"rnbo_serial" : 1,
 					"rnbo_uniqueid" : "Cycles",
 					"rnboinfo" : 					{
 						"needsInstanceInfo" : 1,
@@ -645,7 +1591,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 15.0, 415.0, 43.0, 23.0 ],
+					"patching_rect" : [ 15.0, 515.0, 43.0, 23.0 ],
 					"rnbo_classname" : "sig~",
 					"rnbo_extra_attributes" : 					{
 						"unit" : "ms"
@@ -841,18 +1787,18 @@
 					"rnbo_classname" : "param",
 					"rnbo_extra_attributes" : 					{
 						"minimum" : 0.0,
-						"sendinit" : 1,
 						"preset" : 1,
 						"exponent" : 1.0,
-						"ctlin" : 0.0,
-						"displayorder" : "-",
-						"displayname" : "",
-						"unit" : "",
+						"tonormalized" : "",
 						"maximum" : 1.0,
 						"meta" : "",
+						"ctlin" : 0.0,
+						"sendinit" : 1,
+						"displayname" : "",
+						"steps" : 0.0,
+						"unit" : "",
 						"fromnormalized" : "",
-						"tonormalized" : "",
-						"steps" : 0.0
+						"displayorder" : "-"
 					}
 ,
 					"rnbo_serial" : 1,
@@ -1475,18 +2421,18 @@
 					"patching_rect" : [ 163.0, 15.0, 266.0, 23.0 ],
 					"rnbo_classname" : "param",
 					"rnbo_extra_attributes" : 					{
-						"enum" : "",
-						"order" : "0",
-						"sendinit" : 1,
 						"preset" : 1,
 						"exponent" : 1.0,
+						"tonormalized" : "",
+						"order" : "0",
+						"meta" : "",
+						"enum" : "",
 						"ctlin" : 0.0,
-						"displayorder" : "-",
+						"sendinit" : 1,
 						"displayname" : "",
 						"unit" : "",
-						"meta" : "",
 						"fromnormalized" : "",
-						"tonormalized" : ""
+						"displayorder" : "-"
 					}
 ,
 					"rnbo_serial" : 2,
@@ -1907,7 +2853,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 15.0, 240.0, 122.0, 23.0 ],
+					"patching_rect" : [ 15.0, 340.0, 122.0, 23.0 ],
 					"rnbo_classname" : "expr~",
 					"rnbo_serial" : 3,
 					"rnbo_uniqueid" : "expr~_obj-19",
@@ -1999,7 +2945,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 15.0, 215.0, 235.0, 23.0 ],
+					"patching_rect" : [ 15.0, 315.0, 235.0, 23.0 ],
 					"rnbo_classname" : "param~",
 					"rnbo_extra_attributes" : 					{
 						"exponent" : 1.0,
@@ -2185,7 +3131,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 139.0, 240.0, 28.0, 23.0 ],
+					"patching_rect" : [ 139.0, 340.0, 28.0, 23.0 ],
 					"rnbo_classname" : "s~",
 					"rnbo_serial" : 2,
 					"rnbo_uniqueid" : "s~_obj-21",
@@ -2217,18 +3163,18 @@
 					"patching_rect" : [ 15.0, 115.0, 294.0, 23.0 ],
 					"rnbo_classname" : "param",
 					"rnbo_extra_attributes" : 					{
-						"enum" : "",
-						"order" : "0",
-						"sendinit" : 1,
 						"preset" : 1,
 						"exponent" : 1.0,
+						"tonormalized" : "",
+						"order" : "0",
+						"meta" : "",
+						"enum" : "",
 						"ctlin" : 0.0,
-						"displayorder" : "-",
+						"sendinit" : 1,
 						"displayname" : "",
 						"unit" : "",
-						"meta" : "",
 						"fromnormalized" : "",
-						"tonormalized" : ""
+						"displayorder" : "-"
 					}
 ,
 					"rnbo_serial" : 3,
@@ -2634,7 +3580,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 65.0, 340.0, 74.0, 23.0 ],
+					"patching_rect" : [ 65.0, 440.0, 74.0, 23.0 ],
 					"rnbo_classname" : "round~",
 					"rnbo_serial" : 3,
 					"rnbo_uniqueid" : "round~_obj-233",
@@ -2704,6 +3650,51 @@
 						"assistshowspatchername" : 0,
 						"title" : "Star",
 						"boxes" : [ 							{
+								"box" : 								{
+									"id" : "obj-10",
+									"maxclass" : "newobj",
+									"numinlets" : 0,
+									"numoutlets" : 1,
+									"outlettype" : [ "signal" ],
+									"patching_rect" : [ 129.5, 215.0, 50.0, 23.0 ],
+									"rnbo_classname" : "r~",
+									"rnbo_serial" : 12,
+									"rnbo_uniqueid" : "r~_obj-10",
+									"text" : "r~ dMin"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-26",
+									"maxclass" : "newobj",
+									"numinlets" : 0,
+									"numoutlets" : 1,
+									"outlettype" : [ "signal" ],
+									"patching_rect" : [ 181.5, 215.0, 53.0, 23.0 ],
+									"rnbo_classname" : "r~",
+									"rnbo_serial" : 13,
+									"rnbo_uniqueid" : "r~_obj-26",
+									"text" : "r~ dMax"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-9",
+									"maxclass" : "newobj",
+									"numinlets" : 6,
+									"numoutlets" : 1,
+									"outlettype" : [ "signal" ],
+									"patching_rect" : [ 15.0, 265.0, 82.0, 23.0 ],
+									"rnbo_classname" : "scale~",
+									"rnbo_serial" : 1,
+									"rnbo_uniqueid" : "scale~_obj-9",
+									"text" : "scale~ 0 1 0 1"
+								}
+
+							}
+, 							{
 								"box" : 								{
 									"id" : "obj-40",
 									"maxclass" : "newobj",
@@ -2842,7 +3833,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "signal" ],
-									"patching_rect" : [ 15.0, 265.0, 29.5, 23.0 ],
+									"patching_rect" : [ 15.0, 290.0, 29.5, 23.0 ],
 									"rnbo_classname" : "*~",
 									"rnbo_serial" : 1,
 									"rnbo_uniqueid" : "*~_obj-18",
@@ -4033,8 +5024,8 @@
 									"patching_rect" : [ 15.0, 165.0, 41.0, 23.0 ],
 									"rnbo_classname" : "mtof~",
 									"rnbo_extra_attributes" : 									{
-										"scalename" : "",
-										"filter" : 1.0
+										"filter" : 1.0,
+										"scalename" : ""
 									}
 ,
 									"rnbo_serial" : 1,
@@ -4388,7 +5379,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "signal" ],
-									"patching_rect" : [ 15.0, 290.0, 29.5, 23.0 ],
+									"patching_rect" : [ 15.0, 315.0, 29.5, 23.0 ],
 									"rnbo_classname" : "*~",
 									"rnbo_serial" : 3,
 									"rnbo_uniqueid" : "*~_obj-20",
@@ -4936,6 +5927,13 @@
 							}
 , 							{
 								"patchline" : 								{
+									"destination" : [ "obj-9", 3 ],
+									"source" : [ "obj-10", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-8", 1 ],
 									"source" : [ "obj-11", 0 ]
 								}
@@ -5340,6 +6338,13 @@
 							}
 , 							{
 								"patchline" : 								{
+									"destination" : [ "obj-9", 4 ],
+									"source" : [ "obj-26", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-153", 1 ],
 									"source" : [ "obj-27", 0 ]
 								}
@@ -5447,7 +6452,7 @@
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-18", 0 ],
+									"destination" : [ "obj-9", 0 ],
 									"source" : [ "obj-5", 0 ]
 								}
 
@@ -5545,6 +6550,13 @@
 							}
 , 							{
 								"patchline" : 								{
+									"destination" : [ "obj-18", 0 ],
+									"source" : [ "obj-9", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-60", 0 ],
 									"source" : [ "obj-93", 0 ]
 								}
@@ -5569,9 +6581,9 @@
 					"rnbo_classname" : "p",
 					"rnbo_extra_attributes" : 					{
 						"args" : [  ],
+						"exposevoiceparams" : 0,
 						"notecontroller" : 0,
-						"voicecontrol" : "simple",
-						"exposevoiceparams" : 0
+						"voicecontrol" : "simple"
 					}
 ,
 					"rnbo_serial" : 1,
@@ -6136,7 +7148,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 251.0, 365.0, 31.0, 23.0 ],
+					"patching_rect" : [ 251.0, 465.0, 31.0, 23.0 ],
 					"rnbo_classname" : "s~",
 					"rnbo_serial" : 3,
 					"rnbo_uniqueid" : "s~_obj-215",
@@ -6150,7 +7162,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 141.0, 340.0, 30.0, 23.0 ],
+					"patching_rect" : [ 141.0, 440.0, 30.0, 23.0 ],
 					"rnbo_classname" : "s~",
 					"rnbo_serial" : 4,
 					"rnbo_uniqueid" : "s~_obj-213",
@@ -6164,7 +7176,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 237.0, 290.0, 33.0, 23.0 ],
+					"patching_rect" : [ 237.0, 390.0, 33.0, 23.0 ],
 					"rnbo_classname" : "s~",
 					"rnbo_serial" : 5,
 					"rnbo_uniqueid" : "s~_obj-211",
@@ -6178,7 +7190,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 238.0, 265.0, 32.0, 23.0 ],
+					"patching_rect" : [ 238.0, 365.0, 32.0, 23.0 ],
 					"rnbo_classname" : "s~",
 					"rnbo_serial" : 6,
 					"rnbo_uniqueid" : "s~_obj-209",
@@ -6234,7 +7246,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 15.0, 190.0, 48.0, 23.0 ],
+					"patching_rect" : [ 15.0, 290.0, 48.0, 23.0 ],
 					"rnbo_classname" : "s~",
 					"rnbo_serial" : 10,
 					"rnbo_uniqueid" : "s~_obj-201",
@@ -6249,7 +7261,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 60.0, 415.0, 46.0, 23.0 ],
+					"patching_rect" : [ 60.0, 515.0, 46.0, 23.0 ],
 					"rnbo_classname" : "dbtoa~",
 					"rnbo_serial" : 1,
 					"rnbo_uniqueid" : "dbtoa~_obj-83",
@@ -6264,19 +7276,19 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 15.0, 390.0, 392.0, 23.0 ],
+					"patching_rect" : [ 15.0, 490.0, 392.0, 23.0 ],
 					"rnbo_classname" : "param",
 					"rnbo_extra_attributes" : 					{
-						"enum" : "",
-						"sendinit" : 1,
 						"preset" : 1,
-						"ctlin" : 0.0,
-						"displayorder" : "-",
-						"displayname" : "",
-						"meta" : "",
-						"fromnormalized" : "",
 						"tonormalized" : "",
-						"steps" : 0.0
+						"meta" : "",
+						"enum" : "",
+						"ctlin" : 0.0,
+						"sendinit" : 1,
+						"displayname" : "",
+						"steps" : 0.0,
+						"fromnormalized" : "",
+						"displayorder" : "-"
 					}
 ,
 					"rnbo_serial" : 4,
@@ -6682,7 +7694,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 15.0, 340.0, 48.0, 23.0 ],
+					"patching_rect" : [ 15.0, 440.0, 48.0, 23.0 ],
 					"rnbo_classname" : "/~",
 					"rnbo_serial" : 2,
 					"rnbo_uniqueid" : "/~_obj-78",
@@ -6697,7 +7709,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 15.0, 365.0, 234.0, 23.0 ],
+					"patching_rect" : [ 15.0, 465.0, 234.0, 23.0 ],
 					"rnbo_classname" : "param~",
 					"rnbo_extra_attributes" : 					{
 						"exponent" : 1.0,
@@ -6884,7 +7896,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 15.0, 315.0, 218.0, 23.0 ],
+					"patching_rect" : [ 15.0, 415.0, 218.0, 23.0 ],
 					"rnbo_classname" : "param~",
 					"rnbo_extra_attributes" : 					{
 						"exponent" : 1.0,
@@ -7071,7 +8083,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 15.0, 290.0, 220.0, 23.0 ],
+					"patching_rect" : [ 15.0, 390.0, 220.0, 23.0 ],
 					"rnbo_classname" : "param~",
 					"rnbo_extra_attributes" : 					{
 						"exponent" : 1.0,
@@ -7258,7 +8270,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 15.0, 265.0, 221.0, 23.0 ],
+					"patching_rect" : [ 15.0, 365.0, 221.0, 23.0 ],
 					"rnbo_classname" : "param~",
 					"rnbo_extra_attributes" : 					{
 						"exponent" : 1.0,
@@ -7523,7 +8535,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 15.0, 165.0, 269.0, 23.0 ],
+					"patching_rect" : [ 15.0, 265.0, 269.0, 23.0 ],
 					"rnbo_classname" : "param~",
 					"rnbo_extra_attributes" : 					{
 						"exponent" : 1.0,
@@ -8092,7 +9104,7 @@
 						"id" : ""
 					}
 ,
-					"rnbo_serial" : 11,
+					"rnbo_serial" : 10,
 					"rnbo_uniqueid" : "Vertices",
 					"rnboinfo" : 					{
 						"needsInstanceInfo" : 1,
@@ -8506,6 +9518,13 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-10", 0 ],
+					"source" : [ "obj-11", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-17", 1 ],
 					"order" : 0,
 					"source" : [ "obj-12", 0 ]
@@ -8742,8 +9761,29 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-25", 0 ],
+					"source" : [ "obj-24", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-27", 0 ],
 					"source" : [ "obj-26", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-11", 0 ],
+					"source" : [ "obj-28", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-24", 0 ],
+					"source" : [ "obj-29", 0 ]
 				}
 
 			}
@@ -8882,6 +9922,13 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-28", 0 ],
+					"source" : [ "obj-8", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-6", 0 ],
 					"source" : [ "obj-80", 0 ]
 				}
@@ -8914,6 +9961,13 @@
 					"destination" : [ "obj-82", 1 ],
 					"order" : 0,
 					"source" : [ "obj-83", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-29", 0 ],
+					"source" : [ "obj-9", 0 ]
 				}
 
 			}
