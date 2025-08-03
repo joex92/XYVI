@@ -8,9 +8,17 @@
 	"subtype" : "",
 	"embed" : 1,
 	"snapshot" : 	{
+		"DutyCycleMin" : 		{
+			"value" : 0.0
+		}
+,
 		"__presetid" : "Star",
 		"PitchBendRange" : 		{
 			"value" : 36.0
+		}
+,
+		"DutyCycleMax" : 		{
+			"value" : 100.0
 		}
 ,
 		"PitchBend" : 		{

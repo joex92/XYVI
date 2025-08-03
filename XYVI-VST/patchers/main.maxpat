@@ -2,43 +2,56 @@
 	"patcher" : 	{
 		"fileversion" : 1,
 		"appversion" : 		{
-			"major" : 8,
-			"minor" : 5,
-			"revision" : 5,
+			"major" : 9,
+			"minor" : 0,
+			"revision" : 7,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 35.0, 85.0, 1373.0, 930.0 ],
-		"bglocked" : 0,
-		"openinpresentation" : 0,
-		"default_fontsize" : 12.0,
-		"default_fontface" : 0,
-		"default_fontname" : "Arial",
-		"gridonopen" : 1,
+		"rect" : [ 34.0, 77.0, 1455.0, 929.0 ],
 		"gridsize" : [ 15.0, 15.0 ],
-		"gridsnaponopen" : 1,
-		"objectsnaponopen" : 1,
-		"statusbarvisible" : 2,
-		"toolbarvisible" : 1,
-		"lefttoolbarpinned" : 0,
-		"toptoolbarpinned" : 0,
-		"righttoolbarpinned" : 0,
-		"bottomtoolbarpinned" : 0,
-		"toolbars_unpinned_last_save" : 0,
-		"tallnewobj" : 0,
-		"boxanimatetime" : 200,
-		"enablehscroll" : 1,
-		"enablevscroll" : 1,
-		"devicewidth" : 0.0,
-		"description" : "",
-		"digest" : "",
-		"tags" : "",
-		"style" : "",
-		"subpatcher_template" : "",
-		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-211",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 1786.0, 1132.0, 50.0, 22.0 ],
+					"text" : "-26.82"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-209",
+					"maxclass" : "live.slider",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "float" ],
+					"parameter_enable" : 1,
+					"patching_rect" : [ 1786.0, 229.0, 55.0, 878.0 ],
+					"saved_attribute_attributes" : 					{
+						"valueof" : 						{
+							"parameter_longname" : "live.slider[3]",
+							"parameter_mmax" : 136.0,
+							"parameter_mmin" : -37.0,
+							"parameter_modmode" : 3,
+							"parameter_shortname" : "live.slider[3]",
+							"parameter_steps" : 17301,
+							"parameter_type" : 0,
+							"parameter_unitstyle" : 1
+						}
+
+					}
+,
+					"varname" : "live.slider[3]"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"hidden" : 1,
 					"id" : "obj-207",
@@ -677,8 +690,14 @@
 					"outlettype" : [ "signal", "signal", "list" ],
 					"patching_rect" : [ 1224.0, 163.0, 607.0, 22.0 ],
 					"rnboattrcache" : 					{
-						"Rotation" : 						{
-							"label" : "Rotation",
+						"PositionX" : 						{
+							"label" : "PositionX",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"PositionY" : 						{
+							"label" : "PositionY",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
@@ -689,14 +708,8 @@
 							"parsestring" : ""
 						}
 ,
-						"PositionX" : 						{
-							"label" : "PositionX",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"PositionY" : 						{
-							"label" : "PositionY",
+						"Rotation" : 						{
+							"label" : "Rotation",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
@@ -727,11 +740,12 @@
 
 					}
 ,
-					"rnboversion" : "1.1.2",
+					"rnboversion" : "1.3.4",
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_invisible" : 1,
 							"parameter_longname" : "rnbo~[12]",
+							"parameter_modmode" : 0,
 							"parameter_shortname" : "rnbo~[11]",
 							"parameter_type" : 3
 						}
@@ -760,6 +774,10 @@
 							}
 ,
 							"__presetid" : "Position-FX",
+							"PositionX" : 							{
+								"value" : 0.0
+							}
+,
 							"Mirror" : 							{
 								"value" : 0.0
 							}
@@ -773,6 +791,10 @@
 							}
 ,
 							"Position" : 							{
+								"value" : 0.0
+							}
+,
+							"PositionY" : 							{
 								"value" : 0.0
 							}
 ,
@@ -799,6 +821,10 @@
 										}
 ,
 										"__presetid" : "Position-FX",
+										"PositionX" : 										{
+											"value" : 0.0
+										}
+,
 										"Mirror" : 										{
 											"value" : 0.0
 										}
@@ -815,6 +841,10 @@
 											"value" : 0.0
 										}
 ,
+										"PositionY" : 										{
+											"value" : 0.0
+										}
+,
 										"Rotation" : 										{
 											"value" : 0.0
 										}
@@ -826,7 +856,7 @@
 										"filename" : "Position-FX.rnbopat.maxsnap",
 										"filepath" : "~/OneDrive - Universidad de las Artes/2023/Tesis/XYVI/XYVI-VST/data",
 										"filepos" : -1,
-										"snapshotfileid" : "0d812a8a15977ddc3c3c95f960019a0b"
+										"snapshotfileid" : "100af29ba9083e24dfe0e4a0cbf34fb6"
 									}
 
 								}
@@ -1004,6 +1034,7 @@
 							"parameter_exponent" : 7.6,
 							"parameter_longname" : "live.slider[2]",
 							"parameter_mmax" : 22050.0,
+							"parameter_modmode" : 0,
 							"parameter_shortname" : "live.slider[2]",
 							"parameter_type" : 0,
 							"parameter_unitstyle" : 0
@@ -1244,42 +1275,16 @@
 					"patcher" : 					{
 						"fileversion" : 1,
 						"appversion" : 						{
-							"major" : 8,
-							"minor" : 5,
-							"revision" : 5,
+							"major" : 9,
+							"minor" : 0,
+							"revision" : 7,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
 						"classnamespace" : "box",
 						"rect" : [ 433.0, 106.0, 640.0, 480.0 ],
-						"bglocked" : 0,
-						"openinpresentation" : 0,
-						"default_fontsize" : 12.0,
-						"default_fontface" : 0,
-						"default_fontname" : "Arial",
-						"gridonopen" : 1,
 						"gridsize" : [ 15.0, 15.0 ],
-						"gridsnaponopen" : 1,
-						"objectsnaponopen" : 1,
-						"statusbarvisible" : 2,
-						"toolbarvisible" : 1,
-						"lefttoolbarpinned" : 0,
-						"toptoolbarpinned" : 0,
-						"righttoolbarpinned" : 0,
-						"bottomtoolbarpinned" : 0,
-						"toolbars_unpinned_last_save" : 0,
-						"tallnewobj" : 0,
-						"boxanimatetime" : 200,
-						"enablehscroll" : 1,
-						"enablevscroll" : 1,
-						"devicewidth" : 0.0,
-						"description" : "",
-						"digest" : "",
-						"tags" : "",
-						"style" : "",
-						"subpatcher_template" : "",
-						"assistshowspatchername" : 0,
 						"boxes" : [ 							{
 								"box" : 								{
 									"id" : "obj-281",
@@ -2045,13 +2050,6 @@
 					}
 ,
 					"patching_rect" : [ 265.0, 736.223632216453552, 127.0, 22.0 ],
-					"saved_object_attributes" : 					{
-						"description" : "",
-						"digest" : "",
-						"globalpatchername" : "",
-						"tags" : ""
-					}
-,
 					"text" : "p QuadraticBèzierTest"
 				}
 
@@ -2153,6 +2151,7 @@
 							"parameter_exponent" : 6.0,
 							"parameter_longname" : "live.slider[1]",
 							"parameter_mmax" : 64.0,
+							"parameter_modmode" : 0,
 							"parameter_shortname" : "1 in center",
 							"parameter_type" : 0,
 							"parameter_unitstyle" : 1
@@ -2282,14 +2281,8 @@
 					"outlettype" : [ "signal", "signal", "list" ],
 					"patching_rect" : [ 1224.0, 115.0, 570.0, 22.0 ],
 					"rnboattrcache" : 					{
-						"Framesize" : 						{
-							"label" : "Framesize",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"Rotation" : 						{
-							"label" : "Rotation",
+						"DelayTuning" : 						{
+							"label" : "DelayTuning",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
@@ -2312,20 +2305,26 @@
 							"parsestring" : ""
 						}
 ,
-						"Output" : 						{
-							"label" : "Output",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
 						"Frequency" : 						{
 							"label" : "Frequency",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
 ,
-						"DelayTuning" : 						{
-							"label" : "DelayTuning",
+						"Output" : 						{
+							"label" : "Output",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"Rotation" : 						{
+							"label" : "Rotation",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"Framesize" : 						{
+							"label" : "Framesize",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
@@ -2344,11 +2343,12 @@
 
 					}
 ,
-					"rnboversion" : "1.1.2",
+					"rnboversion" : "1.3.4",
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_invisible" : 1,
 							"parameter_longname" : "rnbo~[11]",
+							"parameter_modmode" : 0,
 							"parameter_shortname" : "rnbo~[11]",
 							"parameter_type" : 3
 						}
@@ -2373,14 +2373,6 @@
 						"embed" : 1,
 						"snapshot" : 						{
 							"__presetid" : "Circle-FX",
-							"Mode" : 							{
-								"value" : 0.0
-							}
-,
-							"Delay" : 							{
-								"value" : 249.999999999999659
-							}
-,
 							"Channel" : 							{
 								"value" : 0.0
 							}
@@ -2393,6 +2385,14 @@
 								"value" : 0.0
 							}
 ,
+							"Framesize" : 							{
+								"value" : 12.0
+							}
+,
+							"Rotation" : 							{
+								"value" : 0.0
+							}
+,
 							"Frequency" : 							{
 								"value" : 1.0
 							}
@@ -2401,8 +2401,12 @@
 								"value" : 100.0
 							}
 ,
-							"Framesize" : 							{
-								"value" : 12.0
+							"Mode" : 							{
+								"value" : 0.0
+							}
+,
+							"Delay" : 							{
+								"value" : 250.0
 							}
 ,
 							"DelayTuning" : 							{
@@ -2424,14 +2428,6 @@
 									"embed" : 1,
 									"snapshot" : 									{
 										"__presetid" : "Circle-FX",
-										"Mode" : 										{
-											"value" : 0.0
-										}
-,
-										"Delay" : 										{
-											"value" : 249.999999999999659
-										}
-,
 										"Channel" : 										{
 											"value" : 0.0
 										}
@@ -2444,6 +2440,14 @@
 											"value" : 0.0
 										}
 ,
+										"Framesize" : 										{
+											"value" : 12.0
+										}
+,
+										"Rotation" : 										{
+											"value" : 0.0
+										}
+,
 										"Frequency" : 										{
 											"value" : 1.0
 										}
@@ -2452,8 +2456,12 @@
 											"value" : 100.0
 										}
 ,
-										"Framesize" : 										{
-											"value" : 12.0
+										"Mode" : 										{
+											"value" : 0.0
+										}
+,
+										"Delay" : 										{
+											"value" : 250.0
 										}
 ,
 										"DelayTuning" : 										{
@@ -2467,7 +2475,7 @@
 										"filename" : "Circle-FX.rnbopat.maxsnap",
 										"filepath" : "~/OneDrive - Universidad de las Artes/2023/Tesis/XYVI/XYVI-VST/data",
 										"filepos" : -1,
-										"snapshotfileid" : "80e664bd6d093ee0701b8e1972070671"
+										"snapshotfileid" : "dd26b4b7e4f090657b602f123703de3b"
 									}
 
 								}
@@ -2561,20 +2569,8 @@
 					"outlettype" : [ "signal", "signal", "int", "list" ],
 					"patching_rect" : [ 14.999999999999989, 544.223632335662842, 512.0, 22.0 ],
 					"rnboattrcache" : 					{
-						"Release" : 						{
-							"label" : "Release",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"PitchBend" : 						{
-							"label" : "PitchBend",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"Size" : 						{
-							"label" : "Size",
+						"Attack" : 						{
+							"label" : "Attack",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
@@ -2591,6 +2587,42 @@
 							"parsestring" : ""
 						}
 ,
+						"Release" : 						{
+							"label" : "Release",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"Exponent" : 						{
+							"label" : "Exponent",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"Size" : 						{
+							"label" : "Size",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"DutyCycleOffset" : 						{
+							"label" : "DutyCycleOffset",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"PitchBend" : 						{
+							"label" : "PitchBend",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"Output" : 						{
+							"label" : "Output",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
 						"Rotation" : 						{
 							"label" : "Rotation",
 							"isEnum" : 0,
@@ -2602,38 +2634,15 @@
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
-,
-						"DutyCycleOffset" : 						{
-							"label" : "DutyCycleOffset",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"Output" : 						{
-							"label" : "Output",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"Attack" : 						{
-							"label" : "Attack",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"Exponent" : 						{
-							"label" : "Exponent",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
 
 					}
 ,
-					"rnboversion" : "1.1.2",
+					"rnboversion" : "1.3.4",
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_invisible" : 1,
 							"parameter_longname" : "rnbo~[10]",
+							"parameter_modmode" : 0,
 							"parameter_shortname" : "rnbo~[4]",
 							"parameter_type" : 3
 						}
@@ -2792,7 +2801,7 @@
 										"filename" : "Spiral.rnbopat.maxsnap",
 										"filepath" : "~/OneDrive - Universidad de las Artes/2023/Tesis/XYVI/XYVI-VST/data",
 										"filepos" : -1,
-										"snapshotfileid" : "1aed076479ed1c441acf4f2fee87bfba"
+										"snapshotfileid" : "bdab07d0e167d87390570aceed8a7525"
 									}
 
 								}
@@ -2890,14 +2899,8 @@
 					"outlettype" : [ "signal", "signal", "int", "list" ],
 					"patching_rect" : [ 14.999999761718755, 616.223632335662842, 573.0, 22.0 ],
 					"rnboattrcache" : 					{
-						"Release" : 						{
-							"label" : "Release",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"PitchBend" : 						{
-							"label" : "PitchBend",
+						"Attack" : 						{
+							"label" : "Attack",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
@@ -2910,6 +2913,30 @@
 ,
 						"PitchBendRange" : 						{
 							"label" : "PitchBendRange",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"Release" : 						{
+							"label" : "Release",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"DutyCycleOffset" : 						{
+							"label" : "DutyCycleOffset",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"PitchBend" : 						{
+							"label" : "PitchBend",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"Output" : 						{
+							"label" : "Output",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
@@ -2932,24 +2959,6 @@
 							"parsestring" : ""
 						}
 ,
-						"DutyCycleOffset" : 						{
-							"label" : "DutyCycleOffset",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"Output" : 						{
-							"label" : "Output",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"Attack" : 						{
-							"label" : "Attack",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
 						"LeavesType" : 						{
 							"label" : "LeavesType",
 							"isEnum" : 1,
@@ -2958,11 +2967,12 @@
 
 					}
 ,
-					"rnboversion" : "1.1.2",
+					"rnboversion" : "1.3.4",
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_invisible" : 1,
 							"parameter_longname" : "rnbo~[9]",
+							"parameter_modmode" : 0,
 							"parameter_shortname" : "rnbo~[4]",
 							"parameter_type" : 3
 						}
@@ -3121,7 +3131,7 @@
 										"filename" : "Cannabis.rnbopat.maxsnap",
 										"filepath" : "~/OneDrive - Universidad de las Artes/2023/Tesis/XYVI/XYVI-VST/data",
 										"filepos" : -1,
-										"snapshotfileid" : "6d842ff5cec22b8634c5fd8ceef7f71e"
+										"snapshotfileid" : "4dcd9af31e0f6e7d678efa032919c0c3"
 									}
 
 								}
@@ -3464,20 +3474,14 @@
 					"outlettype" : [ "signal", "signal", "int", "list" ],
 					"patching_rect" : [ 14.999999999999993, 472.223632454872131, 552.0, 22.0 ],
 					"rnboattrcache" : 					{
-						"Release" : 						{
-							"label" : "Release",
+						"P1" : 						{
+							"label" : "P1",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
 ,
-						"PitchBend" : 						{
-							"label" : "PitchBend",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"Wings" : 						{
-							"label" : "Wings",
+						"Attack" : 						{
+							"label" : "Attack",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
@@ -3488,8 +3492,44 @@
 							"parsestring" : ""
 						}
 ,
+						"Wings" : 						{
+							"label" : "Wings",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
 						"PitchBendRange" : 						{
 							"label" : "PitchBendRange",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"P2" : 						{
+							"label" : "P2",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"Release" : 						{
+							"label" : "Release",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"DutyCycleOffset" : 						{
+							"label" : "DutyCycleOffset",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"PitchBend" : 						{
+							"label" : "PitchBend",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"Output" : 						{
+							"label" : "Output",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
@@ -3512,36 +3552,6 @@
 							"parsestring" : ""
 						}
 ,
-						"DutyCycleOffset" : 						{
-							"label" : "DutyCycleOffset",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"P2" : 						{
-							"label" : "P2",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"Output" : 						{
-							"label" : "Output",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"Attack" : 						{
-							"label" : "Attack",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"P1" : 						{
-							"label" : "P1",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
 						"WingsType" : 						{
 							"label" : "WingsType",
 							"isEnum" : 1,
@@ -3550,11 +3560,12 @@
 
 					}
 ,
-					"rnboversion" : "1.1.2",
+					"rnboversion" : "1.3.4",
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_invisible" : 1,
 							"parameter_longname" : "rnbo~[8]",
+							"parameter_modmode" : 0,
 							"parameter_shortname" : "rnbo~[4]",
 							"parameter_type" : 3
 						}
@@ -3729,7 +3740,7 @@
 										"filename" : "Butterfly.rnbopat.maxsnap",
 										"filepath" : "~/OneDrive - Universidad de las Artes/2023/Tesis/XYVI/XYVI-VST/data",
 										"filepos" : -1,
-										"snapshotfileid" : "8f0ff44afd2ba1f681a956e3266615ca"
+										"snapshotfileid" : "30cb6eb861fab3ef0e0a99580a40ebcc"
 									}
 
 								}
@@ -3810,14 +3821,8 @@
 					"outlettype" : [ "signal", "signal", "int", "list" ],
 					"patching_rect" : [ 14.999999999999993, 400.223632574081421, 506.0, 22.0 ],
 					"rnboattrcache" : 					{
-						"Release" : 						{
-							"label" : "Release",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"PitchBend" : 						{
-							"label" : "PitchBend",
+						"Attack" : 						{
+							"label" : "Attack",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
@@ -3840,14 +3845,8 @@
 							"parsestring" : ""
 						}
 ,
-						"Rotation" : 						{
-							"label" : "Rotation",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"Sustain" : 						{
-							"label" : "Sustain",
+						"Release" : 						{
+							"label" : "Release",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
@@ -3858,14 +3857,26 @@
 							"parsestring" : ""
 						}
 ,
+						"PitchBend" : 						{
+							"label" : "PitchBend",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
 						"Output" : 						{
 							"label" : "Output",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
 ,
-						"Attack" : 						{
-							"label" : "Attack",
+						"Rotation" : 						{
+							"label" : "Rotation",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"Sustain" : 						{
+							"label" : "Sustain",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
@@ -3884,11 +3895,12 @@
 
 					}
 ,
-					"rnboversion" : "1.1.2",
+					"rnboversion" : "1.3.4",
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_invisible" : 1,
 							"parameter_longname" : "rnbo~[7]",
+							"parameter_modmode" : 0,
 							"parameter_shortname" : "rnbo~[4]",
 							"parameter_type" : 3
 						}
@@ -4047,7 +4059,7 @@
 										"filename" : "Gears.rnbopat_20230822.maxsnap",
 										"filepath" : "~/OneDrive - Universidad de las Artes/2023/Tesis/XYVI/XYVI-VST/data",
 										"filepos" : -1,
-										"snapshotfileid" : "ef18ad3d4308c2c324dd8f396e353a45"
+										"snapshotfileid" : "8e43de66e0f90d80b50b265e36ed3452"
 									}
 
 								}
@@ -4128,254 +4140,8 @@
 					"outlettype" : [ "signal", "signal", "int", "list" ],
 					"patching_rect" : [ 15.000000238281231, 760.223632216453552, 539.0, 22.0 ],
 					"rnboattrcache" : 					{
-						"Release" : 						{
-							"label" : "Release",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"P7X" : 						{
-							"label" : "P7X",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"P8X" : 						{
-							"label" : "P8X",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"B1T" : 						{
-							"label" : "B1T",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"B9R" : 						{
-							"label" : "B9R",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"PitchBend" : 						{
-							"label" : "PitchBend",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"P4Y" : 						{
-							"label" : "P4Y",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"B5R" : 						{
-							"label" : "B5R",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"P6Y" : 						{
-							"label" : "P6Y",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"B7T" : 						{
-							"label" : "B7T",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"Decay" : 						{
-							"label" : "Decay",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"P1X" : 						{
-							"label" : "P1X",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"B8T" : 						{
-							"label" : "B8T",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"PitchBendRange" : 						{
-							"label" : "PitchBendRange",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"B6R" : 						{
-							"label" : "B6R",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"P3Y" : 						{
-							"label" : "P3Y",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"B4T" : 						{
-							"label" : "B4T",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"B3R" : 						{
-							"label" : "B3R",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"B8R" : 						{
-							"label" : "B8R",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"Rotation" : 						{
-							"label" : "Rotation",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"B6T" : 						{
-							"label" : "B6T",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"B2R" : 						{
-							"label" : "B2R",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
 						"P0X" : 						{
 							"label" : "P0X",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"Curvature" : 						{
-							"label" : "Curvature",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"P2X" : 						{
-							"label" : "P2X",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"B2T" : 						{
-							"label" : "B2T",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"B9T" : 						{
-							"label" : "B9T",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"P2Y" : 						{
-							"label" : "P2Y",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"Sustain" : 						{
-							"label" : "Sustain",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"B7R" : 						{
-							"label" : "B7R",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"P8Y" : 						{
-							"label" : "P8Y",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"P9X" : 						{
-							"label" : "P9X",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"DutyCycleOffset" : 						{
-							"label" : "DutyCycleOffset",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"B5T" : 						{
-							"label" : "B5T",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"Output" : 						{
-							"label" : "Output",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"P4X" : 						{
-							"label" : "P4X",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"Points" : 						{
-							"label" : "Points",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"P9Y" : 						{
-							"label" : "P9Y",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"Attack" : 						{
-							"label" : "Attack",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"B1R" : 						{
-							"label" : "B1R",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"B4R" : 						{
-							"label" : "B4R",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"P1Y" : 						{
-							"label" : "P1Y",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
@@ -4386,14 +4152,32 @@
 							"parsestring" : ""
 						}
 ,
+						"P0Y" : 						{
+							"label" : "P0Y",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"B4T" : 						{
+							"label" : "B4T",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"Attack" : 						{
+							"label" : "Attack",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
 						"P3X" : 						{
 							"label" : "P3X",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
 ,
-						"P0Y" : 						{
-							"label" : "P0Y",
+						"P8X" : 						{
+							"label" : "P8X",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
@@ -4404,8 +4188,14 @@
 							"parsestring" : ""
 						}
 ,
-						"P5Y" : 						{
-							"label" : "P5Y",
+						"B6R" : 						{
+							"label" : "B6R",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"Decay" : 						{
+							"label" : "Decay",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
@@ -4416,8 +4206,230 @@
 							"parsestring" : ""
 						}
 ,
+						"B3R" : 						{
+							"label" : "B3R",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"P7X" : 						{
+							"label" : "P7X",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"B8R" : 						{
+							"label" : "B8R",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"P1X" : 						{
+							"label" : "P1X",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"PitchBendRange" : 						{
+							"label" : "PitchBendRange",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"B1R" : 						{
+							"label" : "B1R",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"B7T" : 						{
+							"label" : "B7T",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"B7R" : 						{
+							"label" : "B7R",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"B5R" : 						{
+							"label" : "B5R",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"P8Y" : 						{
+							"label" : "P8Y",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"Release" : 						{
+							"label" : "Release",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"B5T" : 						{
+							"label" : "B5T",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"P1Y" : 						{
+							"label" : "P1Y",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"P2Y" : 						{
+							"label" : "P2Y",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"P2X" : 						{
+							"label" : "P2X",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"P6Y" : 						{
+							"label" : "P6Y",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"B9R" : 						{
+							"label" : "B9R",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"DutyCycleOffset" : 						{
+							"label" : "DutyCycleOffset",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"B1T" : 						{
+							"label" : "B1T",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"P4Y" : 						{
+							"label" : "P4Y",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"B6T" : 						{
+							"label" : "B6T",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"P3Y" : 						{
+							"label" : "P3Y",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"B4R" : 						{
+							"label" : "B4R",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"Curvature" : 						{
+							"label" : "Curvature",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"P4X" : 						{
+							"label" : "P4X",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"PitchBend" : 						{
+							"label" : "PitchBend",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"Output" : 						{
+							"label" : "Output",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"B8T" : 						{
+							"label" : "B8T",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"Rotation" : 						{
+							"label" : "Rotation",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"P9X" : 						{
+							"label" : "P9X",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
 						"B3T" : 						{
 							"label" : "B3T",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"Sustain" : 						{
+							"label" : "Sustain",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"Points" : 						{
+							"label" : "Points",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"B2T" : 						{
+							"label" : "B2T",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"P5Y" : 						{
+							"label" : "P5Y",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"B2R" : 						{
+							"label" : "B2R",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"P9Y" : 						{
+							"label" : "P9Y",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"B9T" : 						{
+							"label" : "B9T",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
@@ -4430,11 +4442,12 @@
 
 					}
 ,
-					"rnboversion" : "1.1.2",
+					"rnboversion" : "1.3.4",
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_invisible" : 1,
 							"parameter_longname" : "rnbo~[6]",
+							"parameter_modmode" : 0,
 							"parameter_shortname" : "rnbo~[4]",
 							"parameter_type" : 3
 						}
@@ -5569,7 +5582,7 @@
 										"filename" : "Splines.rnbopat.maxsnap",
 										"filepath" : "~/OneDrive - Universidad de las Artes/2023/Tesis/XYVI/XYVI-VST/data",
 										"filepos" : -1,
-										"snapshotfileid" : "25dfb93bc607f50b677a65be6b9af934"
+										"snapshotfileid" : "94bf1b572876d210dd009a6b26a0fb97"
 									}
 
 								}
@@ -5650,14 +5663,14 @@
 					"outlettype" : [ "signal", "signal", "int", "list" ],
 					"patching_rect" : [ 14.999999999999996, 328.22363269329071, 504.0, 22.0 ],
 					"rnboattrcache" : 					{
-						"Release" : 						{
-							"label" : "Release",
+						"Petals" : 						{
+							"label" : "Petals",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
 ,
-						"PitchBend" : 						{
-							"label" : "PitchBend",
+						"Attack" : 						{
+							"label" : "Attack",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
@@ -5674,8 +5687,26 @@
 							"parsestring" : ""
 						}
 ,
-						"Petals" : 						{
-							"label" : "Petals",
+						"Release" : 						{
+							"label" : "Release",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"DutyCycleOffset" : 						{
+							"label" : "DutyCycleOffset",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"PitchBend" : 						{
+							"label" : "PitchBend",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"Output" : 						{
+							"label" : "Output",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
@@ -5692,24 +5723,6 @@
 							"parsestring" : ""
 						}
 ,
-						"DutyCycleOffset" : 						{
-							"label" : "DutyCycleOffset",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"Output" : 						{
-							"label" : "Output",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"Attack" : 						{
-							"label" : "Attack",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
 						"PetalsType" : 						{
 							"label" : "PetalsType",
 							"isEnum" : 1,
@@ -5718,11 +5731,12 @@
 
 					}
 ,
-					"rnboversion" : "1.1.2",
+					"rnboversion" : "1.3.4",
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_invisible" : 1,
 							"parameter_longname" : "rnbo~[5]",
+							"parameter_modmode" : 0,
 							"parameter_shortname" : "rnbo~[4]",
 							"parameter_type" : 3
 						}
@@ -5881,7 +5895,7 @@
 										"filename" : "Rose.rnbopat.maxsnap",
 										"filepath" : "~/OneDrive - Universidad de las Artes/2023/Tesis/XYVI/XYVI-VST/data",
 										"filepos" : -1,
-										"snapshotfileid" : "4ba1edef18578f36ffdbfd77e7193286"
+										"snapshotfileid" : "98e8159c3b7817774b6a33ad6bd6bc49"
 									}
 
 								}
@@ -5986,14 +6000,8 @@
 					"outlettype" : [ "signal", "signal", "int", "list" ],
 					"patching_rect" : [ 15.0, 256.2236328125, 559.0, 22.0 ],
 					"rnboattrcache" : 					{
-						"Release" : 						{
-							"label" : "Release",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"PitchBend" : 						{
-							"label" : "PitchBend",
+						"Attack" : 						{
+							"label" : "Attack",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
@@ -6010,20 +6018,8 @@
 							"parsestring" : ""
 						}
 ,
-						"Rotation" : 						{
-							"label" : "Rotation",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"Cycles" : 						{
-							"label" : "Cycles",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"Sustain" : 						{
-							"label" : "Sustain",
+						"Release" : 						{
+							"label" : "Release",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
@@ -6034,14 +6030,32 @@
 							"parsestring" : ""
 						}
 ,
+						"Cycles" : 						{
+							"label" : "Cycles",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"PitchBend" : 						{
+							"label" : "PitchBend",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
 						"Output" : 						{
 							"label" : "Output",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
 ,
-						"Attack" : 						{
-							"label" : "Attack",
+						"Rotation" : 						{
+							"label" : "Rotation",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"Sustain" : 						{
+							"label" : "Sustain",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
@@ -6066,11 +6080,12 @@
 
 					}
 ,
-					"rnboversion" : "1.1.2",
+					"rnboversion" : "1.3.4",
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_invisible" : 1,
 							"parameter_longname" : "rnbo~[4]",
+							"parameter_modmode" : 0,
 							"parameter_shortname" : "rnbo~[4]",
 							"parameter_type" : 3
 						}
@@ -6253,7 +6268,7 @@
 										"filename" : "Trochoid.rnbopat.maxsnap",
 										"filepath" : "~/OneDrive - Universidad de las Artes/2023/Tesis/XYVI/XYVI-VST/data",
 										"filepos" : -1,
-										"snapshotfileid" : "fb1f73bcf59eaaf86fa0d456b5d166b2"
+										"snapshotfileid" : "daef2f8ba31c0e84057bf203186f56d5"
 									}
 
 								}
@@ -6862,50 +6877,8 @@
 					"outlettype" : [ "signal", "signal", "int", "list" ],
 					"patching_rect" : [ 15.0, 184.2236328125, 508.0, 22.0 ],
 					"rnboattrcache" : 					{
-						"Release" : 						{
-							"label" : "Release",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"PitchBend" : 						{
-							"label" : "PitchBend",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"Y2" : 						{
-							"label" : "Y2",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"Decay" : 						{
-							"label" : "Decay",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"PitchBendRange" : 						{
-							"label" : "PitchBendRange",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"Yt4" : 						{
-							"label" : "Yt4",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"Rotation" : 						{
-							"label" : "Rotation",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"Y1" : 						{
-							"label" : "Y1",
+						"Attack" : 						{
+							"label" : "Attack",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
@@ -6916,50 +6889,14 @@
 							"parsestring" : ""
 						}
 ,
-						"Yt2" : 						{
-							"label" : "Yt2",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"X" : 						{
-							"label" : "X",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"Sustain" : 						{
-							"label" : "Sustain",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
 						"Y3" : 						{
 							"label" : "Y3",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
 ,
-						"DutyCycleOffset" : 						{
-							"label" : "DutyCycleOffset",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"Yt3" : 						{
-							"label" : "Yt3",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"Output" : 						{
-							"label" : "Output",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"Attack" : 						{
-							"label" : "Attack",
+						"Decay" : 						{
+							"label" : "Decay",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
@@ -6970,19 +6907,98 @@
 							"parsestring" : ""
 						}
 ,
+						"PitchBendRange" : 						{
+							"label" : "PitchBendRange",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"Y1" : 						{
+							"label" : "Y1",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"Release" : 						{
+							"label" : "Release",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"Y2" : 						{
+							"label" : "Y2",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"DutyCycleOffset" : 						{
+							"label" : "DutyCycleOffset",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"Yt4" : 						{
+							"label" : "Yt4",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"X" : 						{
+							"label" : "X",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
 						"Delta" : 						{
 							"label" : "Delta",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"PitchBend" : 						{
+							"label" : "PitchBend",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"Output" : 						{
+							"label" : "Output",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"Rotation" : 						{
+							"label" : "Rotation",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"Sustain" : 						{
+							"label" : "Sustain",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"Yt2" : 						{
+							"label" : "Yt2",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"Yt3" : 						{
+							"label" : "Yt3",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
 
 					}
 ,
-					"rnboversion" : "1.1.2",
+					"rnboversion" : "1.3.4",
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_invisible" : 1,
 							"parameter_longname" : "rnbo~[3]",
+							"parameter_modmode" : 0,
 							"parameter_shortname" : "rnbo~[3]",
 							"parameter_type" : 3
 						}
@@ -7133,7 +7149,7 @@
 										"filename" : "Heart.rnbopat.maxsnap",
 										"filepath" : "~/OneDrive - Universidad de las Artes/2023/Tesis/XYVI/XYVI-VST/data",
 										"filepos" : -1,
-										"snapshotfileid" : "ddca833c376c17da40f7e1c9309a0c04"
+										"snapshotfileid" : "7de1428641f3c5973c829f191d5ddc74"
 									}
 
 								}
@@ -7201,14 +7217,14 @@
 					"outlettype" : [ "signal", "signal", "int", "list" ],
 					"patching_rect" : [ 15.0, 112.2236328125, 571.0, 22.0 ],
 					"rnboattrcache" : 					{
-						"Release" : 						{
-							"label" : "Release",
+						"Attack" : 						{
+							"label" : "Attack",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
 ,
-						"PitchBend" : 						{
-							"label" : "PitchBend",
+						"Y" : 						{
+							"label" : "Y",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
@@ -7225,20 +7241,8 @@
 							"parsestring" : ""
 						}
 ,
-						"Rotation" : 						{
-							"label" : "Rotation",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"X" : 						{
-							"label" : "X",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"Sustain" : 						{
-							"label" : "Sustain",
+						"Release" : 						{
+							"label" : "Release",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
@@ -7249,14 +7253,8 @@
 							"parsestring" : ""
 						}
 ,
-						"Output" : 						{
-							"label" : "Output",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"Attack" : 						{
-							"label" : "Attack",
+						"X" : 						{
+							"label" : "X",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
@@ -7267,19 +7265,38 @@
 							"parsestring" : ""
 						}
 ,
-						"Y" : 						{
-							"label" : "Y",
+						"PitchBend" : 						{
+							"label" : "PitchBend",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"Output" : 						{
+							"label" : "Output",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"Rotation" : 						{
+							"label" : "Rotation",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"Sustain" : 						{
+							"label" : "Sustain",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
 
 					}
 ,
-					"rnboversion" : "1.1.2",
+					"rnboversion" : "1.3.4",
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_invisible" : 1,
 							"parameter_longname" : "rnbo~[2]",
+							"parameter_modmode" : 0,
 							"parameter_shortname" : "rnbo~[2]",
 							"parameter_type" : 3
 						}
@@ -7430,7 +7447,7 @@
 										"filename" : "Lissajous.rnbopat.maxsnap",
 										"filepath" : "~/OneDrive - Universidad de las Artes/2023/Tesis/XYVI/XYVI-VST/data",
 										"filepos" : -1,
-										"snapshotfileid" : "80d39c52ea971de71fa29f65491a3d22"
+										"snapshotfileid" : "730a193bd0fdf2a21bfaef9f727be32f"
 									}
 
 								}
@@ -7518,42 +7535,16 @@
 					"patcher" : 					{
 						"fileversion" : 1,
 						"appversion" : 						{
-							"major" : 8,
-							"minor" : 5,
-							"revision" : 5,
+							"major" : 9,
+							"minor" : 0,
+							"revision" : 7,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
 						"classnamespace" : "box",
 						"rect" : [ 311.0, 298.0, 761.0, 603.0 ],
-						"bglocked" : 0,
-						"openinpresentation" : 0,
-						"default_fontsize" : 12.0,
-						"default_fontface" : 0,
-						"default_fontname" : "Arial",
-						"gridonopen" : 1,
 						"gridsize" : [ 15.0, 15.0 ],
-						"gridsnaponopen" : 1,
-						"objectsnaponopen" : 1,
-						"statusbarvisible" : 2,
-						"toolbarvisible" : 1,
-						"lefttoolbarpinned" : 0,
-						"toptoolbarpinned" : 0,
-						"righttoolbarpinned" : 0,
-						"bottomtoolbarpinned" : 0,
-						"toolbars_unpinned_last_save" : 0,
-						"tallnewobj" : 0,
-						"boxanimatetime" : 200,
-						"enablehscroll" : 1,
-						"enablevscroll" : 1,
-						"devicewidth" : 0.0,
-						"description" : "",
-						"digest" : "",
-						"tags" : "",
-						"style" : "",
-						"subpatcher_template" : "",
-						"assistshowspatchername" : 0,
 						"boxes" : [ 							{
 								"box" : 								{
 									"fontface" : 0,
@@ -7760,8 +7751,8 @@
 									"id" : "obj-8",
 									"maxclass" : "newobj",
 									"numinlets" : 1,
-									"numoutlets" : 2,
-									"outlettype" : [ "list", "list" ],
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
 									"patching_rect" : [ 752.899999999999977, 100.0, 29.5, 22.0 ],
 									"text" : "pi"
 								}
@@ -7985,42 +7976,16 @@
 									"patcher" : 									{
 										"fileversion" : 1,
 										"appversion" : 										{
-											"major" : 8,
-											"minor" : 5,
-											"revision" : 5,
+											"major" : 9,
+											"minor" : 0,
+											"revision" : 7,
 											"architecture" : "x64",
 											"modernui" : 1
 										}
 ,
 										"classnamespace" : "box",
 										"rect" : [ 646.0, 279.0, 187.0, 369.0 ],
-										"bglocked" : 0,
-										"openinpresentation" : 0,
-										"default_fontsize" : 12.0,
-										"default_fontface" : 0,
-										"default_fontname" : "Arial",
-										"gridonopen" : 1,
 										"gridsize" : [ 15.0, 15.0 ],
-										"gridsnaponopen" : 1,
-										"objectsnaponopen" : 1,
-										"statusbarvisible" : 2,
-										"toolbarvisible" : 1,
-										"lefttoolbarpinned" : 0,
-										"toptoolbarpinned" : 0,
-										"righttoolbarpinned" : 0,
-										"bottomtoolbarpinned" : 0,
-										"toolbars_unpinned_last_save" : 0,
-										"tallnewobj" : 0,
-										"boxanimatetime" : 200,
-										"enablehscroll" : 1,
-										"enablevscroll" : 1,
-										"devicewidth" : 0.0,
-										"description" : "",
-										"digest" : "",
-										"tags" : "",
-										"style" : "",
-										"subpatcher_template" : "",
-										"assistshowspatchername" : 0,
 										"boxes" : [ 											{
 												"box" : 												{
 													"id" : "obj-5",
@@ -8314,13 +8279,6 @@
 									}
 ,
 									"patching_rect" : [ 486.38153076171875, 322.63671875, 40.0, 22.0 ],
-									"saved_object_attributes" : 									{
-										"description" : "",
-										"digest" : "",
-										"globalpatchername" : "",
-										"tags" : ""
-									}
-,
 									"text" : "p sel"
 								}
 
@@ -8467,42 +8425,16 @@
 									"patcher" : 									{
 										"fileversion" : 1,
 										"appversion" : 										{
-											"major" : 8,
-											"minor" : 5,
-											"revision" : 5,
+											"major" : 9,
+											"minor" : 0,
+											"revision" : 7,
 											"architecture" : "x64",
 											"modernui" : 1
 										}
 ,
 										"classnamespace" : "box",
 										"rect" : [ 219.0, 591.0, 449.0, 347.0 ],
-										"bglocked" : 0,
-										"openinpresentation" : 0,
-										"default_fontsize" : 12.0,
-										"default_fontface" : 0,
-										"default_fontname" : "Arial",
-										"gridonopen" : 1,
 										"gridsize" : [ 15.0, 15.0 ],
-										"gridsnaponopen" : 1,
-										"objectsnaponopen" : 1,
-										"statusbarvisible" : 2,
-										"toolbarvisible" : 1,
-										"lefttoolbarpinned" : 0,
-										"toptoolbarpinned" : 0,
-										"righttoolbarpinned" : 0,
-										"bottomtoolbarpinned" : 0,
-										"toolbars_unpinned_last_save" : 0,
-										"tallnewobj" : 0,
-										"boxanimatetime" : 200,
-										"enablehscroll" : 1,
-										"enablevscroll" : 1,
-										"devicewidth" : 0.0,
-										"description" : "",
-										"digest" : "",
-										"tags" : "",
-										"style" : "",
-										"subpatcher_template" : "",
-										"assistshowspatchername" : 0,
 										"boxes" : [ 											{
 												"box" : 												{
 													"id" : "obj-4",
@@ -8511,6 +8443,10 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 279.0, 163.0, 28.0, 22.0 ],
+													"saved_object_attributes" : 													{
+														"attr_comment" : ""
+													}
+,
 													"text" : "in 2"
 												}
 
@@ -8762,13 +8698,6 @@
 									}
 ,
 									"patching_rect" : [ 99.0, 459.2236328125, 108.0, 22.0 ],
-									"saved_object_attributes" : 									{
-										"description" : "",
-										"digest" : "",
-										"globalpatchername" : "",
-										"tags" : ""
-									}
-,
 									"text" : "p phasor2coscycle"
 								}
 
@@ -8940,42 +8869,16 @@
 									"patcher" : 									{
 										"fileversion" : 1,
 										"appversion" : 										{
-											"major" : 8,
-											"minor" : 5,
-											"revision" : 5,
+											"major" : 9,
+											"minor" : 0,
+											"revision" : 7,
 											"architecture" : "x64",
 											"modernui" : 1
 										}
 ,
 										"classnamespace" : "box",
 										"rect" : [ 109.0, 266.0, 640.0, 480.0 ],
-										"bglocked" : 0,
-										"openinpresentation" : 0,
-										"default_fontsize" : 12.0,
-										"default_fontface" : 0,
-										"default_fontname" : "Arial",
-										"gridonopen" : 1,
 										"gridsize" : [ 15.0, 15.0 ],
-										"gridsnaponopen" : 1,
-										"objectsnaponopen" : 1,
-										"statusbarvisible" : 2,
-										"toolbarvisible" : 1,
-										"lefttoolbarpinned" : 0,
-										"toptoolbarpinned" : 0,
-										"righttoolbarpinned" : 0,
-										"bottomtoolbarpinned" : 0,
-										"toolbars_unpinned_last_save" : 0,
-										"tallnewobj" : 0,
-										"boxanimatetime" : 200,
-										"enablehscroll" : 1,
-										"enablevscroll" : 1,
-										"devicewidth" : 0.0,
-										"description" : "",
-										"digest" : "",
-										"tags" : "",
-										"style" : "",
-										"subpatcher_template" : "",
-										"assistshowspatchername" : 0,
 										"boxes" : [ 											{
 												"box" : 												{
 													"id" : "obj-13",
@@ -9293,13 +9196,6 @@
 									}
 ,
 									"patching_rect" : [ 308.0, 459.2236328125, 76.0, 22.0 ],
-									"saved_object_attributes" : 									{
-										"description" : "",
-										"digest" : "",
-										"globalpatchername" : "",
-										"tags" : ""
-									}
-,
 									"text" : "p Pol2Card~"
 								}
 
@@ -9411,42 +9307,16 @@
 									"patcher" : 									{
 										"fileversion" : 1,
 										"appversion" : 										{
-											"major" : 8,
-											"minor" : 5,
-											"revision" : 5,
+											"major" : 9,
+											"minor" : 0,
+											"revision" : 7,
 											"architecture" : "x64",
 											"modernui" : 1
 										}
 ,
 										"classnamespace" : "box",
 										"rect" : [ 684.0, 167.0, 640.0, 480.0 ],
-										"bglocked" : 0,
-										"openinpresentation" : 0,
-										"default_fontsize" : 12.0,
-										"default_fontface" : 0,
-										"default_fontname" : "Arial",
-										"gridonopen" : 1,
 										"gridsize" : [ 15.0, 15.0 ],
-										"gridsnaponopen" : 1,
-										"objectsnaponopen" : 1,
-										"statusbarvisible" : 2,
-										"toolbarvisible" : 1,
-										"lefttoolbarpinned" : 0,
-										"toptoolbarpinned" : 0,
-										"righttoolbarpinned" : 0,
-										"bottomtoolbarpinned" : 0,
-										"toolbars_unpinned_last_save" : 0,
-										"tallnewobj" : 0,
-										"boxanimatetime" : 200,
-										"enablehscroll" : 1,
-										"enablevscroll" : 1,
-										"devicewidth" : 0.0,
-										"description" : "",
-										"digest" : "",
-										"tags" : "",
-										"style" : "",
-										"subpatcher_template" : "",
-										"assistshowspatchername" : 0,
 										"boxes" : [ 											{
 												"box" : 												{
 													"id" : "obj-13",
@@ -9764,13 +9634,6 @@
 									}
 ,
 									"patching_rect" : [ 228.0, 455.2236328125, 76.0, 22.0 ],
-									"saved_object_attributes" : 									{
-										"description" : "",
-										"digest" : "",
-										"globalpatchername" : "",
-										"tags" : ""
-									}
-,
 									"text" : "p Pol2Card~"
 								}
 
@@ -10533,13 +10396,6 @@
 					}
 ,
 					"patching_rect" : [ 86.999999761718755, 712.223632216453552, 110.0, 22.0 ],
-					"saved_object_attributes" : 					{
-						"description" : "",
-						"digest" : "",
-						"globalpatchername" : "",
-						"tags" : ""
-					}
-,
 					"text" : "p TimesTableCircle"
 				}
 
@@ -10622,74 +10478,8 @@
 					"outlettype" : [ "signal", "signal", "int", "list" ],
 					"patching_rect" : [ 14.999999761718747, 688.223632216453552, 558.0, 22.0 ],
 					"rnboattrcache" : 					{
-						"Release" : 						{
-							"label" : "Release",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"PitchBend" : 						{
-							"label" : "PitchBend",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"Multiplier" : 						{
-							"label" : "Multiplier",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"Decay" : 						{
-							"label" : "Decay",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"PitchBendRange" : 						{
-							"label" : "PitchBendRange",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"CurvatureAngle" : 						{
-							"label" : "CurvatureAngle",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"Rotation" : 						{
-							"label" : "Rotation",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"Sustract" : 						{
-							"label" : "Sustract",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"Sustain" : 						{
-							"label" : "Sustain",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"DutyCycleOffset" : 						{
-							"label" : "DutyCycleOffset",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"Output" : 						{
-							"label" : "Output",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"Points" : 						{
-							"label" : "Points",
+						"Straight" : 						{
+							"label" : "Straight",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
@@ -10700,14 +10490,80 @@
 							"parsestring" : ""
 						}
 ,
+						"Decay" : 						{
+							"label" : "Decay",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"CurvatureAngle" : 						{
+							"label" : "CurvatureAngle",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"PitchBendRange" : 						{
+							"label" : "PitchBendRange",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
 						"CurvatureMag" : 						{
 							"label" : "CurvatureMag",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
 ,
-						"Straight" : 						{
-							"label" : "Straight",
+						"Release" : 						{
+							"label" : "Release",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"DutyCycleOffset" : 						{
+							"label" : "DutyCycleOffset",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"Multiplier" : 						{
+							"label" : "Multiplier",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"PitchBend" : 						{
+							"label" : "PitchBend",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"Output" : 						{
+							"label" : "Output",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"Sustract" : 						{
+							"label" : "Sustract",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"Rotation" : 						{
+							"label" : "Rotation",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"Sustain" : 						{
+							"label" : "Sustain",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"Points" : 						{
+							"label" : "Points",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
@@ -10720,11 +10576,12 @@
 
 					}
 ,
-					"rnboversion" : "1.1.2",
+					"rnboversion" : "1.3.4",
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_invisible" : 1,
 							"parameter_longname" : "rnbo~[1]",
+							"parameter_modmode" : 0,
 							"parameter_shortname" : "rnbo~[1]",
 							"parameter_type" : 3
 						}
@@ -11027,7 +10884,7 @@
 										"filename" : "TTable.rnbopat_20230822.maxsnap",
 										"filepath" : "~/OneDrive - Universidad de las Artes/2023/Tesis/XYVI/XYVI-VST/data",
 										"filepos" : -1,
-										"snapshotfileid" : "3d32c394a68db5115accf2c881bda8ab"
+										"snapshotfileid" : "8a6f86b1707bd7fd91cfe3d532d05a0e"
 									}
 
 								}
@@ -11103,6 +10960,7 @@
 							"parameter_longname" : "live.gain~",
 							"parameter_mmax" : 6.0,
 							"parameter_mmin" : -70.0,
+							"parameter_modmode" : 0,
 							"parameter_shortname" : "mc.live.gain~",
 							"parameter_type" : 0,
 							"parameter_unitstyle" : 4
@@ -11129,6 +10987,7 @@
 							"parameter_longname" : "live.slider",
 							"parameter_mmax" : 6.0,
 							"parameter_mmin" : -70.0,
+							"parameter_modmode" : 0,
 							"parameter_shortname" : "live.slider",
 							"parameter_type" : 0,
 							"parameter_unitstyle" : 0
@@ -11593,7 +11452,7 @@
 					"outlettype" : [ "signal", "signal" ],
 					"patching_rect" : [ 1177.0, 835.0, 523.0, 22.0 ],
 					"saved_object_attributes" : 					{
-						"exportfolder" : "C:/Users/joex92/OneDrive - Universidad de las Artes/2023/Tesis/XYVI/XYVI-VST/export/gen/",
+						"exportfolder" : "C:/Users/JxM92/OneDrive - Universidad de las Artes/2023/Tesis/XYVI/XYVI-VST/export/gen/",
 						"exportname" : "ButterflyCurve"
 					}
 ,
@@ -11611,7 +11470,7 @@
 					"outlettype" : [ "signal", "signal" ],
 					"patching_rect" : [ 1177.0, 763.0, 346.0, 22.0 ],
 					"saved_object_attributes" : 					{
-						"exportfolder" : "C:/Users/joex92/OneDrive - Universidad de las Artes/2023/Tesis/XYVI/XYVI-VST/export/gen/",
+						"exportfolder" : "C:/Users/JxM92/OneDrive - Universidad de las Artes/2023/Tesis/XYVI/XYVI-VST/export/gen/",
 						"exportname" : "Star"
 					}
 ,
@@ -11629,7 +11488,7 @@
 					"outlettype" : [ "signal", "signal" ],
 					"patching_rect" : [ 1177.0, 811.0, 500.0, 22.0 ],
 					"saved_object_attributes" : 					{
-						"exportfolder" : "C:/Users/joex92/OneDrive - Universidad de las Artes/2023/Tesis/XYVI/XYVI-VST/export/gen/",
+						"exportfolder" : "C:/Users/JxM92/OneDrive - Universidad de las Artes/2023/Tesis/XYVI/XYVI-VST/export/gen/",
 						"exportname" : "Hypotrochoid"
 					}
 ,
@@ -11647,7 +11506,7 @@
 					"outlettype" : [ "signal", "signal" ],
 					"patching_rect" : [ 1177.0, 787.0, 534.0, 22.0 ],
 					"saved_object_attributes" : 					{
-						"exportfolder" : "C:/Users/joex92/OneDrive - Universidad de las Artes/2023/Tesis/XYVI/XYVI-VST/export/gen/",
+						"exportfolder" : "C:/Users/JxM92/OneDrive - Universidad de las Artes/2023/Tesis/XYVI/XYVI-VST/export/gen/",
 						"exportname" : "LissajousCurve"
 					}
 ,
@@ -11697,20 +11556,14 @@
 					"outlettype" : [ "signal", "signal", "int", "list" ],
 					"patching_rect" : [ 15.0, 40.2236328125, 585.0, 22.0 ],
 					"rnboattrcache" : 					{
-						"Release" : 						{
-							"label" : "Release",
+						"Attack" : 						{
+							"label" : "Attack",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
 ,
-						"PitchBend" : 						{
-							"label" : "PitchBend",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"Sharpness" : 						{
-							"label" : "Sharpness",
+						"DutyCycleMin" : 						{
+							"label" : "DutyCycleMin",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
@@ -11721,8 +11574,20 @@
 							"parsestring" : ""
 						}
 ,
+						"DutyCycleMax" : 						{
+							"label" : "DutyCycleMax",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
 						"PitchBendRange" : 						{
 							"label" : "PitchBendRange",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"Release" : 						{
+							"label" : "Release",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
@@ -11733,8 +11598,8 @@
 							"parsestring" : ""
 						}
 ,
-						"Rotation" : 						{
-							"label" : "Rotation",
+						"DutyCycleOffset" : 						{
+							"label" : "DutyCycleOffset",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
@@ -11745,20 +11610,14 @@
 							"parsestring" : ""
 						}
 ,
-						"Vertices" : 						{
-							"label" : "Vertices",
+						"Sharpness" : 						{
+							"label" : "Sharpness",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
 ,
-						"Sustain" : 						{
-							"label" : "Sustain",
-							"isEnum" : 0,
-							"parsestring" : ""
-						}
-,
-						"DutyCycleOffset" : 						{
-							"label" : "DutyCycleOffset",
+						"PitchBend" : 						{
+							"label" : "PitchBend",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
@@ -11769,8 +11628,20 @@
 							"parsestring" : ""
 						}
 ,
-						"Attack" : 						{
-							"label" : "Attack",
+						"Rotation" : 						{
+							"label" : "Rotation",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"Sustain" : 						{
+							"label" : "Sustain",
+							"isEnum" : 0,
+							"parsestring" : ""
+						}
+,
+						"Vertices" : 						{
+							"label" : "Vertices",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
@@ -11783,11 +11654,12 @@
 
 					}
 ,
-					"rnboversion" : "1.1.2",
+					"rnboversion" : "1.3.4",
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_invisible" : 1,
 							"parameter_longname" : "rnbo~",
+							"parameter_modmode" : 0,
 							"parameter_shortname" : "rnbo~",
 							"parameter_type" : 3
 						}
@@ -11811,9 +11683,17 @@
 						"subtype" : "Undefined",
 						"embed" : 1,
 						"snapshot" : 						{
+							"DutyCycleMin" : 							{
+								"value" : 0.0
+							}
+,
 							"__presetid" : "Star",
 							"PitchBendRange" : 							{
 								"value" : 36.0
+							}
+,
+							"DutyCycleMax" : 							{
+								"value" : 100.0
 							}
 ,
 							"PitchBend" : 							{
@@ -11882,9 +11762,17 @@
 									"subtype" : "",
 									"embed" : 1,
 									"snapshot" : 									{
+										"DutyCycleMin" : 										{
+											"value" : 0.0
+										}
+,
 										"__presetid" : "Star",
 										"PitchBendRange" : 										{
 											"value" : 36.0
+										}
+,
+										"DutyCycleMax" : 										{
+											"value" : 100.0
 										}
 ,
 										"PitchBend" : 										{
@@ -11946,7 +11834,7 @@
 										"filename" : "Star.rnbopat.maxsnap",
 										"filepath" : "~/OneDrive - Universidad de las Artes/2023/Tesis/XYVI/XYVI-VST/data",
 										"filepos" : -1,
-										"snapshotfileid" : "5bfb0111e8fc3a02610bcd26f98cd186"
+										"snapshotfileid" : "d310927ccd252482970115b01f076a92"
 									}
 
 								}
@@ -12671,6 +12559,13 @@
 				"patchline" : 				{
 					"destination" : [ "obj-204", 0 ],
 					"source" : [ "obj-208", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-211", 1 ],
+					"source" : [ "obj-209", 0 ]
 				}
 
 			}
@@ -14164,6 +14059,7 @@
 			"obj-142" : [ "rnbo~[8]", "rnbo~[4]", 0 ],
 			"obj-168" : [ "rnbo~[12]", "rnbo~[11]", 0 ],
 			"obj-180" : [ "live.slider[1]", "1 in center", 0 ],
+			"obj-209" : [ "live.slider[3]", "live.slider[3]", 0 ],
 			"obj-32" : [ "rnbo~[4]", "rnbo~[4]", 0 ],
 			"obj-33" : [ "rnbo~[9]", "rnbo~[4]", 0 ],
 			"obj-39" : [ "rnbo~[10]", "rnbo~[4]", 0 ],
@@ -14422,10 +14318,6 @@
 				"patcherrelativepath" : "../data",
 				"type" : "mx@s",
 				"implicit" : 1
-			}
-, 			{
-				"name" : "pi_constant.mxe64",
-				"type" : "mx64"
 			}
  ],
 		"autosave" : 0

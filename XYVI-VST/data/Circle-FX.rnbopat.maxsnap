@@ -9,14 +9,6 @@
 	"embed" : 1,
 	"snapshot" : 	{
 		"__presetid" : "Circle-FX",
-		"Mode" : 		{
-			"value" : 0.0
-		}
-,
-		"Delay" : 		{
-			"value" : 249.999999999999659
-		}
-,
 		"Channel" : 		{
 			"value" : 0.0
 		}
@@ -29,6 +21,14 @@
 			"value" : 0.0
 		}
 ,
+		"Framesize" : 		{
+			"value" : 12.0
+		}
+,
+		"Rotation" : 		{
+			"value" : 0.0
+		}
+,
 		"Frequency" : 		{
 			"value" : 1.0
 		}
@@ -37,8 +37,12 @@
 			"value" : 100.0
 		}
 ,
-		"Framesize" : 		{
-			"value" : 12.0
+		"Mode" : 		{
+			"value" : 0.0
+		}
+,
+		"Delay" : 		{
+			"value" : 250.0
 		}
 ,
 		"DelayTuning" : 		{

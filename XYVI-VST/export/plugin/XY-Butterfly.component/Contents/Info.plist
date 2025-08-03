@@ -39,7 +39,7 @@
         <key>type</key>
 				<string>aumu</string>
         <key>subtype</key>
-				<string>I0AN</string>
+				<string>InMD</string>
         <key>version</key>
         <integer>1</integer>
         <key>resourceUsage</key>

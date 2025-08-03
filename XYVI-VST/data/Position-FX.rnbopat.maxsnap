@@ -13,6 +13,10 @@
 		}
 ,
 		"__presetid" : "Position-FX",
+		"PositionX" : 		{
+			"value" : 0.0
+		}
+,
 		"Mirror" : 		{
 			"value" : 0.0
 		}
@@ -26,6 +30,10 @@
 		}
 ,
 		"Position" : 		{
+			"value" : 0.0
+		}
+,
+		"PositionY" : 		{
 			"value" : 0.0
 		}
 ,
